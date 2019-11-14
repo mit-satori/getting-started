@@ -1,6 +1,6 @@
 ### Satori Getting Started Documentation
 
-This contains the .rst sources for Satori user documentation.
+This repo contains the .rst sources for Satori user documentation.
 
 #### Building the documentation
 
