@@ -10,15 +10,14 @@ node GPUs are linked by an NVLink2 network thst supports nearly to 200GB/s bi-di
 between GPUs. A 100Gb/s Infiniband network with microsecond user space latency connects the cluster 
 nodes togehter. 
 
-What software is available?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
 How can I get an account?
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Anyone with active MIT credentials (all students and employees and sponsored 
+Anyone with active MIT credentials (i.e. all students, employees and sponsored 
 guest account https://ist.mit.edu/guest-accounts ) can connect to the Satori portal and create a project. A
-basic project is provided a limited 
+basic project is provided somewhat limited access. Once a project has been created the project lead may
+request extra access as needed. 
+
 
 Contents
 ^^^^^^^^
