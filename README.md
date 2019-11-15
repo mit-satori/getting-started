@@ -86,6 +86,21 @@ lin = nn.Linear(5, 3)  # maps from R^5 to R^3, parameters A, b
 data = torch.randn(2, 5)
 print(lin(data))  # yes
 ```
+b. TensorFlow
+```bash
+import tensorflow as tf
+from __future__ import print_function
+# Create a Constant op
+# The op is added as a node to the default graph.
+#
+# The value returned by the constructor represents the output
+# of the Constant op.
+hello = tf.constant('Hello, TensorFlow!')
+# Start tf session
+sess = tf.Session()
+# Run the op
+print(sess.run(hello))
+```
 
 NOTE: During the conda install, the packages are downloaded from the internet and after downloading, the license agreement is presented. Read the license agreement and accept the terms and conditions to complete the install. If you decline the license agreement the packages are not installed.
 After you finish reading the license agreement, future installations can be automated to silently accept the license agreement by running the following command before running the conda install command:
