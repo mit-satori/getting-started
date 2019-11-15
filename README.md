@@ -1,4 +1,4 @@
-### Satori Getting Started Documentation
+### Satori Getting Started Documentation for Early Access (EA)
 
 This repo contains the .rst sources for Satori user documentation.
 
