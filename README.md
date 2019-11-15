@@ -4,6 +4,21 @@ This repo contains the .rst sources for Satori user documentation.
 
 #### Watson Machine Learning Community Edition (WMLCE)
 
+Watson ML CE is an IBM Cognitive Systems offering that is designed for the rapidly growing and quickly evolving AI category of deep learning. Watson ML CE brings a suite of capabilities from the open source community and combines them into a single enterprise distribution of software that incorporates complete lifecycle management from installation and configuration; data ingest and preparation; building, optimizing, and training the model; to inference; testing; and moving the model into production. Watson ML CE takes advantage of a distributed architecture to help enable your teams to quickly iterate through the training cycle on more data to help continuously improve the model over time.
+
+Watson ML CE is designed for scale, with software optimised for both single server and cluster deep learning training.
+It offers many optimizations that can ease installation and management, and can help accelerate performance:
+
+- Ready-to-use deep learning frameworks (TensorFlow, PyTorch, Caffe, Caffe2, ONNX, and Keras).
+- Powerful and scalable machine learning libraries (Snap ML and NVIDIA RAPIDS).
+- Distributed as prebuilt containers, or on demand through the Conda provisioning process.
+- Includes dependencies and libraries.
+- Easy updates: Code updates arrive from a repository.
+- Validated deep learning platform with each release.
+- Dedicated support teams for deep learning.
+- Designed for enterprise scale with multisystem cluster performance and large memory support.
+- Supported on GPU accelerated IBM AC922 servers; and also supported on accelerated x86 architecture servers.
+
 ##### [1] Getting Anaconda
 To install WMLCE you need to install on your login account [Anaconda for Power 9 / ppc64le architectue](https://www.anaconda.com/distribution/#download-section). 
 Download of the Anaconda can be done using `wget`:
@@ -98,7 +113,6 @@ The --strict-channel-priority option can be used with powerai-release for greate
 ```bash
 conda install --strict-channel-priority pytorch powerai-release=1.6.2
 ```
-For more information on the conda installer's rules, see Running the solver at: [Understanding and Improving Conda’s performance] (https://www.ibm.com/links?url=https%3A%2F%2Fwww.anaconda.com%2Funderstanding-and-improving-condas-performance%2F).
 
 #### Additional conda channels
 The main WML CE conda channel is described above. That channel includes the formal, supported WML CE releases.
