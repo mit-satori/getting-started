@@ -1,4 +1,4 @@
-#### Watson Machine Learning Community Edition (WMLCE)
+#### IBM Watson Machine Learning Community Edition (WMLCE)
 
 Watson ML CE is an IBM Cognitive Systems offering that is designed for the rapidly growing and quickly evolving AI category of deep learning. Watson ML CE brings a suite of capabilities from the open source community and combines them into a single enterprise distribution of software that incorporates complete lifecycle management from installation and configuration; data ingest and preparation; building, optimizing, and training the model; to inference; testing; and moving the model into production. Watson ML CE takes advantage of a distributed architecture to help enable your teams to quickly iterate through the training cycle on more data to help continuously improve the model over time.
 
