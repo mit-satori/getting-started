@@ -22,7 +22,7 @@ Add the WML CE channel to the conda configuration by running the following comma
 conda config --prepend channels \
 https://public.dhe.ibm.com/ibmdl/export/pub/software/server/ibm-ai/conda/
 ```
-##### [3] Creating conda environments (recommended)
+##### [3] Creating and activate conda environments (recommended)
 With conda, you can create environments that have different versions of Python or packages installed in them. Conda environments are optional but recommended. If not used, packages are installed in the default environment called base, which often has a higher risk of containing conflicting packages or dependencies. Switching between environments is called activating the environment.
 
 The syntax to create and activate a conda environment is:
@@ -58,6 +58,47 @@ export IBM_POWERAI_LICENSE_ACCEPT=yes
 ```
 The license accept has to be done only once on a per user basis.
 
+#### Controlling WMLCE release packages
+The conda installer uses a set of rules to determine which packages to install. Channel priorities and package versions are weighted heavily, but the installer also considers factors such as the number of packages that would need to be installed, whether any packages would need to be upgraded or removed, and so on.
+
+The conda installer will sometimes come up with a surprising installation solution. It may prefer to install:
+Packages from Anaconda channels over the WML CE channel in spite of channel priorities.
+Packages from an older release of WML CE in spite of newer versions being available.
+You can guide the conda installer to ensure that it chooses the desired WML CE package using the strict channel priority option and the powerai-release meta-package.
+
+###### a. Strict channel priority
+
+The strict channel priority option forces the conda installer to give additional weight to the priority of channels defined in the configuration. It is useful in cases where the conda installer is preferring packages from lower-priority channels. The simplest use is just to add --strict-channel-priority to the install command:
+```bash
+conda install --strict-channel-priority tensorflow
+```
+You can check the priority of the channels in the configuration by running the following:
+```bash
+conda config --show
+...
+channel_priority: flexible
+channels:
+  - https://public.dhe.ibm.com/ibmdl/export/pub/software/server/ibm-ai/conda/
+  - defaults
+...
+```
+You could permanently change the channel priority setting to strict:
+```bash
+conda config --set channel_priority strict
+```
+###### b. WMLCE release meta-package
+
+The powerai-release meta-package can be used to specify the WML CE release you want to install from. It is useful when the installer prefers packages from an earlier release, or if you intentionally want to install packages from an older release.
+Examples:
+```bash
+(my-wmlce-env) $ conda install pytorch powerai-release=1.6.2
+(my-wmlce-env) $ conda install pytorch powerai-release=1.6.1
+```
+The --strict-channel-priority option can be used with powerai-release for greater control:
+```bash
+conda install --strict-channel-priority pytorch powerai-release=1.6.2
+```
+For more information on the conda installer's rules, see Running the solver at: [Understanding and Improving Conda’s performance] https://www.ibm.com/links?url=https%3A%2F%2Fwww.anaconda.com%2Funderstanding-and-improving-condas-performance%2F.
 
 #### Additional conda channels
 The main WML CE conda channel is described above. That channel includes the formal, supported WML CE releases.
