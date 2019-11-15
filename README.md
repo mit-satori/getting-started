@@ -22,7 +22,7 @@ It offers many optimizations that can ease installation and management, and can 
 
 ![WMLCE](images/Satori-WMLCE_Infographic.png)
 
-##### [1] Getting Anaconda
+##### [1] Install Anaconda
 To install WMLCE you need to install on your login account [Anaconda for Power 9 / ppc64le architectue](https://www.anaconda.com/distribution/#download-section). 
 Download of the Anaconda can be done using `wget`:
 
@@ -32,7 +32,7 @@ wget https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-ppc64le.sh
 
 By default Anaconda will be insalled in your home folder under `anaconda3` and all the WMLCE pachages will be install in a sub-directory on chosen virtual name/folder (ie. anaconda3/envs/wmlce-1.6.2)
 
-##### [2] Setting up the software repository
+##### [2] WMLCE: Setting up the software repository
 The WML CE MLDL packages are distributed as conda packages in an online conda repository. conda must be configured to give priority to installing packages from this channel.
 
 Add the WML CE channel to the conda configuration by running the following command:
@@ -40,7 +40,7 @@ Add the WML CE channel to the conda configuration by running the following comma
 conda config --prepend channels \
 https://public.dhe.ibm.com/ibmdl/export/pub/software/server/ibm-ai/conda/
 ```
-##### [3] Creating and activate conda environments (recommended)
+##### [3] WMLCE: Creating and activate conda environments (recommended)
 With conda, you can create environments that have different versions of Python or packages installed in them. Conda environments are optional but recommended. If not used, packages are installed in the default environment called base, which often has a higher risk of containing conflicting packages or dependencies. Switching between environments is called activating the environment.
 
 The syntax to create and activate a conda environment is:
@@ -54,7 +54,7 @@ For example, to create an environment named wmlce_env with Python 3.6:
 conda create --name wmlce-1.6.2 python=3.6
 conda activate wmlce-1.6.2
 ```
-##### [4] Installing all frameworks at the same time
+##### [4] WMLCE: Installing all frameworks at the same time
 All the MLDL frameworks except RAPIDS packages can be installed at the same time by using the powerai meta-package. All the RAPIDS packages can be installed using the powerai-rapids meta-package.
 ```bash
 conda install powerai
@@ -78,7 +78,7 @@ export IBM_POWERAI_LICENSE_ACCEPT=yes
 ```
 The license accept has to be done only once on a per user basis.
 
-##### [5] Testing WMLCE installation
+##### [5] WMLCE: Testing ML/DL frameworks (Pytorch, TensorFlow etc) installation
 
 ```bash
 conda activate wmlce-1.6.2
