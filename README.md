@@ -29,7 +29,7 @@ wget https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-ppc64le.sh
 
 By default Anaconda will be insalled in your home folder under `anaconda3` and all the WMLCE pachages will be install in a sub-directory on chosen virtual name/folder (ie. anaconda3/envs/wmlce-1.6.2)
 
-##### [2]Setting up the software repository
+##### [2] Setting up the software repository
 The WML CE MLDL packages are distributed as conda packages in an online conda repository. conda must be configured to give priority to installing packages from this channel.
 
 Add the WML CE channel to the conda configuration by running the following command:
@@ -66,6 +66,25 @@ For example:
 conda install powerai-rapids
 conda install dali
 conda install apex
+```
+
+##### [5] Testing WMLCE installation
+
+```bash
+conda activate wmlce-1.6.2
+python
+```
+a. PYTORCH
+```bash
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+import torch.optim as optim
+torch.manual_seed(1)
+lin = nn.Linear(5, 3)  # maps from R^5 to R^3, parameters A, b
+# data is 2x5.  A maps from 5 to 3... can we map "data" under A?
+data = torch.randn(2, 5)
+print(lin(data))  # yes
 ```
 
 NOTE: During the conda install, the packages are downloaded from the internet and after downloading, the license agreement is presented. Read the license agreement and accept the terms and conditions to complete the install. If you decline the license agreement the packages are not installed.
