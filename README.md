@@ -1,4 +1,4 @@
-### Satori Getting Started Documentation for Early Access (EA)
+## Satori Getting Started Documentation for Early Access (EA)
 
 This repo contains the .rst sources for Satori user documentation.
 
@@ -68,6 +68,13 @@ conda install dali
 conda install apex
 ```
 
+NOTE: During the conda install, the packages are downloaded from the internet and after downloading, the license agreement is presented. Read the license agreement and accept the terms and conditions to complete the install. If you decline the license agreement the packages are not installed.
+After you finish reading the license agreement, future installations can be automated to silently accept the license agreement by running the following command before running the conda install command:
+```bash
+export IBM_POWERAI_LICENSE_ACCEPT=yes
+```
+The license accept has to be done only once on a per user basis.
+
 ##### [5] Testing WMLCE installation
 
 ```bash
@@ -102,12 +109,12 @@ sess = tf.Session()
 print(sess.run(hello))
 ```
 
-NOTE: During the conda install, the packages are downloaded from the internet and after downloading, the license agreement is presented. Read the license agreement and accept the terms and conditions to complete the install. If you decline the license agreement the packages are not installed.
-After you finish reading the license agreement, future installations can be automated to silently accept the license agreement by running the following command before running the conda install command:
+You can try even your custom ML/DL code; in case you have missing libraries don't forget to install them with:
 ```bash
-export IBM_POWERAI_LICENSE_ACCEPT=yes
+conda instal <package name>
+pip install <package name>
 ```
-The license accept has to be done only once on a per user basis.
+If you don't have any more errors you are ready to submit jobs on the compute nodes :)
 
 #### Controlling WMLCE release packages
 The conda installer uses a set of rules to determine which packages to install. Channel priorities and package versions are weighted heavily, but the installer also considers factors such as the number of packages that would need to be installed, whether any packages would need to be upgraded or removed, and so on.
