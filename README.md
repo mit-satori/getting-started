@@ -20,6 +20,8 @@ It offers many optimizations that can ease installation and management, and can 
 - Designed for enterprise scale with multisystem cluster performance and large memory support.
 - Supported on GPU accelerated IBM AC922 servers; and also supported on accelerated x86 architecture servers.
 
+![WMLCE](images/Satori-WMLCE_Infographic.png)
+
 ##### [1] Getting Anaconda
 To install WMLCE you need to install on your login account [Anaconda for Power 9 / ppc64le architectue](https://www.anaconda.com/distribution/#download-section). 
 Download of the Anaconda can be done using `wget`:
