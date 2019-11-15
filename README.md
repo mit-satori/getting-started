@@ -98,7 +98,7 @@ The --strict-channel-priority option can be used with powerai-release for greate
 ```bash
 conda install --strict-channel-priority pytorch powerai-release=1.6.2
 ```
-For more information on the conda installer's rules, see Running the solver at: [Understanding and Improving Conda’s performance] https://www.ibm.com/links?url=https%3A%2F%2Fwww.anaconda.com%2Funderstanding-and-improving-condas-performance%2F.
+For more information on the conda installer's rules, see Running the solver at: [Understanding and Improving Conda’s performance] (https://www.ibm.com/links?url=https%3A%2F%2Fwww.anaconda.com%2Funderstanding-and-improving-condas-performance%2F).
 
 #### Additional conda channels
 The main WML CE conda channel is described above. That channel includes the formal, supported WML CE releases.
