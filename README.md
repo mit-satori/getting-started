@@ -64,6 +64,8 @@ conda install <package name>
 For example:
 ```bash
 conda install powerai-rapids
+conda install dali
+conda install apex
 ```
 
 NOTE: During the conda install, the packages are downloaded from the internet and after downloading, the license agreement is presented. Read the license agreement and accept the terms and conditions to complete the install. If you decline the license agreement the packages are not installed.
