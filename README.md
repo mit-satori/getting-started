@@ -1,7 +1,13 @@
 ![Satori](images/Satori6.png)
 
 ## SATORI: Getting Started Documentation for Early Access (EA)
-This repo contains the .rst sources for early access Satori user documentation.
+This section provides a "Lightning-quick" Guide for early access of Satori users such as:
+- Installing Python environment (Anaconda)
+- Getting most of the optimized Machine Learning and Deep Learning libraries and frameworks 
+- Examples of training jobs submision to the Workload Manager
+- Examples of Distributed Deep Learning with TensorFlow and Pytorch
+- Examples of Large Model Support implementation in TensorFlow and Pytorch
+
 
 #### Watson Machine Learning Community Edition (WMLCE)
 
