@@ -1,5 +1,6 @@
-## Satori Getting Started Documentation for Early Access (EA)
+![Satori](images/Satori6.png)
 
+## Satori Getting Started Documentation for Early Access (EA)
 This repo contains the .rst sources for Satori user documentation.
 
 #### Watson Machine Learning Community Edition (WMLCE)
