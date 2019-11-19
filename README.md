@@ -1,7 +1,7 @@
 ![Satori](images/Satori6.png)
 
 ## SATORI: Getting Started Documentation for Early Access (EA)
-This section provides a "Lightning-quick" Guide for early access of Satori users such as:
+This section provides a "lightning-quick" guide for early access of Satori users such as:
 - Howto optain your login credentials
 - Howto connect in the Satori cluster via SSH/SCP/HTTPS
 - [Installing Python](https://github.com/mit-satori/getting-started/blob/master/satori-ai-frameworks.md) environment (Anaconda) on your login profile
