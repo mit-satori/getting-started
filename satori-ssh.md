@@ -1,4 +1,4 @@
-## Login to Satori Cluster
+## Login to Satori cluster
 
 - Login to Satori cluster is done via SSHv2 as follow:
 
