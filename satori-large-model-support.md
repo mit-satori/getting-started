@@ -7,6 +7,8 @@ Allow seamlessly moves layers of a model between the GPU and CPU to overcome GPU
 Satori nodes have a fast NVLink 2.0 connection between the CPU and GPU, which allows for data swapping with minimal overhead compared with traditional x86 GPU accelerated systems where PCIe Gen3 is available for connection between the CPU and GPU.
 
 ```bash
+# Example for enable TFLMSv2 in TensorFlow
+# ----------------------------------------
 # Import the TF LMS module
 from tensorflow_large_model_support import LMS
 # Instantiate the LMS object, with maximum swapping parameters 
@@ -25,7 +27,7 @@ estimator.train(input_fn=train_input_fn,
                 hooks=[lms_hook])
 ```                
 
-NOTE: LMS introduces four hyper-parameters to work with. Typically you don't need to worry about them, as LMS introduces an auto-tuning feature which automatically evaluates your computational graph and sets appropriate values for these hyper-parameters, based upon estimated memory consumption throughout training. However manual tuning allows for closer control- squeezing out maximum performance. The four hyper-parameters introduced are:
+NOTE: TFLMSv2 introduces four hyper-parameters to work with. Typically you don't need to worry about them, as LMS introduces an auto-tuning feature which automatically evaluates your computational graph and sets appropriate values for these hyper-parameters, based upon estimated memory consumption throughout training. However manual tuning allows for closer control- squeezing out maximum performance. The four hyper-parameters introduced are:
 - swapout_threshold: The number of tensors to hold within GPU memory before pushing them to system memory.
 - swapin_ahead: The larger swapin_ahead is, the earlier a tensor is swapped in to the GPU memory from the host memory.
 - swapin_groupby: Multiple swap-in operations of the same tensor will be grouped or fused into one swap-in operation for better performance if they are close to each other (the distance between them is within swapin_groupby).
