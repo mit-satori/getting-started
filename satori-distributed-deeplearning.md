@@ -17,7 +17,7 @@ Documentation and Tutorial:
 3. IBM [DDL integration with Horovod](https://developer.ibm.com/linuxonpower/2018/08/24/distributed-deep-learning-horovod-powerai-ddl/)
 
 Examples:
-- Keras/TensorFlow
+- [Keras/TensorFlow](https://github.com/IBM/powerai/tree/master/examples/tensorflow_large_model_support/v2)
 - Pytorch
 
 Original IBM DDL paper, can be found at this URL: https://arxiv.org/pdf/1708.02188.pdf
