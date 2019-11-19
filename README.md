@@ -11,3 +11,6 @@ This section provides a "lightning-quick" guide for early access of Satori users
 - Are you training large models that cannot be fit into GPU memory? Have a look how you can [enable Large Model Support (LMS)](https://github.com/mit-satori/getting-started/blob/master/satori-large-model-support.md) in your TensorFLow or Pytorch python scripts.
 - Example of Snap Machine Learning [(SnapML/pai4sk)](https://github.com/IBM/powerai/tree/master/examples/SnapML)
 - [Additional trainings](https://github.com/mit-satori/getting-started/blob/master/satori-training.md) (video format) for CUDA UNIFIED MEMORY, GPUDirect, LSF Workload Manager, POWER9 SMT4 etc
+- [Troubleshooting](satori-troubleshooting.md)
+
++ You don't find what you where looking for? have a look [here](https://www.ibm.com/support/knowledgecenter/SS5SF7_1.6.2/navigation/wmlce_getstarted.html) before asking for help.
