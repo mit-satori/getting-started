@@ -1,4 +1,4 @@
-### Various Training for faster onboarding in the system HW and SW architecture
+## Training for faster onboarding in the system HW and SW architecture
 
 [https://vimeo.com/346452547](https://vimeo.com/346452547)
 Steve Abbott (NVIDIA) talks about GPUDirect, CUDA-aware MPI, and CUDA IPC. He describes what they are, how they are different, and how they are related to each other.
