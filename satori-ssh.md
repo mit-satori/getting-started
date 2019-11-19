@@ -24,7 +24,7 @@ python ResNet50-Keras.py
 ```
 
 As general rules:
--- satori-login-001.mit.edu - shuld be used for submiting training jobs and related activities
--- satori-login-002.mit.edu - shuld be used for transfering large files/datasets and compiling software requireing nvcc, gcc, XL compiler etc
--- if one login-node will not be available try the second one
--- dont't run trainings of login nodes
+- satori-login-001.mit.edu - shuld be used for submiting training jobs and related activities
+- satori-login-002.mit.edu - shuld be used for transfering large files/datasets and compiling software requireing nvcc, gcc, XL compiler etc
+- if one login-node will not be available try the second one
+- dont't run trainings of login nodes
