@@ -9,4 +9,4 @@ This section provides a "Lightning-quick" Guide for early access of Satori users
 - Examples of training jobs submision to the Workload Manager
 - Examples of Distributed Deep Learning with TensorFlow and Pytorch
 - Examples of Large Model Support implementation in TensorFlow and Pytorch
-- [Additional trainings] (https://github.com/mit-satori/getting-started/blob/master/satori-ai-trainings.md) (video format) for CUDA UNIFIED MEMORY, GPUDirect, LSF Workload Manager, POWER9 SMT4 etc
+- [Additional trainings](https://github.com/mit-satori/getting-started/blob/master/satori-ai-trainings.md) (video format) for CUDA UNIFIED MEMORY, GPUDirect, LSF Workload Manager, POWER9 SMT4 etc
