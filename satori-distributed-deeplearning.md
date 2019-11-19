@@ -12,8 +12,8 @@ Integrations into deep learning frameworks to enable distributed training is usi
 - Horovod [Sergeev et al. 2018]. Provides integration libraries into common frameworks which enable distributed training with common communication libraries, including. IBM DDL can be used as backend for Horovod implementation.
 
 Documentation and Tutorial:
-1. IBM [DDL integration with TensorFlow/Keras](https://www.ibm.com/support/knowledgecenter/SS5SF7_1.6.1/navigation/wmlce_ddltf_tutorial.html)
-2. IBM [DDL integration with Pytorch](https://www.ibm.com/support/knowledgecenter/SS5SF7_1.6.1/navigation/wmlce_ddlpytorch_tutorial.html)
+1. IBM [DDL integration with TensorFlow/Keras](https://www.ibm.com/support/knowledgecenter/SS5SF7_1.6.2/navigation/wmlce_ddltf_tutorial.html)
+2. IBM [DDL integration with Pytorch](https://www.ibm.com/support/knowledgecenter/SS5SF7_1.6.2/navigation/wmlce_ddlpytorch_tutorial.html)
 3. IBM [DDL integration with Horovod](https://developer.ibm.com/linuxonpower/2018/08/24/distributed-deep-learning-horovod-powerai-ddl/)
 
 Examples:
