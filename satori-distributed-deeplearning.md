@@ -3,7 +3,7 @@
 The following tools are libraries, which provide the communication functions necessary to perform distributed training. Primarily allReduce and broadcast functions.
 - IBM Spectrum MPI: Classic tool for distributed computing.  Still commonly  used for distributed deep learning.
 - NVIDIA NCCL: Nvidia’s gpu-to-gpu communication library. Since NCCL2, between-node communication is supported.
-- IBM DDL: Provides a topology-aware allReduce. Capable of optimally dividing communication across hierarchies of fabrics.
+- IBM DDL: Provides a topology-aware all-Reduce. Capable of optimally dividing communication across hierarchies of fabrics.
 Utilizes different communication protocols at different hierarchies. When WMLCE is installed all related frameworks are comming with IBM DDL support, you don't have to compile additional software packages, only to modify your training scripts to make use of the need distributed deep learning APIs.
 
 Integrations into deep learning frameworks to enable distributed training is using common communication libraries such as:
