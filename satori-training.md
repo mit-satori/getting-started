@@ -1,5 +1,8 @@
 ## Training for faster onboarding in the system HW and SW architecture
 
+[https://vimeo.com/371964454](https://vimeo.com/371964454)
+This session will serve as an introduction to NVIDIA GPUs and accelerated computing. No prior experience with GPUs is required. Participants will learn about the fundamentals of GPUs and how they differ from traditional CPUs. 
+
 [https://vimeo.com/346452547](https://vimeo.com/346452547)
 Steve Abbott (NVIDIA) talks about GPUDirect, CUDA-aware MPI, and CUDA IPC. He describes what they are, how they are different, and how they are related to each other.
 
