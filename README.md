@@ -8,6 +8,6 @@ This section provides a "lightning-quick" guide for early access of Satori users
 - [Installing WMLCE](https://github.com/mit-satori/getting-started/blob/master/satori-ai-frameworks.md) optimized Machine Learning and Deep Learning libraries and frameworks  on your login profile
 - Examples of training jobs submision to the Workload Manager
 - How to manage [distributed deep learning in TensorFlow and Pytorch](https://github.com/mit-satori/getting-started/blob/master/satori-distributed-deeplearning.md)
-- Examples of Large Model Support implementation in [TensorFlow](https://github.com/IBM/powerai/tree/master/examples/tensorflow_large_model_support/v2) and Pytorch
+- Are you training large models that cannot be fit into GPU memory? Have a look how you can enable Large Model Support (LMS) in your TensorFLow or Pytorch python scripts.
 - Example of Snap Machine Learning [(SnapML/pai4sk)](https://github.com/IBM/powerai/tree/master/examples/SnapML)
 - [Additional trainings](https://github.com/mit-satori/getting-started/blob/master/satori-training.md) (video format) for CUDA UNIFIED MEMORY, GPUDirect, LSF Workload Manager, POWER9 SMT4 etc
