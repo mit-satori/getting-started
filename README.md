@@ -13,4 +13,4 @@ This section provides a "lightning-quick" guide for early access of Satori users
 - [Additional trainings](https://github.com/mit-satori/getting-started/blob/master/satori-training.md) (video format) for CUDA UNIFIED MEMORY, GPUDirect, LSF Workload Manager, POWER9 SMT4 etc
 - [Troubleshooting](satori-troubleshooting.md)
 
-+ You don't find what you where looking for? have a look [here](https://www.ibm.com/support/knowledgecenter/SS5SF7_1.6.2/navigation/wmlce_getstarted.html) before asking for help.
++ You don't find what you where looking for? have a look to [conda cheet sheet](https://github.com/mit-satori/getting-started/blob/master/satori-conda-cheatsheet.pdf) and WMLCE extended documentation [here](https://www.ibm.com/support/knowledgecenter/SS5SF7_1.6.2/navigation/wmlce_getstarted.html) before asking for help.
