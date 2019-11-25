@@ -25,8 +25,9 @@ Contents
 .. toctree::
    :maxdepth: 2
 
-   satori-queues
+   satori-architecture
    satori-storage
    satori-software
+   satori-distributed-deeplearning
   
 
