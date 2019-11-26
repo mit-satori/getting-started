@@ -25,5 +25,5 @@ jobs:
  include:
   - stage: build and test
     name: Build
-    script: make html
+    script: make html; pwd; ls -altr
     skip-cleanup: true
