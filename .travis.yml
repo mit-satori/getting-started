@@ -25,5 +25,5 @@ jobs:
  include:
   - stage: build and test
     name: Build
-    script: make
+    script: make html
     skip-cleanup: true
