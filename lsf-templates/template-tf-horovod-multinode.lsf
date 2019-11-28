@@ -1,0 +1,62 @@
+#BSUB -L /bin/bash
+##
+## Begin LSF Directives (change only no of required GPUs processes/GPUs and job-name-single name as desired/need)
+## - "-n 4" for single AC922, "-n 8" for 2x AC922s, "-n 16" for 4x AC922s etc
+##
+#BSUB -J "tf-horovod-job-name"
+#BSUB -o "tf-horovod-job-name_o.%J"
+#BSUB -e "tf-horovod-job-name_e.%J"
+#BSUB -n 8 
+#BSUB -R "span[ptile=4]"
+#BSUB -gpu "num=4"
+#BSUB -q "normal"
+#BSUB -x
+
+
+#
+# Setup User Environement (Python, WMLCE virtual environment etc)
+#
+HOME2=/nobackup/users/florin
+PYTHON_VIRTUAL_ENVIRONMENT=horovod
+CONDA_ROOT=$HOME2/anaconda3
+
+source ${CONDA_ROOT}/etc/profile.d/conda.sh
+conda activate $PYTHON_VIRTUAL_ENVIRONMENT
+export EGO_TOP=/opt/ibm/spectrumcomputing
+
+# Set up the GPUs and delete any existing scratch directory
+cat > setup.sh << EoF_s
+#! /bin/sh
+##
+if [ \${OMPI_COMM_WORLD_LOCAL_RANK} -eq 0 ]
+then
+  sudo ppc64_cpu --smt=2                 # Set the SMT mode to 2
+  ppc64_cpu --smt                        # Verify the SMT mode
+  sudo nvidia-smi -rac                   # For POWER9+V100
+  sudo nvidia-smi --compute-mode=DEFAULT # Set the compute mode to DEFAULT
+  /bin/rm -rf /tmp/data.${USER}          # Delete the scratch directory
+fi
+EoF_s
+
+#
+# Cleaning CUDA_VISIBLE_DEVICES
+#  
+cat > launch.sh << EoF_s
+#! /bin/sh
+export CUDA_VISIBLE_DEVICES=0,1,2,3
+exec \$*
+EoF_s
+chmod +x launch.sh
+
+
+#
+# Runing the training/inference job
+# (change only the script name and options after python command)
+#
+ddlrun --mpiarg "-x EGO_TOP" "-x HOROVOD_FUSION_THRESHOLD=16777216" -v \
+  ./launch.sh python \
+  $HOME2/hpms/tf_cnn_benchmarks/tf_cnn_benchmarks.py --model resnet50 --batch_size 64 --variable_update=horovod
+
+#
+# EoF
+#
