@@ -3,9 +3,9 @@
 ## Begin LSF Directives (change only no of required GPUs processes/GPUs and job-name-single name as desired/need)
 ## - "-n 4" for single AC922, "-n 8" for 2x AC922s, "-n 16" for 4x AC922s etc
 ##
-#BSUB -J "pytorch-job-name"
-#BSUB -o "pytorch-job-name_o.%J"
-#BSUB -e "pytorch-job-name_e.%J"
+#BSUB -J "tf-job-name"
+#BSUB -o "tf-job-name_o.%J"
+#BSUB -e "tf-job-name_e.%J"
 #BSUB -n 16 
 #BSUB -R "span[ptile=4]"
 #BSUB -gpu "num=4"
