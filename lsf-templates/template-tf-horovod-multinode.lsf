@@ -50,6 +50,11 @@ chmod +x launch.sh
 
 
 #
+# Before running this script please run bellow command from python CLI
+# from where you will lunch the .lsf script.
+# conda install tf_cnn_benchmarks; install_tf_cnn_benchmarks hpms
+
+#
 # Runing the training/inference job
 # (change only the script name and options after python command)
 #
