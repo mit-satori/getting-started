@@ -42,6 +42,7 @@ accelerate performance:
 ''''''''''''''''''''
 
 All users on Satori will have two folders:
+
 .. code:: bash
 
    /home/<username>
