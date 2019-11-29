@@ -1,5 +1,5 @@
-
-## Running AI Jobs on Satori
+![Satori](images/lsf.png)
+## Running your AI training jobs on Satori
 
 Computational work on Satori is performed within jobs managed by a workload manager (IBM LSF). A typical job consists of several components:
 - A submission script
