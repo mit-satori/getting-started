@@ -25,7 +25,7 @@ Since all compute resources are managed/scheduled by LSF, it is not possible to 
 For example, to request an interactive batch job (with bash as the shell) equivalent to the sample batch script above, you would use the command:
 
 ```bash
-bsub -W 3:00 -q normal -gpu "num=4" -Ip bash
+bsub -W 3:00 -q interactive -gpu "num=4" -R "select[type==any]" -Ip bash
 ```
 This will request an AC922 node with 4x GPUs from the Satori (normal queue) for 3 hours.
 
