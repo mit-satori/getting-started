@@ -70,6 +70,14 @@ following command:
    conda config --prepend channels \
    https://public.dhe.ibm.com/ibmdl/export/pub/software/server/ibm-ai/conda/
 
+
+NOTE: All users on Satori will have two folders:
+- /home/<username>
+- /nobackup/users/<username>
+please install Anaconda3 in the /nobackup/users/<your-username>/anaconda3 
+This is because /nobackup partision has way much more space compared with /home. In addition all files in /home will be automaticlay backuped compared with /nobackup partition. Anaconda3 can be install at any time in less then 10 minutes, therefore no backup is need.
+
+
 [3] WMLCE: Creating and activate conda environments (recommended)
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
