@@ -59,6 +59,20 @@ cd $HOME2/projects
 python Keras-ResNet50-training.py --batch=64
 ```
 
+In the above template you can change:
+- line 2-4: with your desire job name, but remember to keep _o for the job output file and _e for the file with the related job errors
+- line 5: "-n 4" here you can consider the no of GPUs you need, multiple of 4 (ie. - n 4, -n 8, -n 16, ....)
+- line 11: add your MIT assigned username folder name from the /nobackup/users/
+- line 12: change to your conda virtual environment defined at installation of WMLCE
+- line 17-18: change as need for what you will want to run and from where
+
+For your convienenice additional LSF batch job templates have been created to cover distributed deep learning trainings across Satori cluster:
+- [Pytorch with IBM Distributed Deep Learning Library (DDL)](https://github.com/mit-satori/getting-started/blob/master/lsf-templates/template-pytorch-multinode.lsf)
+- [TensorFlow with IBM Distributed Deep Learning Library (DDL)](https://github.com/mit-satori/getting-started/blob/master/lsf-templates/template-tf-multinode.lsf)
+- [Pytorch with Horovod + IBM Distributed Deep Learning Library (DDL) backend](https://github.com/mit-satori/getting-started/blob/master/lsf-templates/template-pytorch-horovod-multinode.lsf)
+- [TensorFlow with Horovod + IBM Distributed Deep Learning Library (DDL) backend](https://github.com/mit-satori/getting-started/blob/master/lsf-templates/template-tf-horovod-multinode.lsf)
+
+
 ### Job States
 A job will progress through a number of states through its lifetime. The states you’re most likely to see are:
 - PEND:	Job is pending
