@@ -35,7 +35,7 @@ The most common way to interact with the batch system is via batch jobs. A batch
 
 To submit a batch script, use the bsub command:
 ```bash
-bsub myjob.lsf
+bsub < myjob.lsf
 ```
 As an example, consider the following batch script for 4x V100 GPUs (single AC922 node):
 ```bash
