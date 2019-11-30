@@ -20,8 +20,7 @@ conda update --all
 conda update powerai --no-pin
 conda update --all
 ```
-4. WMLE installation
-When running for the first time
+4. WMLE installation when running for the first time
 ``` bash
 conda install powerai
 ```
