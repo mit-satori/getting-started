@@ -58,7 +58,7 @@ download of the Anaconda can be done using ``wget``:
 
 .. code:: bash
 
-   cd /nobackup/users/$(whoami)/anaconda3
+   cd /nobackup/users/$(whoami)
    wget https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-ppc64le.sh
    sh Anaconda3-2019.10-Linux-ppc64le.sh -f -p /nobackup/users/$(whoami)/anaconda3
    source ~/.bashrc
