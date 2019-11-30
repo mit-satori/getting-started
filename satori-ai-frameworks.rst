@@ -189,6 +189,38 @@ b. TensorFlow
    # Run the op
    print(sess.run(hello))
 
+c. Caffe Test with LSF workload manager
+
+.. code:: bash
+
+wget caffe-test-single-node.lsf
+bsub < caffe-test-single-node.lsf
+bpeak
+
+
+.. code:: bash
+
+#BSUB -L /bin/bash
+#BSUB -J "caffe-test"
+#BSUB -o "caffe-test_o.%J"
+#BSUB -e "caffe-test_e.%J"
+#BSUB -n 4
+#BSUB -R "span[ptile=4]"
+#BSUB -gpu "num=4"
+#BSUB -q "normal"
+#BSUB -x
+
+HOME2=/nobackup/users/$(whoami)
+PYTHON_VIRTUAL_ENVIRONMENT=wmlce-1.6.2
+CONDA_ROOT=$HOME2/anaconda3
+source ${CONDA_ROOT}/etc/profile.d/conda.sh
+conda activate $PYTHON_VIRTUAL_ENVIRONMENT
+
+caffe-test
+
+
+
+
 You can try even your custom ML/DL code; in case you have missing
 libraries don’t forget to install them with:
 
