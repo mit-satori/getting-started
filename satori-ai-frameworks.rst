@@ -192,35 +192,36 @@ b. TensorFlow
 c. Caffe Test with LSF workload manager; this will run remote in one of the Satori compute nodes available
 
 .. code:: bash
-wget https://raw.githubusercontent.com/mit-satori/getting-started/master/lsf-templates/template-caffe-test-singlenode.lsf
-bsub < template-caffe-test-singlenode.lsf
-bjobs
-bjobs
-bpeak
-bjobs
+
+   wget https://raw.githubusercontent.com/mit-satori/getting-started/master/lsf-templates/template-caffe-test-singlenode.lsf
+   bsub < template-caffe-test-singlenode.lsf
+   bjobs
+   bjobs
+   bpeak
+   bjobs
 
 
 The template-caffe-test-singlenode.lsf consist in the following LSF file: 
 
 .. code:: bash
 
-#BSUB -L /bin/bash
-#BSUB -J "caffe-test"
-#BSUB -o "caffe-test_o.%J"
-#BSUB -e "caffe-test_e.%J"
-#BSUB -n 4
-#BSUB -R "span[ptile=4]"
-#BSUB -gpu "num=4"
-#BSUB -q "normal"
-#BSUB -x
+   #BSUB -L /bin/bash
+   #BSUB -J "caffe-test"
+   #BSUB -o "caffe-test_o.%J"
+   #BSUB -e "caffe-test_e.%J"
+   #BSUB -n 4
+   #BSUB -R "span[ptile=4]"
+   #BSUB -gpu "num=4"
+   #BSUB -q "normal"
+   #BSUB -x
 
-HOME2=/nobackup/users/$(whoami)
-PYTHON_VIRTUAL_ENVIRONMENT=wmlce-1.6.2
-CONDA_ROOT=$HOME2/anaconda3
-source ${CONDA_ROOT}/etc/profile.d/conda.sh
-conda activate $PYTHON_VIRTUAL_ENVIRONMENT
+   HOME2=/nobackup/users/$(whoami)
+   PYTHON_VIRTUAL_ENVIRONMENT=wmlce-1.6.2
+   CONDA_ROOT=$HOME2/anaconda3
+   source ${CONDA_ROOT}/etc/profile.d/conda.sh
+   conda activate $PYTHON_VIRTUAL_ENVIRONMENT
 
-caffe-test
+   caffe-test
 
 
 You can try even your custom ML/DL code; in case you have missing
