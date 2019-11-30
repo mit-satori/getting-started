@@ -189,14 +189,18 @@ b. TensorFlow
    # Run the op
    print(sess.run(hello))
 
-c. Caffe Test with LSF workload manager
+c. Caffe Test with LSF workload manager; this will run remote in one of the Satori compute nodes available
 
 .. code:: bash
 
-wget caffe-test-single-node.lsf
-bsub < caffe-test-single-node.lsf
+wget https://raw.githubusercontent.com/mit-satori/getting-started/master/lsf-templates/template-caffe-test-singlenode.lsf
+bsub < template-caffe-test-singlenode.lsf
+bjobs
+bjobs
 bpeak
+bjobs
 
+The template-caffe-test-singlenode.lsf consist in the following LSF file: 
 
 .. code:: bash
 
