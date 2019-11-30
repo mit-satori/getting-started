@@ -16,7 +16,7 @@
 #
 # Setup User Environement (Python, WMLCE virtual environment etc)
 #
-HOME2=/nobackup/users/florin
+HOME2=/nobackup/users/$(whoami)
 PYTHON_VIRTUAL_ENVIRONMENT=horovod
 CONDA_ROOT=$HOME2/anaconda3
 
