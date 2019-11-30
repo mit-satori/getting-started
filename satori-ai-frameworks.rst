@@ -197,7 +197,9 @@ c. Caffe Test with LSF workload manager; this will run remote in one of the Sato
    bsub < template-caffetest-singlenode.lsf
    bjobs
    bjobs
-   bpeak
+   bpeek
+   bpeek
+   bpeek
    bjobs
 
 
