@@ -200,6 +200,7 @@ bjobs
 bpeak
 bjobs
 
+
 The template-caffe-test-singlenode.lsf consist in the following LSF file: 
 
 .. code:: bash
@@ -221,8 +222,6 @@ source ${CONDA_ROOT}/etc/profile.d/conda.sh
 conda activate $PYTHON_VIRTUAL_ENVIRONMENT
 
 caffe-test
-
-
 
 
 You can try even your custom ML/DL code; in case you have missing
