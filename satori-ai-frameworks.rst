@@ -61,7 +61,7 @@ download of the Anaconda can be done using ``wget``:
    cd /nobackup/users/$(whoami)
    wget https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-ppc64le.sh
    sh Anaconda3-2019.10-Linux-ppc64le.sh -p /nobackup/users/$(whoami)
-   source .bashrc
+   source ~/.bashrc
 
 By default Anaconda will be insalled in your home folder under
 ``anaconda3`` and all the WMLCE pachages will be install in a
