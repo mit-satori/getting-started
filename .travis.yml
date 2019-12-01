@@ -25,7 +25,7 @@ jobs:
  include:
   - stage: build and test
     name: Build
-    script: make html; pwd; ls -altr _build/html
+    script: make html; pwd; touch _build/html/.nojekyll ; ls -altr _build/html
     skip-cleanup: true
 
 deploy:
