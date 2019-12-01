@@ -33,7 +33,7 @@ deploy:
  skip_cleanup: true
  keep_history: true
  verbose: true
- repo: mit-satori/mit-satori.github.io
+ repo: ${GH_DEPLOY_ORG}/${GH_DEPLOY_REPO}
  local_dir: _build/html
  github_token: $GH_DEPLOY_TOKEN
  target_branch: master
