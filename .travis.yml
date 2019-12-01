@@ -6,7 +6,7 @@ language: python
 # Change to master later
 branches:
  only:
-  - cnh/add_sphinx
+  - master
 
 python:
  - 3.7
