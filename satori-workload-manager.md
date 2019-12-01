@@ -1,17 +1,21 @@
 ![Satori](images/lsf.png)
+
 ## Running your AI training jobs on Satori
 
 Computational work on Satori is performed within jobs managed by a workload manager (IBM LSF). A typical job consists of several components:
+
 - A submission script
 - An executable file (python sript or C/C++ script)
 - Training data needed by the ML/DL script
 - Output files created by the training/inference job
 
 There are two types for jobs:
+
 - interactive / online
 - batch 
 
 In general, the process for running a batch job is to:
+
 - Prepare executables and input files
 - Modify provided LSF job template for the batch script or write a new one
 - Submit the batch script to the WOrkload Manager
@@ -19,6 +23,7 @@ In general, the process for running a batch job is to:
 
 
 #### Interactive Jobs
+
 Most users will find batch jobs to be the easiest way to interact with the system, since they permit you to hand off a job to the scheduler and then work on other tasks; however, it is sometimes preferable to run interactively on the system. This is especially true when developing, modifying, or debugging a code.
 
 Since all compute resources are managed/scheduled by LSF, it is not possible to simply log into the system and begin running a parallel code interactively. You must request the appropriate resources from the system and, if necessary, wait until they are available. This is done with an “interactive batch” job. Interactive batch jobs are submitted via the command line, which supports the same options that are passed via #BSUB parameters in a batch script. The final options on the command line are what makes the job “interactive batch”: -Is followed by a shell name. 
@@ -27,17 +32,22 @@ For example, to request an interactive batch job (with bash as the shell) equiva
 ```bash
 bsub -W 3:00 -q interactive -gpu "num=4" -R "select[type==any]" -Ip bash
 ```
+
 This will request an AC922 node with 4x GPUs from the Satori (normal queue) for 3 hours.
 
 
 #### Batch Scripts
+
 The most common way to interact with the batch system is via batch jobs. A batch job is simply a shell script with added directives to request various resources from or provide certain information to the batch scheduling system. Aside from the lines containing LSF options, the batch script is simply the series commands needed to set up and run your AI job.
 
 To submit a batch script, use the bsub command:
+
 ```bash
 bsub < myjob.lsf
 ```
+
 As an example, consider the following batch script for 4x V100 GPUs (single AC922 node):
+
 ```bash
 #BSUB -L /bin/bash
 #BSUB -J "keras-job-name"
@@ -60,6 +70,7 @@ python Keras-ResNet50-training.py --batch=64
 ```
 
 In the above template you can change:
+
 - line 2-4: with your desire job name, but remember to keep _o for the job output file and _e for the file with the related job errors
 - line 5: "-n 4" here you can consider the no of GPUs you need, multiple of 4 (ie. - n 4, -n 8, -n 16, ....)
 - line 11: add your MIT assigned username folder name from the /nobackup/users/
@@ -67,6 +78,7 @@ In the above template you can change:
 - line 17-18: change as need for what you will want to run and from where
 
 For your convienenice additional LSF batch job templates have been created to cover distributed deep learning trainings across Satori cluster:
+
 - [Pytorch with IBM Distributed Deep Learning Library (DDL)](https://github.com/mit-satori/getting-started/blob/master/lsf-templates/template-pytorch-multinode.lsf)
 - [TensorFlow with IBM Distributed Deep Learning Library (DDL)](https://github.com/mit-satori/getting-started/blob/master/lsf-templates/template-tf-multinode.lsf)
 - [Pytorch with Horovod + IBM Distributed Deep Learning Library (DDL) backend](https://github.com/mit-satori/getting-started/blob/master/lsf-templates/template-pytorch-horovod-multinode.lsf)
@@ -75,6 +87,7 @@ For your convienenice additional LSF batch job templates have been created to co
 
 ### Job States
 A job will progress through a number of states through its lifetime. The states you’re most likely to see are:
+
 - PEND:	Job is pending
 - RUN:	Job is running
 - DONE:	Job completed normally (with an exit code of 0)
@@ -102,15 +115,18 @@ The most straightforward monitoring is with the bjobs command. This command will
 - bjobs -w	      Use “wide” formatting for output
 
 If you want to check the STDOUT/STDERR of a currently running job, you can do so with the bpeek command. The command supports several options:
+
 - bpeek -J jobname	Show STDOUT/STDERR for the job you’ve most recently submitted with the name jobname
 - bpeek 12345	      Show STDOUT/STDERR for job 12345
 - bpeek -f ...	    Used with other options. Makes bpeek use tail -f and exit once the job completes.
 
 ### Scheduling Policy
+
 In a simple batch queue system, jobs run in a first-in, first-out (FIFO) order. This often does not make effective use of the system. A large job may be next in line to run. If the system is using a strict FIFO queue, many processors sit idle while the large job waits to run. Backfilling would allow smaller, shorter jobs to use those otherwise idle resources, and with the proper algorithm, the start time of the large job would not be delayed. While this does make more effective use of the system, it indirectly encourages the submission of smaller jobs.
 
 ### Batch Queue Policy
-The batch queue is the default queue for production work on Summit. Most work on Summit is handled through this queue. It enforces the following policies:
+
+The batch queue is the default queue for production work on Satori. It enforces the following policies:
 Limit of (4) eligible-to-run jobs per user.
 Jobs in excess of the per user limit above will be placed into a held state, but will change to eligible-to-run at the appropriate time.
 Users may have only (100) jobs queued at any state at any time. Additional jobs will be rejected at submit time.
