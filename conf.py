@@ -78,7 +78,7 @@ html_context = {
 
 # see https://sphinx-rtd-theme.readthedocs.io/en/stable/configuring.html
 html_theme_options = {
-    'canonical_url': 'https://researchcomputing.mit.edu',
+    'canonical_url': 'https://researchcomputing.mit.edu/',
     'collapse_navigation': False,
     'sticky_navigation': True,
     'navigation_depth': 4,
