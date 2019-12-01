@@ -36,3 +36,4 @@ deploy:
  repo: mit-satori/mit-satori.github.io
  local_dir: _build/html
  github_token: $GH_DEPLOY_TOKEN
+ target_branch: master
