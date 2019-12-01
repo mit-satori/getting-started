@@ -11,7 +11,7 @@ Satori users such as:
 
 -  How to optain your login credentials
 
--  How to `connect in the Satori <satori-ssh.md>`__ cluster via
+-  How to `connect in the Satori <satori-ssh.rst>`__ cluster via
    SSH/SCP/HTTPS
 
 -  `Installing
@@ -25,26 +25,26 @@ Satori users such as:
 
 -  Learn how you can start your trainig jobs.\ `Examples of training
    jobs
-   submision <https://github.com/mit-satori/getting-started/blob/master/satori-workload-manager.md>`__
+   submision <https://github.com/mit-satori/getting-started/blob/master/satori-workload-manager.rst>`__
    and management in the Satori cluster.
 
 -  How to manage `distributed deep learning in TensorFlow and
-   Pytorch <https://github.com/mit-satori/getting-started/blob/master/satori-distributed-deeplearning.md>`__
+   Pytorch <https://github.com/mit-satori/getting-started/blob/master/satori-distributed-deeplearning.rst>`__
 
 -  Are you training large models that cannot be fit into GPU memory?
    Have a look how you can `enable Large Model Support
-   (LMS) <https://github.com/mit-satori/getting-started/blob/master/satori-large-model-support.md>`__
+   (LMS) <https://github.com/mit-satori/getting-started/blob/master/satori-large-model-support.rst>`__
    in your TensorFLow or Pytorch python scripts.
 
 -  Example of Snap Machine Learning
    `(SnapML/pai4sk) <https://github.com/IBM/powerai/tree/master/examples/SnapML>`__
 
 -  `Additional
-   trainings <https://github.com/mit-satori/getting-started/blob/master/satori-training.md>`__
+   trainings <https://github.com/mit-satori/getting-started/blob/master/satori-training.rst>`__
    (video format) for CUDA UNIFIED MEMORY, GPUDirect, LSF Workload
    Manager, POWER9 SMT4 etc
 
--  `Troubleshooting <satori-troubleshooting.md>`__
+-  `Troubleshooting <satori-troubleshooting.rst>`__
 
 -  You don’t find what you where looking for? have a look to `conda
    cheet
