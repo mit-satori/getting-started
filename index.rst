@@ -18,6 +18,7 @@ combined simulation and machine learning intensive research work.
    satori-ai-frameworks
    satori-distributed-deeplearning
    satori-large-model-support.rst
+   satori-doc-examples-contributing.rst
    
 
 -  You don’t find what you where looking for? have a look to `conda
