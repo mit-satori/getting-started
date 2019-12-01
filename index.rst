@@ -14,9 +14,9 @@ How can I get an account?
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Anyone with active MIT credentials (i.e. all students, employees and sponsored 
-guest account https://ist.mit.edu/guest-accounts ) can connect to the Satori portal and create a project. A
-basic project is provided somewhat limited access. Once a project has been created the project lead may
-request extra access as needed. 
+guest account https://ist.mit.edu/guest-accounts ) can connect to the Satori portal and create a starter account. A
+starter account is provided somewhat limited access by default. Once a starter account has been created research 
+group leads may request an account be added to one or more projects that can provide larger scale access.  
 
 
 Contents
@@ -25,9 +25,7 @@ Contents
 .. toctree::
    :maxdepth: 2
 
-   satori-architecture
-   satori-storage
-   satori-software
+   satori-basics
    satori-ai-frameworks
    satori-distributed-deeplearning
   
