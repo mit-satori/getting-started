@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Distributed Deep Learning &#8212; MIT Satori User Documentation  documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="satori-software.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+    <link rel="canonical" href="https://researchcomputing.mit.edusatori-distributed-deeplearning.html"/>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="distributed-deep-learning">
+<h1>Distributed Deep Learning<a class="headerlink" href="#distributed-deep-learning" title="Permalink to this headline">¶</a></h1>
+<p>The following tools are libraries, which provide the communication
+functions necessary to perform distributed training. Primarily allReduce
+and broadcast functions.</p>
+<ul class="simple">
+<li>IBM Spectrum MPI: Classic tool for distributed computing. Still
+commonly used for distributed deep learning.</li>
+<li>NVIDIA NCCL: Nvidia’s gpu-to-gpu communication library. Since NCCL2,
+between-node communication is supported.</li>
+<li>IBM DDL: Provides a topology-aware all-Reduce. Capable of optimally
+dividing communication across hierarchies of fabrics. Utilizes
+different communication protocols at different hierarchies. When
+WMLCE is installed all related frameworks are comming with IBM DDL
+support, you don’t have to compile additional software packages, only
+to modify your training scripts to make use of the need distributed
+deep learning APIs.</li>
+</ul>
+<p>Integrations into deep learning frameworks to enable distributed
+training is using common communication libraries such as:</p>
+<ul class="simple">
+<li>TensorFlow Distribution Strategies. Native Tensorflow distribution
+methods.</li>
+<li>IBM DDL. Provides integrations into common frameworks, including a
+Tensorflow operator that integrates IBM DDL with Tensorflow and
+similar for Pytorch.</li>
+<li>Horovod [Sergeev et al.&nbsp;2018]. Provides integration libraries into
+common frameworks which enable distributed training with common
+communication libraries, including. IBM DDL can be used as backend
+for Horovod implementation.</li>
+</ul>
+<p>Documentation and Tutorial:</p>
+<ol class="arabic simple">
+<li>IBM <a class="reference external" href="https://www.ibm.com/support/knowledgecenter/SS5SF7_1.6.2/navigation/wmlce_ddltf_tutorial.html" target="_blank">DDL integration with
+TensorFlow/Keras</a></li>
+<li>IBM <a class="reference external" href="https://www.ibm.com/support/knowledgecenter/SS5SF7_1.6.2/navigation/wmlce_ddlpytorch_tutorial.html" target="_blank">DDL integration with
+Pytorch</a></li>
+<li>IBM <a class="reference external" href="https://developer.ibm.com/linuxonpower/2018/08/24/distributed-deep-learning-horovod-powerai-ddl/" target="_blank">DDL integration with
+Horovod</a></li>
+<li>IBM <a class="reference external" href="https://www.ibm.com/support/knowledgecenter/SS5SF7_1.6.2/navigation/wmlce_ddlapi.html" target="_blank">DDL
+APIs</a>
+for a better integration</li>
+</ol>
+<p>Examples:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/IBM/powerai/tree/master/examples/tensorflow_large_model_support/v2" target="_blank">Keras/TensorFlow</a></li>
+<li>Pytorch</li>
+</ul>
+<p>Original IBM DDL paper, can be found at this URL:
+<a class="reference external" href="https://arxiv.org/pdf/1708.02188.pdf" target="_blank">https://arxiv.org/pdf/1708.02188.pdf</a></p>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">MIT Satori User Documentation</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Distributed Deep Learning</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="satori-software.html" title="previous chapter">&lt;no title&gt;</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, MIT.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/satori-distributed-deeplearning.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
