@@ -25,5 +25,17 @@ jobs:
  include:
   - stage: build and test
     name: Build
-    script: make html; pwd; ls -altr _build/html
+    script: make html; pwd; touch _build/html/.nojekyll ; ls -altr _build/html
     skip-cleanup: true
+
+deploy:
+ provider: pages
+ skip_cleanup: true
+ keep_history: true
+ verbose: true
+ repo: mit-satori/mit-satori.github.io
+ local_dir: _build/html
+ github_token: $GH_DEPLOY_TOKEN
+ target_branch: master
+ on:
+  all_branches: true
