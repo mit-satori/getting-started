@@ -37,3 +37,5 @@ deploy:
  local_dir: _build/html
  github_token: $GH_DEPLOY_TOKEN
  target_branch: master
+ on:
+  all_branches: true
