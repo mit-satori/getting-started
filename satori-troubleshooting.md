@@ -20,3 +20,20 @@ conda update --all
 conda update powerai --no-pin
 conda update --all
 ```
+4. WMLE installation when running for the first time
+``` bash
+conda install powerai
+```
+is posible to get the following error:
+```bash
+CondaHTTPError: HTTP 500 INTERNAL SERVER ERROR for url <https://public.dhe.ibm.com/ibmdl/export/pub/software/server/ibm-ai/conda/linux-ppc64le/current_repodata.json>
+Elapsed: 00:00.515998
+
+A remote server error occurred when trying to retrieve this URL.
+
+A 500-type error (e.g. 500, 501, 502, 503, etc.) indicates the server failed to
+fulfill a valid request.  The problem may be spurious, and will resolve itself if you
+try your request again.  If the problem persists, consider notifying the maintainer
+of the remote server.
+```
+to overcome this issue please re-enter your conda command.

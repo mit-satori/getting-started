@@ -1,0 +1,22 @@
+#BSUB -L /bin/bash
+#BSUB -J "keras-test"
+#BSUB -o "keras-test_resnet50_o.%J"
+#BSUB -e "keras-test_resnet50_e.%J"
+#BSUB -n 4
+#BSUB -R "span[ptile=4]"
+#BSUB -gpu "num=4"
+#BSUB -q "normal"
+#BSUB -x
+
+HOME2=/nobackup/users/$(whoami)
+PYTHON_VIRTUAL_ENVIRONMENT=wmlce-1.6.2
+CONDA_ROOT=$HOME2/anaconda3
+source ${CONDA_ROOT}/etc/profile.d/conda.sh
+conda activate $PYTHON_VIRTUAL_ENVIRONMENT
+
+## Download script
+cd ~/
+wget https://raw.githubusercontent.com/IBM/powerai/master/examples/tensorflow_large_model_support/v2/Keras_ManyModel.py
+
+## Run the Python training
+python ~/Keras_ManyModel.py --lms --model resnet50

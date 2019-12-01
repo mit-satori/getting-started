@@ -1,0 +1,17 @@
+#BSUB -L /bin/bash
+#BSUB -J "caffe-test"
+#BSUB -o "caffe-test_o.%J"
+#BSUB -e "caffe-test_e.%J"
+#BSUB -n 4
+#BSUB -R "span[ptile=4]"
+#BSUB -gpu "num=4"
+#BSUB -q "normal"
+#BSUB -x
+
+HOME2=/nobackup/users/$(whoami)
+PYTHON_VIRTUAL_ENVIRONMENT=wmlce-1.6.2
+CONDA_ROOT=$HOME2/anaconda3
+source ${CONDA_ROOT}/etc/profile.d/conda.sh
+conda activate $PYTHON_VIRTUAL_ENVIRONMENT
+
+caffe-test

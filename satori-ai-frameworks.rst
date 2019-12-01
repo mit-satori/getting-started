@@ -41,14 +41,27 @@ accelerate performance:
 [1] Install Anaconda
 ''''''''''''''''''''
 
-To install WMLCE you need to install on your login account `Anaconda for
-Power 9 / ppc64le
-architectue <https://www.anaconda.com/distribution/#download-section>`__.
-Download of the Anaconda can be done using ``wget``:
+All users on Satori will have two folders:
 
 .. code:: bash
 
+   /home/<username>
+   /nobackup/users/<username>
+   
+please download and install Anaconda3 in the: /nobackup/users/<your-username>/anaconda3 
+This is because /nobackup disk partition has way much more space compared with /home. In addition all files in /home will be automaticlay backuped compared with /nobackup partition. Anaconda3 can be install at any time in less then 10 minutes, therefore no backup is need.
+
+To install WMLCE you need to install on your login account `Anaconda for
+POWER9/ ppc64le 
+architecture <https://www.anaconda.com/distribution/#download-section>`__.
+download of the Anaconda can be done using ``wget``:
+
+.. code:: bash
+
+   cd /nobackup/users/$(whoami)
    wget https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-ppc64le.sh
+   sh Anaconda3-2019.10-Linux-ppc64le.sh -f -p /nobackup/users/$(whoami)/anaconda3
+   source ~/.bashrc
 
 By default Anaconda will be insalled in your home folder under
 ``anaconda3`` and all the WMLCE pachages will be install in a
@@ -69,6 +82,7 @@ following command:
 
    conda config --prepend channels \
    https://public.dhe.ibm.com/ibmdl/export/pub/software/server/ibm-ai/conda/
+
 
 [3] WMLCE: Creating and activate conda environments (recommended)
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -174,6 +188,47 @@ b. TensorFlow
    sess = tf.Session()
    # Run the op
    print(sess.run(hello))
+
+c. Caffe 
+Test with LSF workload manager; this will run remote in one of the Satori compute nodes available
+
+.. code:: bash
+
+
+   cd ~/
+   conda install keras
+   wget https://raw.githubusercontent.com/mit-satori/getting-started/master/lsf-templates/template-caffetest-singlenode.lsf
+   bsub < template-caffetest-singlenode.lsf
+   bjobs
+   bjobs
+   bpeek
+   bpeek
+   bpeek
+   bjobs
+
+
+The template-caffe-test-singlenode.lsf consist in the following LSF file: 
+
+.. code:: bash
+
+   #BSUB -L /bin/bash
+   #BSUB -J "caffe-test"
+   #BSUB -o "caffe-test_o.%J"
+   #BSUB -e "caffe-test_e.%J"
+   #BSUB -n 4
+   #BSUB -R "span[ptile=4]"
+   #BSUB -gpu "num=4"
+   #BSUB -q "normal"
+   #BSUB -x
+
+   HOME2=/nobackup/users/$(whoami)
+   PYTHON_VIRTUAL_ENVIRONMENT=wmlce-1.6.2
+   CONDA_ROOT=$HOME2/anaconda3
+   source ${CONDA_ROOT}/etc/profile.d/conda.sh
+   conda activate $PYTHON_VIRTUAL_ENVIRONMENT
+
+   caffe-test
+
 
 You can try even your custom ML/DL code; in case you have missing
 libraries don’t forget to install them with:
