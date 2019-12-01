@@ -1,7 +1,9 @@
+Satori Login
+============
+
 .. figure:: http://www.sldcassam.in/images/login.png
    :alt: Satori Login
 
-   Satori Login
 
 -  Login to Satori cluster is done via SSHv2 as follow:
 
