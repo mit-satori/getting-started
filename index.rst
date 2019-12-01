@@ -18,6 +18,7 @@ combined simulation and machine learning intensive research work.
    satori-ai-frameworks
    satori-distributed-deeplearning
    satori-large-model-support.rst
+   lsf-templates/satori-lsf-ml-examples.rst
    satori-doc-examples-contributing.rst
    
 
