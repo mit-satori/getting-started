@@ -11,7 +11,20 @@ combined simulation and machine learning intensive research work.
    :maxdepth: 2
 
    satori-basics
+   satori-ssh.rst
+   satori-training.rst
+   satori-workload-manager.rst
+   satori-troubleshooting.rst
    satori-ai-frameworks
    satori-distributed-deeplearning
+   satori-large-model-support.rst
+   
+
+-  You don’t find what you where looking for? have a look to `conda
+   cheet
+   sheet <https://github.com/mit-satori/getting-started/blob/master/satori-conda-cheatsheet.pdf>`__
+   and WMLCE extended documentation
+   `here <https://www.ibm.com/support/knowledgecenter/SS5SF7_1.6.2/navigation/wmlce_getstarted.html>`__
+   or ask for help at satori-support@techsquare.com.
   
 
