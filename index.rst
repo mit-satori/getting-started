@@ -22,8 +22,9 @@ combined simulation and machine learning intensive research work.
    satori-doc-examples-contributing.rst
    
 
--  You don’t find what you where looking for? have a look to `conda
-   cheet
+
+You don’t find what you where looking for? 
+   have a look to `conda cheet
    sheet <https://github.com/mit-satori/getting-started/blob/master/satori-conda-cheatsheet.pdf>`__
    and WMLCE extended documentation
    `here <https://www.ibm.com/support/knowledgecenter/SS5SF7_1.6.2/navigation/wmlce_getstarted.html>`__
