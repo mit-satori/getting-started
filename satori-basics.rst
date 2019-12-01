@@ -1,5 +1,5 @@
-Satori Quick Start Info
-=======================
+Satori Basics
+=============
 
 What is Satori?
 ^^^^^^^^^^^^^^^
