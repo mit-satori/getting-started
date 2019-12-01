@@ -27,3 +27,12 @@ jobs:
     name: Build
     script: make html; pwd; ls -altr _build/html
     skip-cleanup: true
+
+deploy:
+ provider: pages
+ skip_cleanup: true
+ keep_history: false
+ verbose: true
+ repo: mit-satori/mit-satori.github.io
+ local_dir: _build/html
+ github_token: $GH_DEPLOY_TOKEN
