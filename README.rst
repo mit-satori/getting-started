@@ -43,6 +43,8 @@ Satori users such as:
    trainings <https://github.com/mit-satori/getting-started/blob/master/satori-training.rst>`__
    (video format) for CUDA UNIFIED MEMORY, GPUDirect, LSF Workload
    Manager, POWER9 SMT4 etc
+   
+-  `Public Datasets for Machine Learning and Deep Learning <https://github.com/mit-satori/getting-started/blob/master/satori-public-datasets.rst>`__ on Satori that can be used day 1 in your deep learning projects. Will save your time and our Internet bandwith :)
 
 -  `Troubleshooting <satori-troubleshooting.rst>`__
 
