@@ -30,7 +30,7 @@ training is using common communication libraries such as:
    communication libraries, including. IBM DDL can be used as backend
    for Horovod implementation.
 
-Documentation and Tutorial:
+IBM DDL - Documentation and Tutorial:
 
 1. IBM `DDL integration with
    TensorFlow/Keras <https://www.ibm.com/support/knowledgecenter/SS5SF7_1.6.2/navigation/wmlce_ddltf_tutorial.html>`__
@@ -46,6 +46,23 @@ Examples:
 
 -  `Keras/TensorFlow <https://github.com/IBM/powerai/tree/master/examples/tensorflow_large_model_support/v2>`__
 -  Pytorch
+
+
+How to get Horovod with DDL? follow bellow instructions (optional 0 - 2 if you have already install WMLCE):
+0. Add ppc64le conda channel for WMLCE
+$ conda config --prepend channels \
+https://public.dhe.ibm.com/ibmdl/export/pub/software/server/ibm-ai/conda/
+1. Create Conda Virtual Environment
+$ conda create --name horovod python=3.6
+2. Install WMLCE (TF, Pytorch, DDL etc)
+$ conda install powerai
+
+
+3. Install the packages to build Horovod
+$ conda install gxx_linux-ppc64le=7.3.0 cffi cudatoolkit-dev
+4. Install Horovod with DDL backend
+$ HOROVOD_CUDA_HOME=$CONDA_PREFIX HOROVOD_GPU_ALLREDUCE=DDL pip install horovod --no-cache-dir
+
 
 Original IBM DDL paper, can be found at this URL:
 https://arxiv.org/pdf/1708.02188.pdf
