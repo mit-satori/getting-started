@@ -49,19 +49,23 @@ Examples:
 
 
 How to get Horovod with DDL? follow bellow instructions (optional 0 - 2 if you have already install WMLCE):
+
 0. Add ppc64le conda channel for WMLCE
-$ conda config --prepend channels \
-https://public.dhe.ibm.com/ibmdl/export/pub/software/server/ibm-ai/conda/
+.. code:: bash
+   conda config --prepend channels \
+   https://public.dhe.ibm.com/ibmdl/export/pub/software/server/ibm-ai/conda/
 1. Create Conda Virtual Environment
-$ conda create --name horovod python=3.6
+.. code:: bash
+   conda create --name horovod python=3.6
 2. Install WMLCE (TF, Pytorch, DDL etc)
-$ conda install powerai
-
-
+.. code:: bash
+   conda install powerai
 3. Install the packages to build Horovod
-$ conda install gxx_linux-ppc64le=7.3.0 cffi cudatoolkit-dev
+.. code:: bash
+   conda install gxx_linux-ppc64le=7.3.0 cffi cudatoolkit-dev
 4. Install Horovod with DDL backend
-$ HOROVOD_CUDA_HOME=$CONDA_PREFIX HOROVOD_GPU_ALLREDUCE=DDL pip install horovod --no-cache-dir
+.. code:: bash
+   HOROVOD_CUDA_HOME=$CONDA_PREFIX HOROVOD_GPU_ALLREDUCE=DDL pip install horovod --no-cache-dir
 
 
 Original IBM DDL paper, can be found at this URL:
