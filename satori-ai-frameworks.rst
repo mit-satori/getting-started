@@ -348,11 +348,12 @@ Packages in the Early Access channel might depend on packages in the
 main channel, so both channels might be needed in the conda config.
 
 Example of getting EA WMLCE software: 
+
+
 .. code:: bash
 
-   conda config --prepend channels https://public.dhe.ibm.com/ibmdl/export/pub/software/server/ibm-ai/conda-early-access/
-   
+   conda config --prepend channels https://public.dhe.ibm.com/ibmdl/export/pub/software/server/ibm-ai/conda-early-access/   
    conda create -n ea_demo python=3.7
-
    conda activate ea_demo 
    conda install tensorflow
+
