@@ -13,7 +13,7 @@ nodes togehter.
 How can I get an account?
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Anyone with active MIT credentials (i.e. all students, employees and sponsored 
+Anyone with active MIT Kerberos credentials (i.e. all students, employees and sponsored 
 guest account https://ist.mit.edu/guest-accounts ) can connect to the Satori portal and create a starter account. A
 starter account is provided somewhat limited access by default. Once a starter account has been created research 
 group leads may request an account be added to one or more projects that can provide larger scale access.  
