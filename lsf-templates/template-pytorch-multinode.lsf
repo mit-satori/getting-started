@@ -49,6 +49,14 @@ EoF_s
 chmod +x launch.sh
 
 
+
+#
+# BEFORE RUNING THIS SCRIPT PLEASE INSTALL PYTORCH TUTORIALS, by running bellow commands:
+#
+# conda activate wmlce-1.6.2
+# pytorch-install-samples /nobackup/users/$(whoami)/pytorch
+
+
 #
 # Runing the training/inference job
 # (change only the script name and options after python command)
