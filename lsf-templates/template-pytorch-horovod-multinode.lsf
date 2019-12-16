@@ -1,8 +1,13 @@
-#BSUB -L /bin/bash
+##
+## ATTENTION:
+## Before running this training job template/script please read the documentation on bellow URL:
+## https://mit-satori.github.io/satori-workload-manager.html#batch-scripts
+##
 ##
 ## Begin LSF Directives (change only no of required GPUs processes/GPUs and job-name-single name as desired/need)
 ## - "-n 4" for single AC922, "-n 8" for 2x AC922s, "-n 16" for 4x AC922s etc
 ##
+#BSUB -L /bin/bash
 #BSUB -J "pytorch-horovod-job-name"
 #BSUB -o "pytorch-horovod-job-name_o.%J"
 #BSUB -e "pytorch-horovod-job-name_e.%J"
