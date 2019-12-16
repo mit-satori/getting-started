@@ -1,3 +1,8 @@
+##
+## ATTENTION:
+## Before running this training job template/script please read the documentation on bellow URL:
+## https://mit-satori.github.io/satori-workload-manager.html#batch-scripts
+##
 #BSUB -L /bin/bash
 #BSUB -J "keras-test"
 #BSUB -o "keras-test_resnet50_o.%J"
