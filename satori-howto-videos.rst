@@ -33,4 +33,4 @@ Jupyterlab with SSH Tunnel on Satori
 
 .. raw:: html
 
-  <iframe src="https://drive.google.com/file/d/1fhNfgv3e1C8930S2HWD_inVq9DAL9E_l/preview" width="640" height="480"></iframe>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/IcXdL3cmTR4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
