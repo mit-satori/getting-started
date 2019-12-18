@@ -24,7 +24,7 @@ Tensorflow with DDL on Satori
 
 .. raw:: html
   
-  <iframe src="https://drive.google.com/file/d/1uxiMhdn55Z9SwqzROrbVIuMUxCjneGYt/preview" width="640" height="480"></iframe>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/7N0kBdmsYxU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   
   
   
