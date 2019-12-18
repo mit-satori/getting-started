@@ -15,7 +15,7 @@ combined simulation and machine learning intensive research work.
    satori-training.rst
    satori-workload-manager.rst
    satori-troubleshooting.rst
-   satori-ai-frameworks
+   satori-ai-frameworks.rst
    satori-howto-videos.rst
    satori-distributed-deeplearning
    satori-large-model-support.rst
