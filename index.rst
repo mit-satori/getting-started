@@ -10,7 +10,7 @@ combined simulation and machine learning intensive research work.
 .. toctree::
    :maxdepth: 2
 
-   satori-basics
+   satori-basics.rst
    satori-ssh.rst
    satori-training.rst
    satori-workload-manager.rst
