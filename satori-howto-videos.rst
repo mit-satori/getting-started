@@ -6,7 +6,7 @@ Installing WMCLE on Satori
 
 .. raw:: html
 
-  <iframe src="https://drive.google.com/file/d/1Y-1Ffht5L4ZqNcMF4bAgTtlOmIzwANOF/preview" width="640" height="480"></iframe>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/H0pf39syK0k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   
   
   
