@@ -19,7 +19,7 @@ How can I get an account?
      starter account is provided somewhat limited access by default. Once a starter account has been created research 
      group leads may request an account be added to one or more projects that can provide larger scale access.  
    
-**Satori is currently in a beta test phase**. Access requires active MIT Kerberos credentials (available all students, employees and sponsored guest accounts https://ist.mit.edu/guest-accounts ). To have your kereberos account activated on Satori please contact with Chris Hill ( cnh@mit.edu ) or John Cohn ( ). 
+**Satori is currently in a beta test phase**. Access requires active MIT Kerberos credentials (available all students, employees and sponsored guest accounts https://ist.mit.edu/guest-accounts ). To have your kereberos account activated on Satori please contact with Chris Hill ( cnh@mit.edu ) or John Cohn (johncohn@us.ibm.com ). 
 
 Once beta testing is complete, anyone with active MIT Kerberos credentials (i.e. all students, employees and sponsored 
 guest account https://ist.mit.edu/guest-accounts ) will be able to connect to Satori via a portal and a 
