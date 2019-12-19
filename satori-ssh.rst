@@ -44,9 +44,9 @@ As general rules:
 
 In case you want to work with Jupiter Notebooks, you will need to
 forward Jupiter HTTP ports to your own workstation via SSHv2 tunneling.
-This can be done like this:
+This can be done like this: (Note FQDN == Fully Qualified Domain Name like nodeXXXX  for the node you are running on (E.g. node0014)
 
-.. code:: bash
+.. code:: bash 
 
    ssh -L 10001:<compute_node_FQDN>:10001 your_username@satori-login-001.mit.edu
    conda activate wmlce-1.6.2
