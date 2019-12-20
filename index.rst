@@ -20,6 +20,7 @@ combined simulation and machine learning intensive research work.
    satori-large-model-support.rst
    lsf-templates/satori-lsf-ml-examples.rst
    satori-howto-videos.rst
+   satori-public-datasets.rst
    satori-doc-examples-contributing.rst
    
 
