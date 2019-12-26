@@ -353,7 +353,7 @@ Example of getting EA WMLCE software:
 .. code:: bash
 
    conda config --prepend channels https://public.dhe.ibm.com/ibmdl/export/pub/software/server/ibm-ai/conda-early-access/   
-   conda create -n ea_demo python=3.7
-   conda activate ea_demo 
+   conda create -n wmlce-ea python=3.6
+   conda activate wmlce-ea 
    conda install tensorflow
 
