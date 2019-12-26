@@ -357,6 +357,7 @@ Example of getting EA WMLCE software:
    conda activate wmlce-ea 
    conda install tensorflow
 
+
 Alternative:
 
 .. code:: bash
@@ -365,5 +366,6 @@ Alternative:
    conda create -n wmlce-ea python=3.6
    conda activate wmlce-ea
    conda install tensorflow=2.0.0=gpu_py36_871.gde25b7a
-   
- To test your TF2 code you can use the this Deep Convolutional Generative Adversarial Network jupyter notebook from this link or go to https://github.com/tensorflow/docs/tree/master/site/en/tutorials 
+
+
+To test your TF2 code you can use the this Deep Convolutional Generative Adversarial Network jupyter notebook from this link or go to https://github.com/tensorflow/docs/tree/master/site/en/tutorials 
