@@ -23,7 +23,7 @@ Satori users such as:
    optimized Machine Learning and Deep Learning libraries and frameworks
    on your login profile
 
--  Learn how you can start your trainig jobs.\ `Examples of training
+-  Learn how you can start your training jobs.\ `Examples of training
    jobs
    submision <https://github.com/mit-satori/getting-started/blob/master/satori-workload-manager.rst>`__
    and management in the Satori cluster.
@@ -54,3 +54,5 @@ Satori users such as:
    and WMLCE extended documentation
    `here <https://www.ibm.com/support/knowledgecenter/SS5SF7_1.6.2/navigation/wmlce_getstarted.html>`__
    before asking for help.
+
+-  Still need help ? Email satori-admin@techsquare.com 
