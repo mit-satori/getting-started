@@ -22,7 +22,6 @@ combined simulation and machine learning intensive research work.
    satori-howto-videos.rst
    satori-public-datasets.rst
    satori-doc-examples-contributing.rst
-   
    satori-getting-help.rst
    
 
