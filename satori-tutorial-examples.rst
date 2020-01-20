@@ -2,4 +2,4 @@
 .. toctree::
    :maxdepth: 2
 
-   systems/index
+   tutorial/examples/unsupervised-learning-on-ocean-ecosystem-model/index.rst
