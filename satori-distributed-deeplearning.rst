@@ -84,6 +84,15 @@ How to get Horovod with DDL? follow bellow instructions (optional 0 - 2 if you h
 .. code:: bash
 
    HOROVOD_CUDA_HOME=$CONDA_PREFIX HOROVOD_GPU_ALLREDUCE=DDL pip install horovod --no-cache-dir
+   
+
+or with NCCL direct support (recomanded for Pytorch)
+
+
+.. code:: bash
+
+   env HOROVOD_CUDA_HOME=$CONDA_PREFIX HOROVOD_NCCL_HOME=$CONDA_PREFIX HOROVOD_GPU_ALLREDUCE=NCCL HOROVOD_GPU_BROADCAST=NCCL pip install --no-cache horovod
+
 
 
 Original IBM DDL paper, can be found at this URL:
