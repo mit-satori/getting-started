@@ -4,7 +4,4 @@ Tutorial Examples
 .. toctree::
    :maxdepth: 2
 
-    a/doc
-    a/doc2
-    b/doc3
-    b/doc4
+    unsupervised-learning-on-ocean-ecosystem-model/index
