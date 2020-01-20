@@ -35,10 +35,10 @@ cat > setup.sh << EoF_s
 ##
 if [ \${OMPI_COMM_WORLD_LOCAL_RANK} -eq 0 ]
 then
-  sudo ppc64_cpu --smt=2                 # Set the SMT mode to 2
+  # sudo ppc64_cpu --smt=2                 # Set the SMT mode to 2
   ppc64_cpu --smt                        # Verify the SMT mode
-  sudo nvidia-smi -rac                   # For POWER9+V100
-  sudo nvidia-smi --compute-mode=DEFAULT # Set the compute mode to DEFAULT
+  # sudo nvidia-smi -rac                   # For POWER9+V100
+  # sudo nvidia-smi --compute-mode=DEFAULT # Set the compute mode to DEFAULT
   /bin/rm -rf /tmp/data.${USER}          # Delete the scratch directory
 fi
 EoF_s
