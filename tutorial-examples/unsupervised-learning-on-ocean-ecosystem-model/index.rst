@@ -7,10 +7,14 @@ Description
 +++++++++++
 
 
-Commands to run example
-+++++++++++++++++++++++
+Commands to run this example
+++++++++++++++++++++++++++++
 
 
 
-Code and input data repositories
-++++++++++++++++++++++++++++++++
+Code and input data repositories for this example
++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+Useful references
++++++++++++++++++
