@@ -12,6 +12,7 @@ combined simulation and machine learning intensive research work.
 
    satori-basics.rst
    satori-ssh.rst
+   satori-portal.rst
    satori-training.rst
    satori-workload-manager.rst
    satori-troubleshooting.rst
