@@ -25,7 +25,7 @@ In general, the process for running a batch job is to:
 -  Prepare executables and input files
 -  Modify provided LSF job template for the batch script or write a new
    one
--  Submit the batch script to the WOrkload Manager
+-  Submit the batch script to the Workload Manager
 -  Monitor the job’s progress before and during execution
 
 Interactive Jobs
