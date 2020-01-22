@@ -40,7 +40,7 @@ As general rules:
    files/datasets and compiling software requireing nvcc, gcc, XL
    compiler etc
 -  if one login-node will not be available try the second one
--  dont’t run trainings of login nodes
+-  don’t run trainings on login nodes
 
 In case you want to work with Jupiter Notebooks, you will need to
 forward Jupiter HTTP ports to your own workstation via SSHv2 tunneling.
