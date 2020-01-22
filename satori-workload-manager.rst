@@ -25,7 +25,7 @@ In general, the process for running a batch job is to:
 -  Prepare executables and input files
 -  Modify provided LSF job template for the batch script or write a new
    one
--  Submit the batch script to the WOrkload Manager
+-  Submit the batch script to the Workload Manager
 -  Monitor the job’s progress before and during execution
 
 Interactive Jobs
@@ -35,7 +35,7 @@ Most users will find batch jobs to be the easiest way to interact with
 the system, since they permit you to hand off a job to the scheduler and
 then work on other tasks; however, it is sometimes preferable to run
 interactively on the system. This is especially true when developing,
-modifying, or debugging a code.
+modifying, or debugging code.
 
 Since all compute resources are managed/scheduled by LSF, it is not
 possible to simply log into the system and begin running a parallel code
