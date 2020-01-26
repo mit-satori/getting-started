@@ -1,5 +1,32 @@
+Satori Login
+============
+
+You can connect to Satori through a web portal that uses the open source Open On Demand ( https://osc.github.io/ood-documentation/master/architecture.html ) software, or through plain ssh from a terminal or a terminal client like PuTTY (https://www.putty.org). 
+
 Web Portal Login
 ^^^^^^^^^^^^^^^^
+
+To use the web portal
+
+#. Navigate to https://satori-portal.mit.edu in your favorite web browser.
+
+#. Select the Globus Auth button.
+
+#. When redirected to globus, authenticate via Massachusetts Institute of Technology.
+
+#. When successfully logged in, you will be redirected back to Satori Portal! 
+
+
+you can then launch Jupyter notebook environments running on GPUs 
+
+
+#. Select "Jupyter Notebook" from the "Interactive Apps" dropdown in the top navbar. You can also select "My Interactive Sessions".
+
+#. At the prompt to launch a Jupyter notebook, select the "Anaconda 2019.10 PowerAI [Experimental]" option in the "Choose Anaconda Environment" section. 
+
+#. Enter (in hours) how long you would like the app to run for. 
+
+#. Click launch, wait for app to begin running on a compute node and finally, select "Connect to Jupyter"!
 
 SSH Login
 ^^^^^^^^^
