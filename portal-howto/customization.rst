@@ -136,7 +136,10 @@ Additionally we might want to include a Julia interactive environment and an Oct
       module load julia/1.3.0
       julia -E 'using Pkg; Pkg.add("IJulia")'
       
-Files and directories::
+Files and directories
+---------------------
+
+ ::
 
    ~/.local/share/jupyter/kernels/cnh-awesome-new-environment/
    ~/.local/share/jupyter/kernels/cnh-awesome-new-environment/kernel.json
