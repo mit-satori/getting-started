@@ -1,3 +1,6 @@
+.. image:: https://travis-ci.org/mit-satori/getting-started.svg?branch=master
+    :target: https://travis-ci.org/mit-satori/getting-started
+
 .. figure:: images/Satori6.png
    :alt: Satori
 
