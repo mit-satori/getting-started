@@ -25,3 +25,6 @@ that you can request be added for your group to a standard set.
 Steps to create kernel
 ======================
 
+These instructions assume you are slightly familiar with conda ( https://docs.conda.io/en/latest/index.html ) and that you are
+starting a brand new conda environment for the kernel. 
+
