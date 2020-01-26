@@ -69,8 +69,8 @@ inadvertantly overwriting and existing conda environment. If conda is not alread
      CKNAME=cnh-awesome-new-environment
      CKUSER=cnh
      CKROOT=projects/condas
-     mkdir -p /nobackup/users/${CKUSER}/$CKROOT}/${ENAME}
-     cd /nobackup/users/${CKUSER}/$CKROOT}/${ENAME}
+     mkdir -p /nobackup/users/${CKUSER}/$CKROOT}/${CKNAME}
+     cd /nobackup/users/${CKUSER}/$CKROOT}/${CKNAME}
      wget https://repo.continuum.io/miniconda/Miniconda2-4.7.12.1-Linux-ppc64le.sh
      chmod +x Miniconda2-4.7.12.1-Linux-ppc64le.sh
      ./Miniconda2-4.7.12.1-Linux-ppc64le.sh -b -p `pwd`/miniconda3
