@@ -45,4 +45,4 @@ available in the OOD portal, under the **Clusters** pull-down.
 
 we will use the OOD terminal for executing the steps needed for a custom kernel. Alternatively, the same steps
 can be carried out when logged in from an ssh session, for example via the command line
-```ssh -l USER satori-login-001.mit.edu``` of through a client like PuTTY.
+``ssh -l USER satori-login-001.mit.edu`` of through a client like PuTTY.
