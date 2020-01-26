@@ -84,8 +84,8 @@ Commands to type to create a new conda environment and custom kernel
    is complete, renaming or moving the install directory 
    ( ``/nobackup/users/cnh/projects/condas/cnh-awesome-new-environment`` in this example) will break the setup. 
    
-#. **Activate.** Once the new environment has been created in its own directory, make sure the shell is still has the 
-   correct settings and then activate using the following commands::
+#. **Activate.** Once the new conda environment has been created in its own directory, make sure the shell still has the 
+   correct settings and then *activate* the environment in the terminal shell session using the following commands::
 
       CKNAME=cnh-awesome-new-environment
       CKUSER=cnh
@@ -95,6 +95,12 @@ Commands to type to create a new conda environment and custom kernel
       . miniconda3/etc/profile.d/conda.sh
       conda create -y --name ${CKNAME} python=3.6
       conda activate ${CKNAME}
+      
+   **NOTE** - the conda environment *activate* step applies to the terminal shell session in which 
+   the **activate** commands are run. If you start a new terminal or shell you will need to rerun the activate step before
+   exectuing the **install** commands.
+   
+#. **Install.** Once the conda environment has been **created** and is **activated** in the terminal shell. 
 
 
 
