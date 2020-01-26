@@ -1,4 +1,4 @@
 Satrori useful tips and tricks
 ==============================
 
-.. include:: show-disk-quota/index.rst
+.. include:: show-disk-quota.rst
