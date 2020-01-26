@@ -12,5 +12,13 @@ packages that are missing and see a message like this image
 
 When this happens it is possible to create a custom kernel yourself
 that will be included in the OOD menu for your account. That kernel can
-include any available software you want.  
+include any available software you want. You can also request that the
+module be added to a standard environment or that a new standard environment
+be added, however, sometimes that requires waiting or the module may conflict 
+with something else. 
+
+By learning how to add your own kernels you can avoid having to wait, work around
+any incompatabilities. You can also gather customized, versioned sets of tools into 
+a standard kernel that can be shared within a group working on a common project, or
+that you can request be added for your group to a standard set. 
 
