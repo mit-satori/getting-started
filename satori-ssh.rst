@@ -67,19 +67,16 @@ SSH Login
    scp <local-file.py> your_username@satori-login-001.mit.edu:
 
 -  Once connected through ssh if you are familiar with tools like LSF you can start
-   interactive or batch scripts. 
+   interactive or batch scripts e.g.
 
 .. code:: bash
 
-   bsub -ISp -tty -q normal /bin/bash
+   bsub -ISp -tty -q default /bin/bash
+   bsub -q default < myjobscript.lsf
    
-   scp ResNet50-Keras.py florin@satori-login-002.mit.edu:
-   ssh florin@satori-login-002.mit.edu
-   conda activate wmlce-1.6.2
-   python ResNet50-Keras.py
    
-If you are not familiar with LSF and cluster use take a look at the tutorial examples in other sections 
-of this document. 
+If you are not familiar with LSF and cluster there are tutorial examples in other pages
+of this document that can help show how to get started. 
 
 As general rules:
 
