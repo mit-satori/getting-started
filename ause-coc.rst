@@ -28,7 +28,7 @@ Code of Conduct
 
 The Satori system is a shared resource used by a wide community. All people involved in
 its use and operations should try their utmost to be courteous at all times. Members of the 
-Satori  community should be respectful toward one another, and endeavor to ensure a 
+Satori  community should be respectful toward one another and endeavor to ensure a 
 welcoming and collegial environment for all. Account holders are also expected to respect
 privacy of others activities on the system, and not to try to gain access to parts of the
 system they are not explicitly authorized to access. 
