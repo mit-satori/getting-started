@@ -9,6 +9,12 @@ welcome contributions.
 Tips and tricks
 ---------------
 
-.. include:: /tips-and-tricks/show-disk-quota/index.rst
 
-.. include:: tips-and-tricks/show-disk-quota/index.rst
+.. toctree::
+   :maxdepth: 2
+
+   show-disk-quota/index.rst
+
+# .. include:: /tips-and-tricks/show-disk-quota/index.rst
+
+# .. include:: tips-and-tricks/show-disk-quota/index.rst
