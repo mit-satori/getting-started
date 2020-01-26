@@ -108,7 +108,7 @@ Commands to type to create a new conda environment and custom kernel
    ``seaborn`` ( https://anaconda.org/anaconda/seaborn ), ``statsmodels`` ( https://anaconda.org/anaconda/statsmodels )
    and ``netcdf4`` (https://anaconda.org/anaconda/netcdf4). All except ``netcdf4`` are currently in a standard 
    kernel on Satori. We include an environment variable ``IBM_POWERAI_LICENSE_ACCEPT=yes`` so that we can run things
-   without interaction. Additionally we include a Julia interactive environment and an Octave interactive environment::
+   without interaction. The final commands needed are then::
    
       
       CKNAME=cnh-awesome-new-environment
@@ -123,8 +123,22 @@ Commands to type to create a new conda environment and custom kernel
       conda install -y keras patsy seaborn netcdf4
       pip install --user ipykernel
       python -m ipykernel install --user --name=${CKNAME}
+      
+    This creates a new kernel we can start from our OOD Jupyter launcher. It should be visible, under the name given by 
+    ``${CKNAME}`` , when a new Jupyter session is started. 
+      
+Additionally we might want to include a Julia interactive environment and an Octave interactive environment::
+
+  
       module load julia/1.3.0
       julia -E 'using Pkg; Pkg.add("IJulia")'
+      
+Files and directories::
+
+   ~/.local/share/jupyter/kernels/cnh-awesome-new-environment/
+   ~/.local/share/jupyter/kernels/cnh-awesome-new-environment/kernel.json
+   ~/.local/share/jupyter/kernels/julia-1.3
+   
       
 
 
