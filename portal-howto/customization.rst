@@ -70,16 +70,27 @@ Commands to type to create a new conda environment and custom kernel
         CKNAME=cnh-awesome-new-environment
         CKUSER=cnh
         CKROOT=projects/condas
-        mkdir -p /nobackup/users/${CKUSER}/$CKROOT}/${CKNAME}
+        mkdir -p /nobackup/users/${CKUSER}/${CKROOT}/${CKNAME}
         cd /nobackup/users/${CKUSER}/$CKROOT}/${CKNAME}
         wget https://repo.continuum.io/miniconda/Miniconda2-4.7.12.1-Linux-ppc64le.sh
         chmod +x Miniconda2-4.7.12.1-Linux-ppc64le.sh
         ./Miniconda2-4.7.12.1-Linux-ppc64le.sh -b -p `pwd`/miniconda3
-        export PATH="`pwd`/miniconda3/bin:$PATH"
    
    
    **NOTE** - the conda commands tend to hard code full path names as part of their installation. So, once the create step
-   is complete, renaming or moving ``/nobackup/users/cnh/projects/condas/cnh-awesome-new-environment``will break the setup.  
+   is complete, renaming or moving ``/nobackup/users/cnh/projects/condas/cnh-awesome-new-environment``will break the setup. 
+   
+#. **Activate.** Once the new environment has been created in its own directory, make sure the shell is still has the 
+   correct settings and then activate using the following commands::
+
+      CKNAME=cnh-awesome-new-environment
+      CKUSER=cnh
+      CKROOT=projects/condas
+      cd /nobackup/users/${CKUSER}/${CKROOT}/${CKNAME}
+      export PATH="`pwd`/miniconda3/bin:$PATH"
+      . miniconda3/etc/profile.d/conda.sh
+      conda create -y --name ${CKNAME} python=3.6
+      conda activate ${CKNAME}
 
 
 
