@@ -11,7 +11,7 @@ combined simulation and machine learning intensive research work.
    :maxdepth: 2
 
    satori-basics.rst
-   satori-ssh.rst
+   Satori Login <satori-ssh.rst>
    satori-portal.rst
    satori-training.rst
    satori-workload-manager.rst
