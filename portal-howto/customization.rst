@@ -22,3 +22,6 @@ any incompatabilities. You can also gather customized, versioned sets of tools i
 a standard kernel that can be shared within a group working on a common project, or
 that you can request be added for your group to a standard set. 
 
+Steps to create kernel
+======================
+
