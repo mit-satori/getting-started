@@ -23,8 +23,9 @@ any incompatibilities. You can also gather customized, versioned sets of tools i
 a standard kernels that can then be shared within a group working on a common 
 project, or that you can request be added for your group to a standard set. This can
 be more efficient than having to wait for something to installed centrally every
-time you find a new awesome package that all the cool people are using. An additional
-benefit of mastering creating your own kernels is it can help with sharing and reproducibility
+time you find a new awesome package that all the cool people are using. 
+
+An additional benefit of knowing how to create your own kernels is that it can help with sharing and reproducibility
 of results. Stric versioning and maintaining historic kernels in perpetuity in central locations 
 can easily become an impractical combinatorial challenge. Creating
 precise kernels that collect specific version combinations of software in an 
