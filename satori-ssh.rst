@@ -3,9 +3,9 @@ Satori Login
 
 You can connect to Satori through 
 
- * a web portal that uses the open source Open On Demand ( https://osc.github.io/ood-documentation/master/architecture.html ) software, or 
+* a web portal that uses the open source Open On Demand ( https://osc.github.io/ood-documentation/master/architecture.html ) software, or 
 
- * through plain ssh from a terminal or a terminal client like PuTTY (https://www.putty.org). 
+* through plain ssh from a terminal or a terminal client like PuTTY (https://www.putty.org). 
 
 Web Portal Login
 ^^^^^^^^^^^^^^^^
