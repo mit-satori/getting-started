@@ -6,8 +6,8 @@ rendered into a document using Sphinx. Please feel free to post issues, or (even
 submit pull requests against the documentation repo, https://github.com/mit-satori/getting-started. We
 welcome contributions. 
 
-Tips and tricks
----------------
+Tips, tricks and questions
+--------------------------
 
 
 .. toctree::
