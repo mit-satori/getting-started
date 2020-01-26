@@ -48,6 +48,9 @@ can be carried out when logged in from an ssh session, for example via the comma
 ``ssh -l USER satori-login-001.mit.edu`` of through a client like PuTTY.
 
 To create our new kernel we will  
-1. create a brand new, clean conda environment in a new directory
-2. activate the environment and install the packages we need
-3. initialise the interactive python settings for the new environment
+
+  1. create a brand new, clean conda environment in a new directory
+  
+  2. activate the environment and install the packages we need
+  
+  3. initialise the interactive python settings for the new environment
