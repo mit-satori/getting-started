@@ -58,7 +58,7 @@ To create our new kernel we will
 Commands to type to create a new conda environment and custom kernel
 --------------------------------------------------------------------
 
-These commands create a new conda environment. This example uses the account name ``cnh``. The new 
+#. **Create.** These commands create a new conda environment. This example uses the account name ``cnh``. The new 
 environment is placed in a new directory under the scratch space ``/nobackup/users/cnh/projects/condas`` belonging to 
 the account ``cnh``. The new environment is named ``cnh-awesome-new-environment``. These values can be changed for 
 different accounts and ways of organizing files. The command sequence starts with ``conda deactivate`` to prevent
@@ -76,5 +76,7 @@ inadvertantly overwriting and existing conda environment. If conda is not alread
      ./Miniconda2-4.7.12.1-Linux-ppc64le.sh -b -p `pwd`/miniconda3
      export PATH="`pwd`/miniconda3/bin:$PATH"
    
-**NOTE** The conda commands tend to hard code full path names as part of their installation. So, once the create step is complete, renaming or moving ``/nobackup/users/cnh/projects/condas/cnh-awesome-new-environment``will break the setup.     
+**NOTE** - the conda commands tend to hard code full path names as part of their installation. So, once the create step is complete, renaming or moving ``/nobackup/users/cnh/projects/condas/cnh-awesome-new-environment``will break the setup.  
+
+
 
