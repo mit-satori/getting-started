@@ -32,6 +32,15 @@ you can then launch Jupyter notebook environments running on GPUs
 
 #. Click launch, wait for app to begin running on a compute node and finally, select "Connect to Jupyter"!
 
+the web portal also has sub-menus for
+
+#. a terminal on the front-end node (**Clusters** menu)
+
+#. a running job monitoring window (**Jobs** menu). This is also has a batch job preparation form, but
+   it is malfunction at the moment! 
+   
+#. a file browsing and transfer client (**Files** menu)
+
 SSH Login
 ^^^^^^^^^
 
@@ -57,14 +66,20 @@ SSH Login
 
    scp <local-file.py> your_username@satori-login-001.mit.edu:
 
--  For example:
+-  Once connected through ssh if you are familiar with tools like LSF you can start
+   interactive or batch scripts. 
 
 .. code:: bash
 
+   bsub -ISp -tty -q normal /bin/bash
+   
    scp ResNet50-Keras.py florin@satori-login-002.mit.edu:
    ssh florin@satori-login-002.mit.edu
    conda activate wmlce-1.6.2
    python ResNet50-Keras.py
+   
+If you are not familiar with LSF and cluster use take a look at the tutorial examples in other sections 
+of this document. 
 
 As general rules:
 
@@ -76,12 +91,3 @@ As general rules:
 -  if one login-node will not be available try the second one
 -  don’t run trainings on login nodes
 
-In case you want to work with Jupiter Notebooks, you will need to
-forward Jupiter HTTP ports to your own workstation via SSHv2 tunneling.
-This can be done like this: (Note FQDN == Fully Qualified Domain Name like nodeXXXX  for the node you are running on (E.g. node0014)
-
-.. code:: bash 
-
-   ssh -L 10001:<compute_node_FQDN>:10001 your_username@satori-login-001.mit.edu
-   conda activate wmlce-1.6.2
-   jupyter notebook --ip=<compute_node_FQDN> --port=10001
