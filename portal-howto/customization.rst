@@ -64,8 +64,8 @@ To create our new kernel we will
   
 #. **Initialise** the interactive python settings for the new environment
 
-Commands to type to create a new conda environment and custom kernel
---------------------------------------------------------------------
+Commands to create a new conda environment with a custom Python kernel
+----------------------------------------------------------------------
 
 #. **Create.** The bash shell commands create a new conda environment. This example uses the account name ``cnh``. The new 
    environment is placed in a new directory under the scratch space ``/nobackup/users/cnh/projects/condas`` belonging to 
