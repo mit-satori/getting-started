@@ -49,8 +49,8 @@ can be carried out when logged in from an ssh session, for example via the comma
 
 To create our new kernel we will  
 
-# **create** a brand new, clean conda environment in a new directory
+#. **create** a brand new, clean conda environment in a new directory
   
-# **activate** the environment and install the packages we need
+#. **activate** the environment and install the packages we need
   
-# **initialise** the interactive python settings for the new environment
+#. **initialise** the interactive python settings for the new environment
