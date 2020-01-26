@@ -39,3 +39,7 @@ These instructions assume you are slightly familiar with conda ( https://docs.co
 starting a brand new conda environment for this kernel. The steps involve a series of terminal commands. There is a terminal
 available in the OOD portal, under the **Clusters** pull-down.
 
+.. image:: clusters-pull-down.png	
+  :width: 400
+  :alt: Cluster terminal pull down
+
