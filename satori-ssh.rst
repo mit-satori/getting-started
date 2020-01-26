@@ -96,6 +96,13 @@ This can be done like this: (Note FQDN == Fully Qualified Domain Name like nodeX
 .. code:: bash 
 
    ssh -L 10001:<compute_node_FQDN>:10001 your_username@satori-login-001.mit.edu
-   conda activate wmlce-1.6.2
    jupyter notebook --ip=<compute_node_FQDN> --port=10001
+   
+if you do this, remember to activate whatever conda enviroment you wish to use before starting ``jupyter`` e.g
+
+.. code:: bash 
+
+   
+   conda activate wmlce-1.6.2
+   
 
