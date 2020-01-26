@@ -18,6 +18,19 @@ Slack
 ^^^^^
 
 A Slack channel for advice, discussion, advance problem solving and more is available to all Satorians.
-You can connect to the channel `here <https://mit-satori.slack.com/>`_ .
+You can connect to the channel `here <https://mit-satori.slack.com/>`_ . To request an invite to
+te Slack channel follow this `link <https://join.slack.com/t/mit-satori/shared_invite/enQtOTE2Mjk2NTc3MTI0LWNmZTAwMGFlM2NlZWMyZjUwOGExMTg1Mjg2ZmUzODIxMzM5YzkzNTE0NmJhZTc2NzhlZTExZmU3MWY5ZWNjZWQ>`_ . 
+
+Slack or satori-support@techsquare.com
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+For basic things, like *I can't log in* an email to satori-support@techsquare.com is probably best. For more involved things like *Does anyone know how to make Horovod do parallel I/O properly* the Slack channel may be more useful. 
+
+Tips and Tricks
+^^^^^^^^^^^^^^^
+
+There is a Tips and Tricks section in the Satori documentation web pages. That can be a useful place to find out 
+specifc weird commands or environment variables that have proved useful. If you have material to contribute their, please
+feel free to add things via Git. 
 
 
