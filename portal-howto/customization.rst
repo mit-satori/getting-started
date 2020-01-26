@@ -22,8 +22,8 @@ any incompatabilities. You can also gather customized, versioned sets of tools i
 a standard kernel that can be shared within a group working on a common project, or
 that you can request be added for your group to a standard set. 
 
-Steps to create kernel
-======================
+Steps to create a kernel
+========================
 
 These instructions assume you are slightly familiar with conda ( https://docs.conda.io/en/latest/index.html ), that you are
 starting a brand new conda environment for this kernel. The steps involve a series of terminal commands. There is a terminal
