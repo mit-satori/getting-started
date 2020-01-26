@@ -10,3 +10,5 @@ Tips and tricks
 ---------------
 
 .. include:: /tips-and-tricks/show-disk-quota/index.rst
+
+.. include:: tips-and-tricks/show-disk-quota/index.rst
