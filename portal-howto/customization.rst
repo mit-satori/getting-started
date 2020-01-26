@@ -36,7 +36,9 @@ Steps to create a kernel
 ========================
 
 These instructions assume you are slightly familiar with conda ( https://docs.conda.io/en/latest/index.html ), that you are
-starting a brand new conda environment for this kernel. The steps involve a series of terminal commands. There is a terminal
+starting a brand new conda environment for this kernel. The steps involve a series of terminal commands and assume 
+you are familiar with working at the terminal command line ( if you are not you can ask someone for 
+help and can also find tutorials on line https://ryanstutorials.net/linuxtutorial/ ). There is a terminal
 available in the OOD portal, under the **Clusters** pull-down.
 
 .. image:: clusters-pull-down.png	
