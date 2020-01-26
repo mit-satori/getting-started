@@ -49,11 +49,11 @@ can be carried out when logged in from an ssh session, for example via the comma
 
 To create our new kernel we will  
 
-#. **create** a brand new, clean conda environment in a new directory
+#. **Create** a brand new, clean conda environment in a new directory
   
-#. **activate** the environment and install the packages we need
+#. **Activate** the environment and install the packages we need
   
-#. **initialise** the interactive python settings for the new environment
+#. **Initialise** the interactive python settings for the new environment
 
 Commands to type to create a new conda environment and custom kernel
 --------------------------------------------------------------------
@@ -66,16 +66,16 @@ Commands to type to create a new conda environment and custom kernel
    command not found`` may be printed. That is OK::
 
 
-     conda deactivate
-     CKNAME=cnh-awesome-new-environment
-     CKUSER=cnh
-     CKROOT=projects/condas
-     mkdir -p /nobackup/users/${CKUSER}/$CKROOT}/${CKNAME}
-     cd /nobackup/users/${CKUSER}/$CKROOT}/${CKNAME}
-     wget https://repo.continuum.io/miniconda/Miniconda2-4.7.12.1-Linux-ppc64le.sh
-     chmod +x Miniconda2-4.7.12.1-Linux-ppc64le.sh
-     ./Miniconda2-4.7.12.1-Linux-ppc64le.sh -b -p `pwd`/miniconda3
-     export PATH="`pwd`/miniconda3/bin:$PATH"
+        conda deactivate
+        CKNAME=cnh-awesome-new-environment
+        CKUSER=cnh
+        CKROOT=projects/condas
+        mkdir -p /nobackup/users/${CKUSER}/$CKROOT}/${CKNAME}
+        cd /nobackup/users/${CKUSER}/$CKROOT}/${CKNAME}
+        wget https://repo.continuum.io/miniconda/Miniconda2-4.7.12.1-Linux-ppc64le.sh
+        chmod +x Miniconda2-4.7.12.1-Linux-ppc64le.sh
+        ./Miniconda2-4.7.12.1-Linux-ppc64le.sh -b -p `pwd`/miniconda3
+        export PATH="`pwd`/miniconda3/bin:$PATH"
    
     **NOTE** - the conda commands tend to hard code full path names as part of their installation. So, once the create step
     is complete, renaming or moving ``/nobackup/users/cnh/projects/condas/cnh-awesome-new-environment``will break the setup.  
