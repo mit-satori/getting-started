@@ -77,6 +77,7 @@ Commands to type to create a new conda environment and custom kernel
         ./Miniconda2-4.7.12.1-Linux-ppc64le.sh -b -p `pwd`/miniconda3
         export PATH="`pwd`/miniconda3/bin:$PATH"
    
+   
     **NOTE** - the conda commands tend to hard code full path names as part of their installation. So, once the create step
     is complete, renaming or moving ``/nobackup/users/cnh/projects/condas/cnh-awesome-new-environment``will break the setup.  
 
