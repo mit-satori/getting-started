@@ -81,7 +81,8 @@ Commands to type to create a new conda environment and custom kernel
    
    
    **NOTE** - the conda commands tend to hard code full path names as part of their installation. So, once the **Create** step
-   is complete, renaming or moving ``/nobackup/users/cnh/projects/condas/cnh-awesome-new-environment`` will break the setup. 
+   is complete, renaming or moving the install directory 
+   ( ``/nobackup/users/cnh/projects/condas/cnh-awesome-new-environment`` in this example) will break the setup. 
    
 #. **Activate.** Once the new environment has been created in its own directory, make sure the shell is still has the 
    correct settings and then activate using the following commands::
