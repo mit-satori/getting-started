@@ -13,7 +13,8 @@ to use judgement and apply common sense to their use of the system. The system i
 to be used to support commercial activities or for non-MIT related activities. It is not
 to be used for anything that might be construed as illegal or criminal. Datasets on
 the system must have been obtained legitimately and the system is not to be used
-for working with unanonymized data. If you are unsure about a planned use please feel
+for working with unanonymized data or data subject to ITAR or other national security 
+restrictions. If you are unsure about a planned use, please feel
 free to contact satori-support@techsquare.com. 
 
 Account holders should not share accounts and should take reasonable precautions to ensure 
