@@ -89,3 +89,13 @@ As general rules:
 -  don’t run large computations on the login nodes
 
 
+In case you want to work with Jupiter Notebooks but cannot use the https://satori-portal.mit.edu portal, you will 
+need to forward Jupiter HTTP ports to your own workstation via SSHv2 tunneling.
+This can be done like this: (Note FQDN == Fully Qualified Domain Name like nodeXXXX  for the node you are running on (E.g. node0014)
+
+.. code:: bash 
+
+   ssh -L 10001:<compute_node_FQDN>:10001 your_username@satori-login-001.mit.edu
+   conda activate wmlce-1.6.2
+   jupyter notebook --ip=<compute_node_FQDN> --port=10001
+
