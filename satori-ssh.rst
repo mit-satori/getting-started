@@ -71,8 +71,8 @@ SSH Login
 
 .. code:: bash
 
-   bsub -ISp -tty -q default /bin/bash
-   bsub -q default < myjobscript.lsf
+   bsub -ISp -tty -q short /bin/bash
+   bsub -q short < myjobscript.lsf
    
    
 If you are not familiar with LSF and cluster there are tutorial examples in other pages
@@ -86,5 +86,6 @@ As general rules:
    files/datasets and compiling software requireing nvcc, gcc, XL
    compiler etc
 -  if one login-node will not be available try the second one
--  don’t run trainings on login nodes
+-  don’t run large computations on the login nodes
+
 
