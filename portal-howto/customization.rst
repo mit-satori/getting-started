@@ -130,7 +130,7 @@ Commands to type to create a new conda environment and custom kernel
 Some additional steps
 ---------------------
 
-Additionally we might want to include a Julia interactive environment and an Octave interactive environment. We should document how to do that here.
+Additionally we might want to include a Julia interactive environment and an Octave interactive environment. We should document how to do that here::
 
   
       module load julia/1.3.0
@@ -139,7 +139,7 @@ Additionally we might want to include a Julia interactive environment and an Oct
 Files and directories
 ---------------------
 
- ::
+ There are several files and directories that are useful to know about::
 
    ~/.local/share/jupyter/kernels/cnh-awesome-new-environment/
    ~/.local/share/jupyter/kernels/cnh-awesome-new-environment/kernel.json
