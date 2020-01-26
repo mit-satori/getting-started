@@ -2,7 +2,7 @@ Creating your own Jupyter kernels for OOD portal
 ++++++++++++++++++++++++++++++++++++++++++++++++
 
 The OOD portal has a set of centrally installed Jupyter kernels that
-include common software. The software aims to cover most
+include common software. The aims is to cover most
 things needed for frequently used tools. If you start using
 the portal extensively, sometimes you will come across
 packages that are missing and see a message like this image
@@ -11,12 +11,19 @@ packages that are missing and see a message like this image
   :width: 400
   :alt: Module not found message
 
-When this happens it is possible to create a custom kernel yourself.
-This kernel will then be included in the OOD menu for your account. That kernel can
-include any available software you want. You can also request that the
-module be added to one of the standard environments or that a new standard environment
-be added. Sometimes, however, getting a module added to the standard environment 
-requires waiting or the module may conflict with something else. 
+This is a sad moment, but inevtiable because people keep creating new and exciting
+packages and it is hard for the central repository to keep up. 
+Fortunately it is possible to create a custom kernel yourself.
+This kernel will then be included in the OOD launcher options for your account alongside
+the standard kernels. A kernel you create can
+include any available software you can figure out how to install. The instructions on this
+page show you how to go about creating your own kernel. 
+
+*Note* you can also request that 
+modules be added to one of the standard environments or that a new standard environment
+be added. The standard modues do evolve and new software is added as it the administration
+group becomes aware of them. Sometimes, however, getting a module added to the standard environment 
+requires waiting a little, or the module may conflict with something else. 
 
 By learning how to add your own kernels you can avoid having to wait and work around
 any incompatibilities. You can also gather customized, versioned sets of tools into 
@@ -127,10 +134,10 @@ Commands to type to create a new conda environment and custom kernel
    This creates a new kernel we can start from our OOD Jupyter launcher. It should be visible, under the name given by 
    ``${CKNAME}`` , when a new Jupyter session is started. 
    
-Some additional steps
----------------------
+Some additional steps for Julia and Octave
+------------------------------------------
 
-Additionally we might want to include a Julia interactive environment and an Octave interactive environment. We should document how to do that here::
+Additionally we might want to include a Julia interactive environment and an Octave interactive environment. This section should document more about how how to do that here::
 
   
       module load julia/1.3.0
@@ -139,7 +146,7 @@ Additionally we might want to include a Julia interactive environment and an Oct
 Files and directories
 ---------------------
 
- There are several files and directories that are useful to know about::
+ There are several files and directories that are useful to know about. This section could provide some details on these::
 
    ~/.local/share/jupyter/kernels/cnh-awesome-new-environment/
    ~/.local/share/jupyter/kernels/cnh-awesome-new-environment/kernel.json
