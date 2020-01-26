@@ -18,6 +18,6 @@ Slack
 ^^^^^
 
 A Slack channel for advice, discussion, advance problem solving and more is available to all Satorians.
-You can connect to the channel [https://mit-satori.slack.com](here).
+You can connect to the channel `here <https://mit-satori.slack.com/>`_ .
 
 
