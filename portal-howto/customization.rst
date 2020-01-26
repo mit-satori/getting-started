@@ -74,10 +74,12 @@ Commands to type to create a new conda environment and custom kernel
         CKROOT=projects/condas
         conda deactivate
         mkdir -p /nobackup/users/${CKUSER}/${CKROOT}/${CKNAME}
-        cd /nobackup/users/${CKUSER}/$CKROOT}/${CKNAME}
+        cd /nobackup/users/${CKUSER}/${CKROOT}/${CKNAME}
         wget https://repo.continuum.io/miniconda/Miniconda2-4.7.12.1-Linux-ppc64le.sh
         chmod +x Miniconda2-4.7.12.1-Linux-ppc64le.sh
         ./Miniconda2-4.7.12.1-Linux-ppc64le.sh -b -p `pwd`/miniconda3
+        . miniconda3/etc/profile.d/conda.sh
+        conda config --prepend channels https://public.dhe.ibm.com/ibmdl/export/pub/software/server/ibm-ai/conda/
    
    
    **NOTE** - the conda commands tend to hard code full path names as part of their installation. So, once the **Create** step
@@ -96,11 +98,13 @@ Commands to type to create a new conda environment and custom kernel
       conda create -y --name ${CKNAME} python=3.6
       conda activate ${CKNAME}
       
-   **NOTE** - the conda environment *activate* step applies to the terminal shell session in which 
+   **NOTE** - the conda environment **activate** step applies to the terminal shell session in which 
    the **activate** commands are run. If you start a new terminal or shell you will need to rerun the activate step before
    exectuing the **install** commands.
    
-#. **Install.** Once the conda environment has been **created** and is **activated** in the terminal shell. 
+#. **Install.** Once the conda environment has been **created** and is **activated** in the terminal shell the final step 
+   involves running install commands in the shell. In the example shown here we will install the IBM ``powerai `` 
+   software stack and add ``patsy`` (https://anaconda.org/anaconda/patsy), ``seaborn``, ``statsmodels`` and ``netcdf4`` (https://anaconda.org/anaconda/netcdf4). 
 
 
 
