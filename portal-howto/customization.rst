@@ -80,8 +80,8 @@ Commands to type to create a new conda environment and custom kernel
         ./Miniconda2-4.7.12.1-Linux-ppc64le.sh -b -p `pwd`/miniconda3
    
    
-   **NOTE** - the conda commands tend to hard code full path names as part of their installation. So, once the create step
-   is complete, renaming or moving ``/nobackup/users/cnh/projects/condas/cnh-awesome-new-environment``will break the setup. 
+   **NOTE** - the conda commands tend to hard code full path names as part of their installation. So, once the **Create** step
+   is complete, renaming or moving ``/nobackup/users/cnh/projects/condas/cnh-awesome-new-environment`` will break the setup. 
    
 #. **Activate.** Once the new environment has been created in its own directory, make sure the shell is still has the 
    correct settings and then activate using the following commands::
