@@ -13,7 +13,7 @@ Tips and tricks
 .. toctree::
    :maxdepth: 2
 
-   show-disk-quota/index.rst
+   tips-and-tricks/show-disk-quota/index.rst
 
 # .. include:: /tips-and-tricks/show-disk-quota/index.rst
 
