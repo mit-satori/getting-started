@@ -30,4 +30,4 @@ its use and operations should try their utmost to be courteous at all times. Mem
 Satori  community should be respectful toward one another, and endeavor to ensure a 
 welcoming and collegial environment for all. Account holders are also expected to respect
 privacy of others activities on the system, and not to try to gain access to parts of the
-system they are not authorized to access. 
+system they are not explicitly authorized to access. 
