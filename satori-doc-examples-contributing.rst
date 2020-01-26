@@ -14,7 +14,3 @@ Tips and tricks
    :maxdepth: 2
 
    tips-and-tricks/show-disk-quota/index.rst
-
-# .. include:: /tips-and-tricks/show-disk-quota/index.rst
-
-# .. include:: tips-and-tricks/show-disk-quota/index.rst
