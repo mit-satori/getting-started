@@ -130,7 +130,7 @@ Commands to type to create a new conda environment and custom kernel
 Some additional steps
 ---------------------
 
-Additionally we might want to include a Julia interactive environment and an Octave interactive environment::
+Additionally we might want to include a Julia interactive environment and an Octave interactive environment. We should document how to do that here.
 
   
       module load julia/1.3.0
