@@ -61,7 +61,8 @@ Create a new conda environment
 These commands create a new conda enviroonment. We will use the account name ``cnh``. We will place the new environment in a 
 new directory under the scratch space ``/nobackup/users/cnh`` belonging to the account. We will name the new environment ```cnh-awesome-new-environment```. These values can be changed for different accounts and purposes. 
 
-.. code:: html
+```html
    ENAME=cnh-awesome-new-environment
    mkdir -p /nobackup/users/cnh/projects/condas/${ENAME}
+```
 
