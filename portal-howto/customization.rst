@@ -124,9 +124,12 @@ Commands to type to create a new conda environment and custom kernel
       pip install --user ipykernel
       python -m ipykernel install --user --name=${CKNAME}
       
-    This creates a new kernel we can start from our OOD Jupyter launcher. It should be visible, under the name given by 
-    ``${CKNAME}`` , when a new Jupyter session is started. 
-      
+   This creates a new kernel we can start from our OOD Jupyter launcher. It should be visible, under the name given by 
+   ``${CKNAME}`` , when a new Jupyter session is started. 
+   
+Some additional steps
+---------------------
+
 Additionally we might want to include a Julia interactive environment and an Octave interactive environment::
 
   
