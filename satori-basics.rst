@@ -23,7 +23,7 @@ How can I get an account?
 
 Once beta testing is complete, anyone with active MIT Kerberos credentials (i.e. all students, employees and sponsored 
 guest account https://ist.mit.edu/guest-accounts ) will be able to connect to Satori via a portal and a 
-starter account will be created. A starter account is provided somewhat limited access by default. Once a starter account has been created, research group leads may request an account be added to one or more project groups that can provide larger scale access.
+starter account will be created. A starter account will be provided somewhat limited access by default. Once a starter account has been created, an account holder can be added as a member to one or more research groups. Different research groups can provide larger scale access to their members. 
 
 Getting help?
 ^^^^^^^^^^^^^
