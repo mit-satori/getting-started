@@ -54,3 +54,8 @@ To create our new kernel we will
 #. **activate** the environment and install the packages we need
   
 #. **initialise** the interactive python settings for the new environment
+
+Create a new conda environment
+------------------------------
+
+
