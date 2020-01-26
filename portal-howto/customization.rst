@@ -108,7 +108,7 @@ Commands to type to create a new conda environment and custom kernel
    ``seaborn`` ( https://anaconda.org/anaconda/seaborn ), ``statsmodels`` ( https://anaconda.org/anaconda/statsmodels )
    and ``netcdf4`` (https://anaconda.org/anaconda/netcdf4). All except ``netcdf4`` are currently in a standard 
    kernel on Satori. We include an environment variable ``IBM_POWERAI_LICENSE_ACCEPT=yes`` so that we can run things
-   without interaction. Additionally we include a Julia interactive environment and an Octave interactive environment:
+   without interaction. Additionally we include a Julia interactive environment and an Octave interactive environment::
    
       
       CKNAME=cnh-awesome-new-environment
