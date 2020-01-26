@@ -103,8 +103,9 @@ Commands to type to create a new conda environment and custom kernel
    exectuing the **install** commands.
    
 #. **Install.** Once the conda environment has been **created** and is **activated** in the terminal shell the final step 
-   involves running install commands in the shell. In the example shown here we will install the IBM ``powerai `` 
-   software stack and add ``patsy`` (https://anaconda.org/anaconda/patsy), ``seaborn``, ``statsmodels`` and ``netcdf4`` (https://anaconda.org/anaconda/netcdf4). 
+   involves running install commands in the shell. In the example shown here we will install the IBM ``powerai`` 
+   software stack and add ``patsy`` (https://anaconda.org/anaconda/patsy), ``seaborn``, ``statsmodels`` 
+   and ``netcdf4`` (https://anaconda.org/anaconda/netcdf4). 
 
 
 
