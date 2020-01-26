@@ -78,8 +78,8 @@ Commands to type to create a new conda environment and custom kernel
         export PATH="`pwd`/miniconda3/bin:$PATH"
    
    
-    **NOTE** - the conda commands tend to hard code full path names as part of their installation. So, once the create step
-    is complete, renaming or moving ``/nobackup/users/cnh/projects/condas/cnh-awesome-new-environment``will break the setup.  
+   **NOTE** - the conda commands tend to hard code full path names as part of their installation. So, once the create step
+   is complete, renaming or moving ``/nobackup/users/cnh/projects/condas/cnh-awesome-new-environment``will break the setup.  
 
 
 
