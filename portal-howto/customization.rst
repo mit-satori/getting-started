@@ -104,8 +104,27 @@ Commands to type to create a new conda environment and custom kernel
    
 #. **Install.** Once the conda environment has been **created** and is **activated** in the terminal shell the final step 
    involves running install commands in the shell. In the example shown here we will install the IBM ``powerai`` 
-   software stack and add ``patsy`` (https://anaconda.org/anaconda/patsy), ``seaborn``, ``statsmodels`` 
-   and ``netcdf4`` (https://anaconda.org/anaconda/netcdf4). 
-
+   software stack and add ``keras`` (https://anaconda.org/anaconda/keras), ``patsy`` (https://anaconda.org/anaconda/patsy), 
+   ``seaborn`` ( https://anaconda.org/anaconda/seaborn ), ``statsmodels`` ( https://anaconda.org/anaconda/statsmodels )
+   and ``netcdf4`` (https://anaconda.org/anaconda/netcdf4). All except ``netcdf4`` are currently in a standard 
+   kernel on Satori. We include an environment variable ``IBM_POWERAI_LICENSE_ACCEPT=yes`` so that we can run things
+   without interaction. Additionally we include a Julia interactive environment and an Octave interactive environment:
+   
+      
+      CKNAME=cnh-awesome-new-environment
+      CKUSER=cnh
+      CKROOT=projects/condas
+      cd /nobackup/users/${CKUSER}/${CKROOT}/${CKNAME}
+      export PATH="`pwd`/miniconda3/bin:$PATH"
+      . miniconda3/etc/profile.d/conda.sh
+      conda activate ${CKNAME}
+      export IBM_POWERAI_LICENSE_ACCEPT=yes
+      conda install -y powerai
+      conda install -y keras patsy seaborn netcdf4
+      pip install --user ipykernel
+      python -m ipykernel install --user --name=${CKNAME}
+      module load julia/1.3.0
+      julia -E 'using Pkg; Pkg.add("IJulia")'
+      
 
 
