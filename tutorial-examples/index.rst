@@ -7,6 +7,7 @@ Tutorial Examples
    pytorch-style-transfer/index
    neural-network-dna-demo/index
    transfer-learning-pathology/index
+   eric-fiala-wmlce-notebooks-master/index
    unsupervised-learning-on-ocean-ecosystem-model/index
    
    
