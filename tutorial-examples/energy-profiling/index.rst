@@ -99,6 +99,10 @@ The following commands can be used
       
  #. we can now do the same with a four gpu application::
   
+        git clone https://github.com/tensorflow/benchmarks
+        cd benchmarks
+        git checkout 1ef603fd7e568ff75127ec07f160808fcc59911c
+        cd ..
         ddlrun -v ./launch.sh python $HOME2/hpms/tf_cnn_benchmarks/tf_cnn_benchmarks.py --model resnet50 --batch_size 128 --variable_update=horovod --num_batches=1000 --use_fp16 
         
     in this case the application is a Tensor Flow benchmark, but any application can be used. 
