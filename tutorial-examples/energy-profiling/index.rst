@@ -74,11 +74,30 @@ The following commands can be used
         git clone https://github.com/johncohn/pytorchstyletransfer_satori.git
         cd pytorchstyletransfer_satori.git
         conda install nbconvert
+        jupyter nbconvert --to script TorchTransfer.ipynb
+        python TorchTransfer.py
         
     **NOTE** the ``conda install nbconvert`` above is only needed once and may not be needed at all. It is here because
     I found that ``cnh-awesome-new-environment`` was missing the ``nbconvert`` command.
+    
+    While the ``python TorchTransfer.py`` step is executing you can open another terminal (for example using
+    https://satori-portal.mit.edu ) and look at the ``read_inst_power_cons.sh`` output e.g.::
+    
+        cd /nobackup/users/cnh/four-way-energy/
+        cat energy-consumption.out.7877_0
+        
+     **NOTE** the directory path ``/nobackup/users/cnh/four-way-energy/`` will be different for your tests 
+     and so will the job number ``7877``. The output should show an increase in energy use once the GPU compute
+     intensive part of the calculation starts e.g ::
+     
+         1580144216:     Instantaneous power reading:                   484 Watts
+         1580144220:     Instantaneous power reading:                   497 Watts
+         1580144223:     Instantaneous power reading:                   577 Watts
+         1580144227:     Instantaneous power reading:                   686 Watts
+         1580144230:     Instantaneous power reading:                   743 Watts
+
       
- #. start your application::
+ #. we can now do the same with a four gpu applicsation::
   
         ddlrun -v ./launch.sh python $HOME2/hpms/tf_cnn_benchmarks/tf_cnn_benchmarks.py --model resnet50 --batch_size 128 --variable_update=horovod --num_batches=1000 --use_fp16 
         
