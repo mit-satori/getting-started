@@ -47,9 +47,11 @@ The following commands can be used
      cp bff35521a2fa0c499578c98751be1b3c/setup.sh .
      rm -fr bff35521a2fa0c499578c98751be1b3c
      
-#. example all in one batch script::
+* **Example all in one batch script**. To see an example all in one script of the above steps for measuring power and 
+  capturing energy use use the following commands::
 
       git clone https://gist.github.com/bff35521a2fa0c499578c98751be1b3c.git
+      cp bff35521a2fa0c499578c98751be1b3c/batch-job-example.lsf .
       
 
 
