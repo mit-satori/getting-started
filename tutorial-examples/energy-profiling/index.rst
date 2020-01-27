@@ -23,6 +23,12 @@ done from a script.
 Running on a single node
 @@@@@@@@@@@@@@@@@@@@@@@@
 
+The following commands can be used
+
+#. request a whole node from the scheduler::
+
+     bsub -n 4 -R "span[ptile=4]" -gpu "num=4" -Is bash
+
 
 
 Code and input data repositories for this example
