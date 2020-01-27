@@ -86,9 +86,9 @@ The following commands can be used
         cd /nobackup/users/cnh/four-way-energy/
         cat energy-consumption.out.7877_0
         
-     **NOTE** the directory path ``/nobackup/users/cnh/four-way-energy/`` will be different for your tests 
-     and so will the job number ``7877``. The output should show an increase in energy use once the GPU compute
-     intensive part of the calculation starts e.g ::
+    **NOTE** the directory path ``/nobackup/users/cnh/four-way-energy/`` will be different for your tests 
+    and so will the job number ``7877``. The output should show an increase in energy use once the GPU compute
+    intensive part of the calculation starts e.g ::
      
          1580144216:     Instantaneous power reading:                   484 Watts
          1580144220:     Instantaneous power reading:                   497 Watts
