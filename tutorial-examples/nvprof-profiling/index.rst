@@ -27,6 +27,15 @@ The resulting profile can be examined visually on a laptop/desktop with the NVID
 installed ( see - https://developer.nvidia.com/nvidia-visual-profiler ). The profile file ``results.nvprof``
 can be downloaded on a desktop/laptop with the profiler installed. 
 
+Unfortunately for recent MacOS systems NVidia have declared
+
+ 
+    ``Note that CUDA 10.2 is the last release to support macOS and future releases of CUDA may not support macOS``
+    
+
+( https://docs.nvidia.com/cuda/cuda-installation-guide-mac-os-x/index.html#system-requirements ) and it appears
+that OSx 10.15.2 (the most recent Catalina) is not supported. 
+
 
 Useful references
 +++++++++++++++++
