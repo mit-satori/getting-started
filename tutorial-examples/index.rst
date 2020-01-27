@@ -13,4 +13,7 @@ Measuring Resource Use
 
 - energy use
 
-- profiling
+.. toctree::
+   :maxdepth: 2
+   
+   nvprof-profiling/index
