@@ -42,6 +42,13 @@ at the command line on Satori. A good command for this is::
 Reportedly from these links ( https://gist.github.com/sonots/5abc0bccec2010ac69ff74788b265086#gistcomment-3082435 ) and
 ( https://gist.github.com/sonots/5abc0bccec2010ac69ff74788b265086#gistcomment-3072066 ) there may be a work around for Catalina. If someone has a moment then this would be good to try.
 
+nvprof can also profile python machine learning code e.g.::
+
+   git clone https://gist.github.com/de9e934a2315fd2551a794d40255d301.git
+   cp de9e934a2315fd2551a794d40255d301/cuml-tsne.py .
+   rm -fr de9e934a2315fd d2551a794d40255d301
+   nvprof --print-gpu-trace python cuml_tsne.py
+
 
 Useful references
 +++++++++++++++++
