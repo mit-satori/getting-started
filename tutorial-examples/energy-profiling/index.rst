@@ -67,6 +67,14 @@ The following commands can be used
          1580143480:     Instantaneous power reading:                   469 Watts
 
 
+ #. now we can start an application. First lets use the example from ``https://github.com/johncohn/pytorchstyletransfer_satori.git`` as follows::
+ 
+        git clone https://github.com/johncohn/pytorchstyletransfer_satori.git
+        cd pytorchstyletransfer_satori.git
+        conda install nbconvert
+        
+    **NOTE** the ``conda install nbconvert`` is only needed once and may not be needed at all. It is here because
+    I found that ``cnh-awesome-new-environment`` was missing the ``nbconvert`` command.
       
  #. start your application::
   
