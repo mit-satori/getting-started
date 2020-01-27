@@ -27,7 +27,7 @@ The following commands can be used
 
      bsub -n 4 -R "span[ptile=4]" -gpu "num=4" -Is bash
      
-#. once the node is available set up the environment under your account. The example here shows
+#. once the node is available, set up the environment under your account. The example here shows
    using account ``cnh`` with a suitable conda environment installed 
    in ``/nobackup/users/cnh/projects/condas/cnh-awesome-new-environment``. Different accounts are free to use
    different paths and naming rules::
@@ -48,6 +48,18 @@ The following commands can be used
      cp bff35521a2fa0c499578c98751be1b3c/read_inst_power_cons.sh .
      rm -fr bff35521a2fa0c499578c98751be1b3c
      chmod +x *.sh
+     
+#. Once the environment is all set
+
+  #. set the power monitoring script running::
+  
+      mpirun --tag-output ./setup.sh
+      
+  #. start your application::
+  
+        ddlrun -v ./launch.sh python $HOME2/hpms/tf_cnn_benchmarks/tf_cnn_benchmarks.py --model resnet50 --batch_size 128 --variable_update=horovod --num_batches=1000 --use_fp16 
+        
+     in this case the application is a Tensor Flow benchmark, but any application can be used. 
      
 * **Example all in one batch script**. To see an example all in one script of the above steps for measuring power and 
   capturing energy use use the following commands::
