@@ -134,6 +134,31 @@ Commands to create a new conda environment with a custom Python kernel
    This creates a new kernel we can start from in the OOD Jupyter launcher. It should be visible, under the name given by 
    ``${CKNAME}`` , when a new Jupyter session is started. 
    
+An added bonus - updating on the fly
+------------------------------------
+
+Once you have created a new kernel conda environment it is ownde by your account, so it can be updated if needed. This 
+is unlike the standard system kernels which are currently read-only. For example in the example above the kernel 
+environment does not include ``cuml`` ( https://anaconda.org/rapidsai/cuml ). The ``cuml`` package can be used to 
+greatly accelerate TSNE dimensionality reduction 
+( see - https://medium.com/rapids-ai/tsne-with-gpus-hours-to-seconds-9d9c17c941db ), so it may be neded at some point e.g. 
+when an import like ``from cuml.manifold import TSNE`` fails. Rather than going through the entire **Create**, 
+**Activate**, **Install** sequence from scratch we can update in a Terminal within Jupyter and then reestart our 
+kernel. The commands for this are
+
+.. code:: bash
+   CKNAME=cnh-awesome-new-environment
+   CKUSER=cnh
+   CKROOT=projects/condas
+   cd /nobackup/users/${CKUSER}/${CKROOT}/${CKNAME}
+   export PATH="`pwd`/miniconda3/bin:$PATH"
+   . miniconda3/etc/profile.d/conda.sh
+   conda activate ${CKNAME}
+   conda install cuml
+   
+when this completes we can restart the kernel and the new package will be avaiable.
+
+   
 Some additional steps for Julia and Octave
 ------------------------------------------
 
