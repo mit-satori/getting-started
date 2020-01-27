@@ -40,7 +40,17 @@ The following commands can be used
      . ${EPCROOT}/miniconda3/etc/profile.d/conda.sh
      conda activate cnh-awesome-new-environment
      export EGO_TOP=/opt/ibm/spectrumcomputing
-     git clone 
+     git clone https://gist.github.com/bff35521a2fa0c499578c98751be1b3c.git
+     cp bff35521a2fa0c499578c98751be1b3c/launch.sh .
+     cp bff35521a2fa0c499578c98751be1b3c/main_script_commands .
+     cp bff35521a2fa0c499578c98751be1b3c/reset.sh .
+     cp bff35521a2fa0c499578c98751be1b3c/setup.sh .
+     rm -fr bff35521a2fa0c499578c98751be1b3c
+     
+#. example all in one batch script::
+
+      git clone https://gist.github.com/bff35521a2fa0c499578c98751be1b3c.git
+      
 
 
 
