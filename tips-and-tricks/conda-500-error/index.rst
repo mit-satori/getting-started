@@ -1,4 +1,4 @@
-Sometimes the ``conda install`` commad returns a 500 error::
+Sometimes the ``conda install`` commad returns a 500 error e.g.::
 
     cnh-awesome-new-environment) [cnh@node0047 pytorchstyletransfer_satori]$ conda install nbconvert
     Collecting package metadata (current_repodata.json): failed
