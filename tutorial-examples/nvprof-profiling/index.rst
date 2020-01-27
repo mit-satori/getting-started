@@ -52,3 +52,5 @@ nvprof can also profile python machine learning code e.g.::
 
 Useful references
 +++++++++++++++++
+
+  https://github.com/mit-satori/getting-started/blob/master/tutorial-examples/nvprof-profiling/Satori_NVProf_Intro.pdf
