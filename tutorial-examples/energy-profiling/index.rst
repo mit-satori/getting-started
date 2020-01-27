@@ -62,8 +62,8 @@ The following commands can be used
     in this case the application is a Tensor Flow benchmark, but any application can be used. 
     
   
-    
- #. once the application is finished then clean up::
+ 
+ #. once the application is finished then finish power logging using the command::
  
      mpirun --tag-output ./reset.sh 
      
