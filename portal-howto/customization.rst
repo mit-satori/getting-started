@@ -144,9 +144,8 @@ greatly accelerate TSNE dimensionality reduction
 ( see - https://medium.com/rapids-ai/tsne-with-gpus-hours-to-seconds-9d9c17c941db ), so it may be neded at some point e.g. 
 when an import like ``from cuml.manifold import TSNE`` fails. Rather than going through the entire **Create**, 
 **Activate**, **Install** sequence from scratch we can update in a Terminal within Jupyter and then reestart our 
-kernel. The commands for this are
+kernel. The commands for this are::
 
-.. code:: bash
    CKNAME=cnh-awesome-new-environment
    CKUSER=cnh
    CKROOT=projects/condas
@@ -155,6 +154,7 @@ kernel. The commands for this are
    . miniconda3/etc/profile.d/conda.sh
    conda activate ${CKNAME}
    conda install cuml
+   
    
 when this completes we can restart the kernel and the new package will be avaiable.
 
