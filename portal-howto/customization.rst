@@ -1,7 +1,7 @@
 How can I create custom Jupyter kernels for the Satori web portal?
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-The OOD portal has a set of centrally installed Jupyter kernels that
+The Open On Demand (OOD) Satori portal has a set of centrally installed Jupyter kernels that
 include common software. The aims is to cover most
 things needed for frequently used tools. If you start using
 the portal extensively, sometimes you will come across
@@ -131,7 +131,7 @@ Commands to create a new conda environment with a custom Python kernel
       pip install --user ipykernel
       python -m ipykernel install --user --name=${CKNAME}
       
-   This creates a new kernel we can start from our OOD Jupyter launcher. It should be visible, under the name given by 
+   This creates a new kernel we can start from in the OOD Jupyter launcher. It should be visible, under the name given by 
    ``${CKNAME}`` , when a new Jupyter session is started. 
    
 Some additional steps for Julia and Octave
