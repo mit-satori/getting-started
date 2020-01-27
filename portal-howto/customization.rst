@@ -33,7 +33,7 @@ be more efficient than having to wait for something to installed centrally every
 time you find a new awesome package that all the cool people are using. 
 
 An additional benefit of knowing how to create your own kernels is that it can help with sharing and reproducibility
-of results. Stric versioning and maintaining historic kernels in perpetuity in central locations 
+of results. Strict versioning and maintaining historic kernels in perpetuity in central locations 
 can easily become an impractical combinatorial challenge. Creating
 precise kernels that collect specific version combinations of software in an 
 immutable state in a per account location can help, although this still requires care and
