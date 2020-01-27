@@ -103,12 +103,20 @@ The following commands can be used
         cd benchmarks
         git checkout 1ef603fd7e568ff75127ec07f160808fcc59911c
         cd ..
+        conda install gxx_linux-ppc64le=7.3.0 cffi cudatoolkit-dev
+        HOROVOD_CUDA_HOME=$CONDA_PREFIX HOROVOD_GPU_ALLREDUCE=DDL pip install horovod --no-cache-dir
         ddlrun -v ./launch.sh python $HOME2/hpms/tf_cnn_benchmarks/tf_cnn_benchmarks.py --model resnet50 --batch_size 128 --variable_update=horovod --num_batches=1000 --use_fp16 
         
-    in this case the application is a Tensor Flow benchmark, but any application can be used. 
+    in this case the application is a Tensor Flow benchmark, but any application can be used. **NOTE** as before we
+    only need to add the ``conda install`` steps once. There is also another wrinkle in this example. The Horovod modules
+    need to be built for a specific configuraiton. We pass the environment variables to ``pip install`` to
+    select the configuraiton. We also need to use the pip ( ) installation tool for Horovod, not conda. There 
+    is no clear reason why Horovod could not be in Conda, but sometimes computing is like that! 
+    
+    Again, while the application is running we can check out the power log and we can make a plot from
+    the log too.
     
   
- 
  #. once the application is finished then finish power logging using the command::
  
      mpirun --tag-output ./reset.sh 
