@@ -59,7 +59,7 @@ The following commands can be used
   
         ddlrun -v ./launch.sh python $HOME2/hpms/tf_cnn_benchmarks/tf_cnn_benchmarks.py --model resnet50 --batch_size 128 --variable_update=horovod --num_batches=1000 --use_fp16 
         
-     in this case the application is a Tensor Flow benchmark, but any application can be used. 
+    in this case the application is a Tensor Flow benchmark, but any application can be used. 
      
 * **Example all in one batch script**. To see an example all in one script of the above steps for measuring power and 
   capturing energy use use the following commands::
