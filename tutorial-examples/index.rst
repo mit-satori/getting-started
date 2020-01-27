@@ -6,6 +6,7 @@ Tutorial Examples
 
    pytorch-style-transfer/index
    unsupervised-learning-on-ocean-ecosystem-model/index
+   transfer-learning-pathology/index
    
    
 Measuring Resource Use
