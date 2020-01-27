@@ -55,6 +55,19 @@ The following commands can be used
   
       mpirun --tag-output ./setup.sh
       
+    if things work as expected this should create a file that logs power use from a background script ``read_inst_power_cons.sh`` and you should be able to see the power readings using the command ``cat`` 
+      like this::
+    
+       
+        cnh-awesome-new-environment) [cnh@node0047 four-way-energy]$ cat energy-consumption.out.7877_0
+         1580143466:     Instantaneous power reading:                   497 Watts
+         1580143470:     Instantaneous power reading:                   555 Watts
+         1580143473:     Instantaneous power reading:                   557 Watts
+         1580143476:     Instantaneous power reading:                   559 Watts
+         1580143480:     Instantaneous power reading:                   469 Watts
+
+
+      
  #. start your application::
   
         ddlrun -v ./launch.sh python $HOME2/hpms/tf_cnn_benchmarks/tf_cnn_benchmarks.py --model resnet50 --batch_size 128 --variable_update=horovod --num_batches=1000 --use_fp16 
