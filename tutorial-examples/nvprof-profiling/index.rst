@@ -25,7 +25,7 @@ are::
    
 The resulting profile can be examined visually on a laptop/desktop with the NVIDIA Visual Profiler 
 installed ( see - https://developer.nvidia.com/nvidia-visual-profiler ). The profile file ``results.nvprof``
-can be downloaded on a desktop/laptopn with the profiler installed. 
+can be downloaded on a desktop/laptop with the profiler installed. 
 
 
 Useful references
