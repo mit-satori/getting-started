@@ -11,9 +11,8 @@ Tutorial Examples
 Measuring Resource Use
 ~~~~~~~~~~~~~~~~~~~~~~
 
-- energy use
-
 .. toctree::
    :maxdepth: 2
    
+   energy-profiling/index
    nvprof-profiling/index
