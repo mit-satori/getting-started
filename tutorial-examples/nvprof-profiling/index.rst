@@ -34,7 +34,10 @@ Unfortunately for recent MacOS systems NVidia have declared
     
 
 ( see- https://docs.nvidia.com/cuda/cuda-installation-guide-mac-os-x/index.html#system-requirements ) and it appears
-that OSX 10.15.2 (the most recent Catalina) is not supported. 
+that OSX 10.15.2 (the most recent Catalina) is not supported. For this situation the best option is to use non-visual mode
+at the command line on Satori. A good command for this is::
+
+   nvprof --print-gpu-trace -o results.nvprof ./vector-add
 
 
 Useful references
