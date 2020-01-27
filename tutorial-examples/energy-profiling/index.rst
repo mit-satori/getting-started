@@ -29,7 +29,10 @@ The following commands can be used
 
      bsub -n 4 -R "span[ptile=4]" -gpu "num=4" -Is bash
      
-#. once the node is available set up the environment::
+#. once the node is available set up the environment under your account. The example here shows
+   using account ``cnh`` with a suitable conda environment installed 
+   in ``/nobackup/users/cnh/projects/condas/cnh-awesome-new-environment``. Different accounts are free to use
+   different paths and naming rules::
       
      EPUNAME=cnh
      EPCROOT=/nobackup/users/${EPUNAME}/projects/condas/cnh-awesome-new-environment
