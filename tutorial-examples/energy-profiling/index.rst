@@ -135,11 +135,13 @@ The following commands can be used
       
 
 
+* **Congratulations if yuu got this far**. You have earned a cookie and are now in a good state to try measuring and
+  optimizing resource use in your favorite project! **GOOD LUCK**.
 
 Code and input data repositories for this example
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
+see text above
 
 
 Useful references
