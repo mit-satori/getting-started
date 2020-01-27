@@ -60,6 +60,18 @@ The following commands can be used
         ddlrun -v ./launch.sh python $HOME2/hpms/tf_cnn_benchmarks/tf_cnn_benchmarks.py --model resnet50 --batch_size 128 --variable_update=horovod --num_batches=1000 --use_fp16 
         
     in this case the application is a Tensor Flow benchmark, but any application can be used. 
+    
+  
+    
+ #. once the application is finished then clean up::
+ 
+     mpirun --tag-output ./reset.sh 
+     
+* The power history (recorded as snapshots every 3 seconds) will be written to a file with name 
+  begining ``energy-consumption.out.`` followed by the LSF job id. This file can be listed to the
+  screen e.g.::
+  
+     cat energy-consumption.out.7843_0
      
 * **Example all in one batch script**. To see an example all in one script of the above steps for measuring power and 
   capturing energy use use the following commands::
