@@ -55,6 +55,7 @@ The following commands can be used
   
       mpirun --tag-output ./setup.sh
       
+      
     if things work as expected this should create a file that logs power use from a background script ``read_inst_power_cons.sh`` and you should be able to see the power readings using the command ``cat`` 
       like this::
     
@@ -73,7 +74,7 @@ The following commands can be used
         cd pytorchstyletransfer_satori.git
         conda install nbconvert
         
-    **NOTE** the ``conda install nbconvert`` is only needed once and may not be needed at all. It is here because
+    **NOTE** the ``conda install nbconvert`` above is only needed once and may not be needed at all. It is here because
     I found that ``cnh-awesome-new-environment`` was missing the ``nbconvert`` command.
       
  #. start your application::
