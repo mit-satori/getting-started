@@ -51,11 +51,11 @@ The following commands can be used
      
 #. Once the environment is all set
 
-  #. set the power monitoring script running::
+ #. set the power monitoring script running::
   
       mpirun --tag-output ./setup.sh
       
-  #. start your application::
+ #. start your application::
   
         ddlrun -v ./launch.sh python $HOME2/hpms/tf_cnn_benchmarks/tf_cnn_benchmarks.py --model resnet50 --batch_size 128 --variable_update=horovod --num_batches=1000 --use_fp16 
         
