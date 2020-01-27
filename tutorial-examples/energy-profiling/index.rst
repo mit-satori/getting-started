@@ -45,6 +45,7 @@ The following commands can be used
      cp bff35521a2fa0c499578c98751be1b3c/main_script_commands .
      cp bff35521a2fa0c499578c98751be1b3c/reset.sh .
      cp bff35521a2fa0c499578c98751be1b3c/setup.sh .
+     cp bff35521a2fa0c499578c98751be1b3c/read_inst_power_cons.sh .
      rm -fr bff35521a2fa0c499578c98751be1b3c
      chmod +x *.sh
      
