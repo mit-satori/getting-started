@@ -56,8 +56,9 @@ The following commands can be used
       mpirun --tag-output ./setup.sh
       
       
-    if things work as expected this should create a file that logs power use from a background script ``read_inst_power_cons.sh`` and you should be able to see the power readings using the command ``cat`` 
-      like this::
+    if things work as expected this should create a file that logs power use from a background 
+    script ``read_inst_power_cons.sh`` and you should be able to see the power 
+    readings using the command ``cat`` like this::
     
        
         cnh-awesome-new-environment) [cnh@node0047 four-way-energy]$ cat energy-consumption.out.7877_0
