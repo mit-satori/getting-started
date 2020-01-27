@@ -16,6 +16,8 @@ Commands to run this example
 Code and input data repositories for this example
 +++++++++++++++++++++++++++++++++++++++++++++++++
 
+https://github.com/mit-satori/getting-started/tree/master/jupyter-notebooks/eric-fiala-wmlce-notebooks-master
+
 
 Useful references
 +++++++++++++++++
