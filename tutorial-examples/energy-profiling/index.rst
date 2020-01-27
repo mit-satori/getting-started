@@ -15,10 +15,8 @@ virtual environment based on WMLCE powerai is active.
 Commands to run this example
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The example can be run interactively on a single node or in batch mode on multiple nodes. 
-Running interactively on multiple nodes is possible in principle but requires
-loggin to each node to set up the hardware and to restore its state at the end. This is better
-done from a script. 
+The example can be run interactively or in batch mode. Here we shown interactive execution on 
+one node and using four GPUs.
 
 Running on a single node
 @@@@@@@@@@@@@@@@@@@@@@@@
