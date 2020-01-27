@@ -97,7 +97,7 @@ The following commands can be used
          1580144230:     Instantaneous power reading:                   743 Watts
 
       
- #. we can now do the same with a four gpu applicsation::
+ #. we can now do the same with a four gpu application::
   
         ddlrun -v ./launch.sh python $HOME2/hpms/tf_cnn_benchmarks/tf_cnn_benchmarks.py --model resnet50 --batch_size 128 --variable_update=horovod --num_batches=1000 --use_fp16 
         
