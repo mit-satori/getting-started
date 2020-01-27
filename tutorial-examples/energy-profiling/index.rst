@@ -97,7 +97,7 @@ The following commands can be used
          1580144230:     Instantaneous power reading:                   743 Watts
 
       
- #. we can now do the same with a four gpu application::
+ #. we can now try and do the same with a four gpu application::
   
         git clone https://github.com/tensorflow/benchmarks
         cd benchmarks
@@ -105,7 +105,7 @@ The following commands can be used
         cd ..
         conda install gxx_linux-ppc64le=7.3.0 cffi cudatoolkit-dev
         HOROVOD_CUDA_HOME=$CONDA_PREFIX HOROVOD_GPU_ALLREDUCE=DDL pip install horovod --no-cache-dir
-        ddlrun -v ./launch.sh python $HOME2/hpms/tf_cnn_benchmarks/tf_cnn_benchmarks.py --model resnet50 --batch_size 128 --variable_update=horovod --num_batches=1000 --use_fp16 
+        ddlrun -v ./launch.sh python /nobackup/users/florin/hpms/tf_cnn_benchmarks/tf_cnn_benchmarks.py --model resnet50 --batch_size 128 --variable_update=horovod --num_batches=1000 --use_fp16 
         
     in this case the application is a Tensor Flow benchmark, but any application can be used. **NOTE** as before we
     only need to add the ``conda install`` steps once. There is also another wrinkle in this example. The Horovod modules
@@ -114,7 +114,7 @@ The following commands can be used
     is no clear reason why Horovod could not be in Conda, but sometimes computing is like that! 
     
     Again, while the application is running we can check out the power log and we can make a plot from
-    the log too.
+    the log too. Unfortunately this example doesn't quite work yet! 
     
   
  #. once the application is finished then finish power logging using the command::
