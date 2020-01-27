@@ -38,6 +38,9 @@ that OSX 10.15.2 (the most recent Catalina) is not supported. For this situation
 at the command line on Satori. A good command for this is::
 
    nvprof --print-gpu-trace -o results.nvprof ./vector-add
+   
+Reportedly from these links ( https://gist.github.com/sonots/5abc0bccec2010ac69ff74788b265086#gistcomment-3082435 ) and
+( https://gist.github.com/sonots/5abc0bccec2010ac69ff74788b265086#gistcomment-3072066 ) there may be a work around for Catalina. If someone has a moment then this would be good to try.
 
 
 Useful references
