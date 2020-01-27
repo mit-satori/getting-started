@@ -7,9 +7,13 @@ John Cohn ( johncohn@us.ibm.com )
 Description
 ~~~~~~~~~~~
 
+see github repository
+
 
 Commands to run this example
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+see github repository
 
 
 
@@ -21,3 +25,5 @@ https://github.com/johncohn/pytorchstyletransfer_satori
 
 Useful references
 ~~~~~~~~~~~~~~~~~
+
+see github repository
