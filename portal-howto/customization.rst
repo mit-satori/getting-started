@@ -1,5 +1,5 @@
-Creating your own Jupyter kernels for OOD portal
-++++++++++++++++++++++++++++++++++++++++++++++++
+How can I create custom Jupyter kernels for the Satori web portal?
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 The OOD portal has a set of centrally installed Jupyter kernels that
 include common software. The aims is to cover most
