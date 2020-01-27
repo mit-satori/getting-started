@@ -13,7 +13,8 @@ Commands to run the examples
 ++++++++++++++++++++++++++++
 
 To run the example we start in a shell on the login/front-end node, then run in a short interactive session. This
-generates profiling information that can then be analysed. The commands needed are::
+generates profiling information that can then be analysed. The commands needed for a simple illustrative cuda program 
+are::
 
    git clone https://gist.github.com/de9e934a2315fd2551a794d40255d301.git
    cp de9e934a2315fd2551a794d40255d301/vector-add.cu .
@@ -23,7 +24,8 @@ generates profiling information that can then be analysed. The commands needed a
    nvprof -s -o results.nvprof ./vector-add
    
 The resulting profile can be examined visually on a laptop/desktop with the NVIDIA Visual Profiler 
-installed ( see - https://developer.nvidia.com/nvidia-visual-profiler ). The profile 
+installed ( see - https://developer.nvidia.com/nvidia-visual-profiler ). The profile file ``results.nvprof``
+can be downloaded on a desktop/laptopn with the profiler installed. 
 
 
 Useful references
