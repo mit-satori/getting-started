@@ -14,3 +14,4 @@ Tips, tricks and questions
    :maxdepth: 2
 
    tips-and-tricks/storage/index.rst
+   tips-and-tricks/portal-kernel-customization/index.rst
