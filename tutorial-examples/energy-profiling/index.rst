@@ -28,6 +28,18 @@ The following commands can be used
 #. request a whole node from the scheduler::
 
      bsub -n 4 -R "span[ptile=4]" -gpu "num=4" -Is bash
+     
+#. once the node is available set up the environment
+      
+     EPUNAME=cnh
+     EPCROOT=/nobackup/users/${EPUNAME}/projects/condas/cnh-awesome-new-environment
+     module load perftools
+     mkdir -p /nobackup/users/${EPUNAME}/four-way-energy
+     cd /nobackup/users/${EPUNAME}/four-way-energy
+     . ${EPCROOT}/miniconda3/etc/profile.d/conda.sh
+     conda activate cnh-awesome-new-environment
+     export EGO_TOP=/opt/ibm/spectrumcomputing
+     git clone 
 
 
 
