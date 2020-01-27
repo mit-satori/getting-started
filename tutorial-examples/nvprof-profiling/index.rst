@@ -5,7 +5,8 @@ Andrew Kirby ( ackirby@mit.edu )
 
 Description
 +++++++++++
-The nvprof tool from NVidia can be used to 
+The nvprof tool from NVidia can be used to create detailed profiles of where codes are spending time 
+and what resources they are using. It can work for compiled CUDA code and for Python libraries.
 
 
 Commands to run the examples
