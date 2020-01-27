@@ -11,8 +11,8 @@ Using a pre-trained CNN classifier on ImageNet data we freeze some layers and co
 
 Commands to run this example
 ++++++++++++++++++++++++++++
-wget https://raw.githubusercontent.com/IBM/coursera/master/coursera_ai/week4/patho_train.sh
-wget https://raw.githubusercontent.com/IBM/coursera/master/coursera_ai/week4/patho_train.py
+wget https://raw.githubusercontent.com/IBM/coursera/master/coursera_ai/week4/patho_train.sh  
+wget https://raw.githubusercontent.com/IBM/coursera/master/coursera_ai/week4/patho_train.py  
 chmod 755 patho_train.sh
 chmod 755 patho_train.py
 python patho_train.py
