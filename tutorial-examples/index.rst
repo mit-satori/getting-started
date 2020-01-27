@@ -6,8 +6,8 @@ Tutorial Examples
 
    pytorch-style-transfer/index
    neural-network-dna-demo/index
-   unsupervised-learning-on-ocean-ecosystem-model/index
    transfer-learning-pathology/index
+   unsupervised-learning-on-ocean-ecosystem-model/index
    
    
 Measuring Resource Use
