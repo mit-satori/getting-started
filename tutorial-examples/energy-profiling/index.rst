@@ -29,7 +29,7 @@ The following commands can be used
 
      bsub -n 4 -R "span[ptile=4]" -gpu "num=4" -Is bash
      
-#. once the node is available set up the environment
+#. once the node is available set up the environment::
       
      EPUNAME=cnh
      EPCROOT=/nobackup/users/${EPUNAME}/projects/condas/cnh-awesome-new-environment
