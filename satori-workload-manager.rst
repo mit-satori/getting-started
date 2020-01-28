@@ -51,7 +51,7 @@ command:
 
 .. code:: bash
 
-   bsub -W 3:00 -q interactive -gpu "num=4" -R "select[type==any]" -Ip bash
+   bsub -W 3:00 -q normal -gpu "num=4" -R "select[type==any]" -Ip bash
 
 This will request an AC922 node with 4x GPUs from the Satori (normal
 queue) for 3 hours.
