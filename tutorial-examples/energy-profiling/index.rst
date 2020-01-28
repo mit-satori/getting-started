@@ -64,8 +64,7 @@ The following commands can be used
          1580143476:     Instantaneous power reading:                   559 Watts
          1580143480:     Instantaneous power reading:                   469 Watts
 
-
- #. now we can start an application. First lets use the example from ``https://github.com/johncohn/pytorchstyletransfer_satori.git`` as follows::
+#. now we can start an application. First lets use the example from ``https://github.com/johncohn/pytorchstyletransfer_satori.git`` as follows::
  
         git clone https://github.com/johncohn/pytorchstyletransfer_satori.git
         cd pytorchstyletransfer_satori
@@ -80,7 +79,7 @@ The following commands can be used
      tail -f energy-consumption.out.<###> 
      where <###> is your job number.
       
- #. we can now try and do the same with a four gpu application::
+#. we can now try and do the same with a four gpu application::
   
         git clone https://github.com/tensorflow/benchmarks
         cd benchmarks
@@ -100,7 +99,7 @@ The following commands can be used
     the log too. Unfortunately this example doesn't quite work yet! 
     
   
- #. once the application is finished then finish power logging using the command::
+#. once the application is finished then finish power logging using the command::
  
      mpirun --tag-output ./reset.sh 
      
