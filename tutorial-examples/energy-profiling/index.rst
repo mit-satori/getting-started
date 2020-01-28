@@ -71,7 +71,7 @@ The following commands can be used
         conda install nbconvert
         jupyter nbconvert --to script TorchTransfer.ipynb
         python TorchTransfer.py
-        cc ..
+        cd ..
         
     **NOTE** the ``conda install nbconvert`` above is only needed once. 
     
