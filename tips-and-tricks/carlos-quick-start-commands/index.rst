@@ -1,5 +1,5 @@
 
-Go to some /nobackup/user/UUUU directory::
+Log in and then::
 
    wget https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-ppc64le.sh
    sh Anaconda3-2019.10-Linux-ppc64le.sh -f -p /nobackup/users/$(whoami)/anaconda3
