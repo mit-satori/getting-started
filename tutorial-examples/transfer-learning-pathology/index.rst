@@ -4,6 +4,8 @@ Pathology Image Classification Transfer Learning
 
 Romeo Kienzler ( 1 s t n a m e . l a s t n a m e  a t  c h . i b m . c o m )
 
+Maximilian Dargatz
+
 Description
 +++++++++++
 Using a pre-trained CNN classifier on ImageNet data we freeze some layers and continue training on pathology image data
