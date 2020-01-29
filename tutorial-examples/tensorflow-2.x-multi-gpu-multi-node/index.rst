@@ -1,6 +1,6 @@
 
-Pathology Image Classification Transfer Learning
-------------------------------------------------
+Multi Node Pathology Image Classification Transfer Learning
+-----------------------------------------------------------
 
 Romeo Kienzler ( 1 s t n a m e . l a s t n a m e  a t  c h . i b m . c o m )
 
