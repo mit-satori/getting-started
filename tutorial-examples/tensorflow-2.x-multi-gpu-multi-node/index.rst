@@ -22,13 +22,9 @@ Commands to run this example
 
 #. Install TensorFlow 2.0 as described here => IMPORTANT <= this might change, please ask John or Chris => https://mit-satori.github.io/satori-ai-frameworks.html#the-wml-ce-early-access-channel-is-available-at-https-public-dhe-ibm-com-ibmdl-export-pub-software-server-ibm-ai-conda-early-access
 
-#. bsub -W 3:00 -q normal -gpu "num=4" -R "select[type==any]" -Ip bash (note down the node you are getting (e.g. node0046))
+#. bsub -W 3:00 -q normal -n 8 -gpu "num=4" -R "span[ptile=4]" -Ip bash (note down the nodes you are getting (e.g. node0046, node0055))
 
 #. conda activate wmlce-ea
-
-#. Open a new shell window to the login node
-
-#. bsub -W 3:00 -q normal -gpu "num=4" -R "select[type==any]" -Ip bash (note down the node you are getting (e.g. node0053))
 
 #. paste and execute the following (replace node0046 and node0053 with your nodes) into the terminal 
 TF_CONFIG='{"cluster": {"worker": ["node0046:12345", "node0053:12345"]}, "task": {"index": 0, "type": "worker"}}'
