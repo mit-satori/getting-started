@@ -1,4 +1,7 @@
 
+How do I set up a basic conda environment?
+==========================================
+
 Log in and then::
 
    wget https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-ppc64le.sh
