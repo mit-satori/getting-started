@@ -21,6 +21,7 @@ combined simulation and machine learning intensive research work.
    lsf-templates/satori-lsf-ml-examples.rst
    satori-howto-videos.rst
    satori-public-datasets.rst
+   singularity.rst
    satori-doc-examples-contributing.rst
    Green Up Hackathon IAP 2020 <satori-tutorial-examples.rst>
    satori-getting-help.rst
