@@ -15,7 +15,6 @@
 #BSUB -R "span[ptile=4]"
 #BSUB -gpu "num=4"
 #BSUB -q "normal"
-#BSUB -x
 
 
 #
@@ -58,7 +57,7 @@ chmod +x launch.sh
 # Runing the training/inference job
 # (change only the script name and options after python command)
 #
-ddlrun --mpiarg "-x EGO_TOP" -v \
+ddlrun --mpiarg "-x EGO_TOP" \
   ./launch.sh python \
   $CONDA_ROOT/envs/$PYTHON_VIRTUAL_ENVIRONMENT/ddl-tensorflow/examples/mnist/mnist-eager-env.py
 
