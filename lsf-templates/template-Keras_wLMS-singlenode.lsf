@@ -11,7 +11,6 @@
 #BSUB -R "span[ptile=4]"
 #BSUB -gpu "num=4"
 #BSUB -q "normal"
-#BSUB -x
 
 HOME2=/nobackup/users/$(whoami)
 PYTHON_VIRTUAL_ENVIRONMENT=wmlce-1.6.2
