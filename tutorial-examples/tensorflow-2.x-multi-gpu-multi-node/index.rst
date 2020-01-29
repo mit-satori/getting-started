@@ -1,6 +1,6 @@
 
-Multi Node Pathology Image Classification Transfer Learning
------------------------------------------------------------
+Multi Node Multi GPU TensorFlow 2.0 Distributed Training Example
+----------------------------------------------------------------
 
 Romeo Kienzler ( 1 s t n a m e . l a s t n a m e  a t  c h . i b m . c o m )
 
