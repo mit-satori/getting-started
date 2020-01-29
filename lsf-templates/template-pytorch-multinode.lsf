@@ -53,12 +53,14 @@ EoF_s
 chmod +x launch.sh
 
 
-
 #
 # BEFORE RUNING THIS SCRIPT PLEASE INSTALL PYTORCH TUTORIALS, by running bellow commands:
 #
 # conda activate wmlce-1.6.2
 # pytorch-install-samples /nobackup/users/$(whoami)/pytorch
+
+## ddlrun requires mpitool. Make sure to use an MPI that has mpitool binary. 
+export PATH=/opt/ibm/spectrum_mpi/bin/:$PATH
 
 
 #
