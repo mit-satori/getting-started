@@ -56,19 +56,19 @@ Setting up Your Environment
 There are two ways we manage software and environemnts in Satori. The first is conda, which is the general package
 manager for the second. The second are environment modules.
 
-#. **Environment Modules**: Environment modules are pre-packaged environments for software, tools, and libraries. It allows you to load and unload these as you go. It's always good to check to see if a module exists for a tool before installing it yourself. To see the full set of modules available, first load the spack module (`module load spack`), then run the `module avail` command. A few common module commands are:
+1. **Environment Modules**: Environment modules are pre-packaged environments for software, tools, and libraries. It allows you to load and unload these as you go. It's always good to check to see if a module exists for a tool before installing it yourself. To see the full set of modules available, first load the spack module (`module load spack`), then run the `module avail` command. A few common module commands are:
 
-    * `module avail`: Shows the available modules
+* `module avail`: Shows the available modules
 
-    * `module load MODULENAME`: Load the module MODULENAME
-    
-    * `module list`: List the modules that you have loaded
+* `module load MODULENAME`: Load the module MODULENAME
 
-    * `module rm MODULENAME` or `module unload MODULENAME`: Unload the module MODULENAME
+* `module list`: List the modules that you have loaded
 
-    * `module switch MODULE1 MODULE2`: Unload MODULE1 and load MODULE2
+* `module rm MODULENAME` or `module unload MODULENAME`: Unload the module MODULENAME
 
-#. **Conda**: Conda is the package manager for the system. The thing to know when you create your conda
+* `module switch MODULE1 MODULE2`: Unload MODULE1 and load MODULE2
+
+2. **Conda**: Conda is the package manager for the system. The thing to know when you create your conda
 environment is that you want to make sure you are getting your packages from the right channel. We have
 in depth instructions on how to properly set up a conda environment on the `WMLCE <https://mit-satori.github.io/satori-ai-frameworks.html>`__
 page. Steps 1-3 will show you how to create and properly set up a conda environment
