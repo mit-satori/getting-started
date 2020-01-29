@@ -8,4 +8,5 @@ Tips and Tricks
    carlos-quick-start-commands/index	
    conda-500-error/index		
    storage/index
+   sys_queries/sys_queries.rst
    
