@@ -16,11 +16,11 @@ Commands to run this example
 
 #. Login to Satori Login Node
 
-#. wget https://raw.githubusercontent.com/IBM/coursera/master/coursera_ai/week4/multi_worker_with_keras_numpyArrays.py
+#. wget https://raw.githubusercontent.com/mit-satori/getting-started/master/tutorial-examples/tensorflow-2.x-multi-gpu-multi-node/multi_worker_with_keras_runner.py
 
 #. chmod 755 multi_worker_with_keras_numpyArrays.py
 
-#. wget https://raw.githubusercontent.com/romeokienzler/TensorFlow/master/scripts/multi_worker_with_keras_runner.py
+#. wget https://raw.githubusercontent.com/mit-satori/getting-started/master/tutorial-examples/tensorflow-2.x-multi-gpu-multi-node/multi_worker_with_keras_runner.py
 
 #. chmod 755 multi_worker_with_keras_runner.py
 
