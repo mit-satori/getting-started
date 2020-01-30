@@ -59,15 +59,12 @@ chmod +x launch.sh
 # conda activate wmlce-1.6.2
 # pytorch-install-samples /nobackup/users/$(whoami)/pytorch
 
-## ddlrun requires mpitool. Make sure to use an MPI that has mpitool binary. 
-export PATH=/opt/ibm/spectrum_mpi/bin/:$PATH
-
 
 #
 # Runing the training/inference job
 # (change only the script name and options after python command)
 #
-ddlrun --mpiarg "-x EGO_TOP" -v \
+ddlrun --mpiarg "-x EGO_TOP" -v -s\
   ./launch.sh python \
   $HOME2/pytorch/examples/ddl_examples/mnist/mnist_ddp.py --dist-backend ddl
 
