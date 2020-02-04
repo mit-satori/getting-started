@@ -11,39 +11,42 @@ Description
 Ported the TensorFlow example to run on Satori
 
 
+Prerequisites if you are not yet running TensorFlow 2.0
++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Install TensorFlow 2.0 as described here => IMPORTANT <= this might change, please ask John or Chris => https://mit-satori.github.io/satori-ai-frameworks.html#the-wml-ce-early-access-channel-is-available-at-https-public-dhe-ibm-com-ibmdl-export-pub-software-server-ibm-ai-conda-early-access => it is important that you name your environment wmlce-ea
+
+
 Commands to run this example
 ++++++++++++++++++++++++++++
 
 #. Login to Satori Login Node
 
-#. wget https://raw.githubusercontent.com/IBM/coursera/master/coursera_ai/week4/multi_worker_with_keras.py
+#. wget https://raw.githubusercontent.com/mit-satori/getting-started/master/tutorial-examples/tensorflow-2.x-multi-gpu-multi-node/multi_worker_with_keras_runner.py
 
-#. chmod 755 multi_worker_with_keras.py
+#. chmod 755 multi_worker_with_keras_numpyArrays.py
 
-#. Install TensorFlow 2.0 as described here => IMPORTANT <= this might change, please ask John or Chris => https://mit-satori.github.io/satori-ai-frameworks.html#the-wml-ce-early-access-channel-is-available-at-https-public-dhe-ibm-com-ibmdl-export-pub-software-server-ibm-ai-conda-early-access
+#. wget https://raw.githubusercontent.com/mit-satori/getting-started/master/tutorial-examples/tensorflow-2.x-multi-gpu-multi-node/multi_worker_with_keras_runner.py
 
-#. bsub -W 3:00 -q normal -n 8 -gpu "num=4" -R "span[ptile=4]" -Ip bash (note down the nodes you are getting (e.g. node0046, node0055))
+#. chmod 755 multi_worker_with_keras_runner.py
 
-#. conda activate wmlce-ea
+#. bsub -W 3:00 -q normalx -x  -n 8  -gpu "num=4" -R "span[ptile=4]" -I "while (true) do ls > /dev/null; done" (replace 2586 with a number smaller equals than 256 :)
 
-#. paste and execute the following (replace node0046 and node0053 with your nodes) into the terminal 
-TF_CONFIG='{"cluster": {"worker": ["node0046:12345", "node0053:12345"]}, "task": {"index": 0, "type": "worker"}}'
+#. login to a new shell
 
-#. python multi_worker_with_keras.py
+#. nodes=`bjobs |grep 4*node |awk -F"\*" '{print $2}' |awk -F"." '{print $1}'`
 
-#. Go back to your first terminal window where "YOUR" node0046 node resides
+#. echo $nodes |python multi_worker_with_keras_runner.py
 
-#. paste and execute the following (replace node0046 and node0053 with your nodes) into the terminal 
-TF_CONFIG='{"cluster": {"worker": ["node0046:12345", "node0053:12345"]}, "task": {"index": 1, "type": "worker"}}'
-PLEASE NOTE THAT THE INDEX HAS CHANGED
 
-#. python multi_worker_with_keras.py
+Wait until training starts, please run different new terminals on your worker nodes to observe what's happening
 
-Wait until training starts on both terminal windows (it should now)
+watch -n 0.1 nvidia-smi
 
 What's going on here?
 +++++++++++++++++++++
-Both scripts start a Service component which communicates with the other scripts in the background for parameter averaging.
+All scrips running on all nodes start a Service component which communicates with the other scripts in the background for parameter averaging.
+
+See https://www.youtube.com/watch?v=ZwFPvvAREC8 for more information
 
 
 Code and input data repositories for this example
@@ -56,6 +59,7 @@ Useful references
 +++++++++++++++++
 https://lambdalabs.com/blog/tensorflow-2-0-tutorial-05-distributed-training-multi-node/
 https://www.tensorflow.org/api_docs/python/tf/distribute/experimental/MultiWorkerMirroredStrategy
+https://www.youtube.com/watch?v=ZwFPvvAREC8
 
 
 
