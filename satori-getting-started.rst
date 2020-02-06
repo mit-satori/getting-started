@@ -57,25 +57,100 @@ There are two ways we manage software and environemnts in Satori. The first is c
 manager for the second. The second are environment modules.
 
 1. **Environment Modules**: Environment modules are pre-packaged environments for software, tools, and libraries. It allows you to load and unload these as you go. It's always good to check to see if a module exists for a tool before installing it yourself. To see the full set of modules available, first load the spack module (`module load spack`), then run the `module avail` command. A few common module commands are:
-
-* `module avail`: Shows the available modules
-
-* `module load MODULENAME`: Load the module MODULENAME
-
-* `module list`: List the modules that you have loaded
-
-* `module rm MODULENAME` or `module unload MODULENAME`: Unload the module MODULENAME
-
-* `module switch MODULE1 MODULE2`: Unload MODULE1 and load MODULE2
-
+  * `module avail`: Shows the available modules
+  * `module load MODULENAME`: Load the module MODULENAME
+  * `module list`: List the modules that you have loaded
+  * `module rm MODULENAME` or `module unload MODULENAME`: Unload the module MODULENAME
+  * `module switch MODULE1 MODULE2`: Unload MODULE1 and load MODULE2
 2. **Conda**: Conda is the package manager for the system. The thing to know when you create your conda
 environment is that you want to make sure you are getting your packages from the right channel. We have
 in depth instructions on how to properly set up a conda environment on the `WMLCE <https://mit-satori.github.io/satori-ai-frameworks.html>`__
-page. Steps 1-3 will show you how to create and properly set up a conda environment
+page. Steps 1-3 will show you how to create and properly set up a conda environment, Step 4 will set up 
+the machine learning frameworks.
 
 Transferring Files
 ^^^^^^^^^^^^^^^^^^
+There are multiple ways to transfer files:
 
+* At the command line using scp or rsync
 
+* On the Satori Portal using the File explorer
 
+* Using other tools like `WinSCP <https://winscp.net/eng/download.php>`__, `Cyberduck <https://cyberduck.io/download/>`__, etc
+
+Using scp or rysnc
+------------------
+Both scp and rsync are command line tools that you can use to transfer files to and from remote systems
+like Satori. They both work like cp, but you have to specify the hostname of the remote system. You'll 
+need to know the path to the file or directory that you want to transfer and the path to the location where
+you want to transfer the file or directory. To transfer a file from your computer to Satori, for example:
+
+.. code:: bash
+
+   scp <local-file.py> your_username@satori-login-001.mit.edu:/path/to/location/
+
+To transfer a file from Satori you'd do a similar thing, but swap the arguments. For example, to transfer
+to the current directory:
+
+.. code:: bash
+
+   scp your_username@satori-login-001.mit.edu:/path/to/file/<remote-file.py> .
+
+To transfer a directory use the -r (recursive) flag as you would with cp and other Linux commands.
+
+The rysnc command works similarly, but has more options. For example, you can run it with the -u (update)
+option, which will only transfer files that have not already been transferred.
+
+Satori Portal File Explorer
+---------------------------
+
+Using the File Explorer on the Satori Portal you can navigate, view, and transfer files. To get to the File
+Explorer, log into the Satori Portal and click Files -> Home Directory. From here you can click use the
+Upload and Download buttons to move your files. You can also drag and drop files from your computer into
+the File Explorer window to transfer them to the system.
+
+Types of Jobs
+^^^^^^^^^^^^^
+There a couple of different ways you can run on Satori. We've already mentioned that you can start up
+Jupyter Lab from the Satori Portal and run Jupyter Notebooks there. You can also open a terminal in Jupyter
+and run at the command line there. This is a great place to start if you are more familiar with Jupyter.
+Outisde of Jupyter, there are two other main ways to run your code, the first interactive jobs, the second
+are batch jobs.
+
+Running Interactive Jobs
+^^^^^^^^^^^^^^^^^^^^^^^^
+In an interactive job you are running at the command line on a compute node. You can start up a Julia or Python
+shell and run interactively there, or you can run scripts or programs at the command line. Interactive sessions
+won't end until you exit them or you come to the end of your time limit. Interactive jobs are very good for
+testing, debugging, figuring out your workflow, or interactive data exploration. When you first port your code
+to Satori, it can be helpful to first run it in an interactive session, so you can iteratively make edits and
+rerun your code, without waiting for new resources each time. However, once you have a script that you are fairly
+confident will run without need for intervention, it's time to move on to a batch job.
+
+Visit the `Interactive Jobs <https://mit-satori.github.io/satori-workload-manager.html#interactive-jobs>`__
+section to see how to start an interactive session.
+
+Running Batch Jobs
+^^^^^^^^^^^^^^^^^^
+Batch jobs are the most common type of job on HPC clusters. You have a script or executable you'd like to run and
+you submit that to the scheduler using a submission or batch script. From there, the scheduler will decide when
+and where to run your script, and when your script comes to completion or runs into an error the job will end.
+
+Visit the `Batch Jobs <https://mit-satori.github.io/satori-workload-manager.html#batch-scripts>`__
+section to see how to submit a batch job, as well as some sample submission scripts and other information on
+monitoring batch jobs.
+
+One of the most common questions on batch jobs is how to know what is going on with them, how does the user
+know if there is an error or monitor the output of the job. In your submission script you specify where you
+want the errors and output for your job. Print statements in your code can be very useful for debugging or
+for quickly checking the progress of a job. One handy command for watching these files is "tail" with the "-f"
+option. This command will print the last few lines of a file, and with "-f" will wait and print new lines as
+they are written to the file. For example:
+
+.. code:: bash
+
+   tail -f my_job.log-12345
+
+Will print the output of the log file my_job.log-12345, where 12345 is the Job ID for this particular job. To
+exit the "following" mode, press Ctrl+C.
 
