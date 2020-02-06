@@ -15,3 +15,5 @@ Tips, tricks and questions
 
    tips-and-tricks/storage/index.rst
    portal-howto/customization.rst
+   tips-and-tricks/carlos-quick-start-commands/index.rst
+   tips-and-tricks/sys_queries/index.rst
