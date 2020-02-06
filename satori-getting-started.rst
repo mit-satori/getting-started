@@ -57,16 +57,17 @@ There are two ways we manage software and environemnts in Satori. The first is c
 manager for the second. The second are environment modules.
 
 1. **Environment Modules**: Environment modules are pre-packaged environments for software, tools, and libraries. It allows you to load and unload these as you go. It's always good to check to see if a module exists for a tool before installing it yourself. To see the full set of modules available, first load the spack module (`module load spack`), then run the `module avail` command. A few common module commands are:
-  * `module avail`: Shows the available modules
-  * `module load MODULENAME`: Load the module MODULENAME
-  * `module list`: List the modules that you have loaded
-  * `module rm MODULENAME` or `module unload MODULENAME`: Unload the module MODULENAME
-  * `module switch MODULE1 MODULE2`: Unload MODULE1 and load MODULE2
-2. **Conda**: Conda is the package manager for the system. The thing to know when you create your conda
-environment is that you want to make sure you are getting your packages from the right channel. We have
-in depth instructions on how to properly set up a conda environment on the `WMLCE <https://mit-satori.github.io/satori-ai-frameworks.html>`__
-page. Steps 1-3 will show you how to create and properly set up a conda environment, Step 4 will set up 
-the machine learning frameworks.
+
+.. code:: bash
+
+  module avail # Shows the available modules
+  module load MODULENAME # Load the module MODULENAME
+  module list # List the modules that you have loaded
+  module rm MODULENAME # Unload the module MODULENAME
+  module unload MODULENAME # Unload the module MODULENAME
+  module switch MODULE1 MODULE2 # Unload MODULE1 and load MODULE2
+
+2. **Conda**: Conda is the package manager for the system. The thing to know when you create your conda environment is that you want to make sure you are getting your packages from the right channel. We have in depth instructions on how to properly set up a conda environment on the `WMLCE <https://mit-satori.github.io/satori-ai-frameworks.html>`__ page. Steps 1-3 will show you how to create and properly set up a conda environment, Step 4 will set up the machine learning frameworks.
 
 Transferring Files
 ^^^^^^^^^^^^^^^^^^
@@ -114,11 +115,11 @@ Types of Jobs
 There a couple of different ways you can run on Satori. We've already mentioned that you can start up
 Jupyter Lab from the Satori Portal and run Jupyter Notebooks there. You can also open a terminal in Jupyter
 and run at the command line there. This is a great place to start if you are more familiar with Jupyter.
-Outisde of Jupyter, there are two other main ways to run your code, the first interactive jobs, the second
-are batch jobs.
+Outisde of Jupyter, there are two other main ways to run your code, the first are **interactive jobs**, the second
+are **batch jobs**.
 
 Running Interactive Jobs
-^^^^^^^^^^^^^^^^^^^^^^^^
+------------------------
 In an interactive job you are running at the command line on a compute node. You can start up a Julia or Python
 shell and run interactively there, or you can run scripts or programs at the command line. Interactive sessions
 won't end until you exit them or you come to the end of your time limit. Interactive jobs are very good for
@@ -131,7 +132,7 @@ Visit the `Interactive Jobs <https://mit-satori.github.io/satori-workload-manage
 section to see how to start an interactive session.
 
 Running Batch Jobs
-^^^^^^^^^^^^^^^^^^
+------------------
 Batch jobs are the most common type of job on HPC clusters. You have a script or executable you'd like to run and
 you submit that to the scheduler using a submission or batch script. From there, the scheduler will decide when
 and where to run your script, and when your script comes to completion or runs into an error the job will end.
