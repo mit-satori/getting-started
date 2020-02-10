@@ -17,4 +17,4 @@ Tips, tricks and questions
    portal-howto/customization.rst
    tips-and-tricks/carlos-quick-start-commands/index.rst
    tips-and-tricks/sys_queries/index.rst
-   tips-and-tricks/cnh-faq/index.rst
+   tips-and-tricks/ondemand_portal_queries/index.rst
