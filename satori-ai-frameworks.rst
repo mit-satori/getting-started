@@ -365,7 +365,7 @@ Alternative:
    conda config --prepend channels https://public.dhe.ibm.com/ibmdl/export/pub/software/server/ibm-ai/conda-early-access/   
    conda create -n wmlce-ea python=3.6
    conda activate wmlce-ea
-   conda install tensorflow=2.0.0=gpu_py36_871.gde25b7a
+   conda install tensorflow=2.1.0=gpu_py36_914.g4f6e601
 
 
 To test your TF2 code you can use the this Deep Convolutional Generative Adversarial Network jupyter notebook from this `link <https://github.com/mit-satori/getting-started/blob/master/jupyter-notebooks/TF2.0-DCGAN-Tutorial.ipynb>`__ or go to https://github.com/tensorflow/docs/tree/master/site/en/tutorials 
