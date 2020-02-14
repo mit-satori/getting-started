@@ -23,6 +23,7 @@ combined simulation and machine learning intensive research work.
    satori-howto-videos.rst
    satori-public-datasets.rst
    singularity.rst
+   satori-copy-large-filesets.rst
    FAQ <satori-doc-examples-contributing.rst>
    Green Up Hackathon IAP 2020 <satori-tutorial-examples.rst>
    satori-getting-help.rst
