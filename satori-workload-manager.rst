@@ -62,11 +62,12 @@ This will request an AC922 node with 4x GPUs from the Satori (normal
 queue) for 3 hours.
 
 If you need to make sure no one else can allocate the unused GPU's on the machine you can use
+
 .. code:: bash
 
    bsub -W 3:00 -x -q normalx -gpu "num=4:mode=exclusive_process" -Is /bin/bash
    
-
+this will request exclusive use of an interactive node with 4GPU's 
 
 Batch Scripts
 ^^^^^^^^^^^^^
@@ -125,52 +126,53 @@ As above, if you need to request exclusive use of the gpus on the node you can d
 
 .. code:: bash
 
-$ bsub < template-16GPUs.lsf
+   $ bsub < template-16GPUs.lsf
 
+.. code:: bash
 
---- template-16GPUs.lsf ---
-#BSUB -L /bin/bash
-#BSUB -J "template-16GPUs"
-#BSUB -o "template-16GPUs_o.%J"
-#BSUB -e "template-16GPUs_e.%J"
-#BSUB -n 16
-#BSUB -R "span[ptile=4]"
-#BSUB -gpu "num=4"
-#BSUB -q "normalx"
-#BSUB -x
+   --- template-16GPUs.lsf ---
+   #BSUB -L /bin/bash
+   #BSUB -J "template-16GPUs"
+   #BSUB -o "template-16GPUs_o.%J"
+   #BSUB -e "template-16GPUs_e.%J"
+   #BSUB -n 16
+   #BSUB -R "span[ptile=4]"
+   #BSUB -gpu "num=4"
+   #BSUB -q "normalx"
+   #BSUB -x
 
-#
-# Setup User Environement (Python, WMLCE virtual environment etc)
-#
-HOME2=/nobackup/users/<user-name>
-PYTHON_VIRTUAL_ENVIRONMENT=wmlce-1.6.2
-CONDA_ROOT=$HOME2/anaconda3
+   #
+   # Setup User Environement (Python, WMLCE virtual environment etc)
+   #
+   HOME2=/nobackup/users/<user-name>
+   PYTHON_VIRTUAL_ENVIRONMENT=wmlce-1.6.2
+   CONDA_ROOT=$HOME2/anaconda3
+   
+   source ${CONDA_ROOT}/etc/profile.d/conda.sh
+   conda activate $PYTHON_VIRTUAL_ENVIRONMENT
+   export EGO_TOP=/opt/ibm/spectrumcomputing
+   
+   #
+   # Cleaning CUDA_VISIBLE_DEVICES
+   #
+   cat > launch.sh << EoF_s
+   #! /bin/sh
+   export CUDA_VISIBLE_DEVICES=0,1,2,3
+   exec \$*
+   EoF_s
+   chmod +x launch.sh
+   mpirun --tag-output ./setup.sh
+   
+   
+   #
+   # Runing the training/inference job
+   # (change only the script name and options after python command)
+   #
+   
+   ddlrun --mpiarg "-x EGO_TOP" -v \
+     ./launch.sh python <python-script-name-here>
 
-source ${CONDA_ROOT}/etc/profile.d/conda.sh
-conda activate $PYTHON_VIRTUAL_ENVIRONMENT
-export EGO_TOP=/opt/ibm/spectrumcomputing
-
-#
-# Cleaning CUDA_VISIBLE_DEVICES
-#
-cat > launch.sh << EoF_s
-#! /bin/sh
-export CUDA_VISIBLE_DEVICES=0,1,2,3
-exec \$*
-EoF_s
-chmod +x launch.sh
-mpirun --tag-output ./setup.sh
-
-
-#
-# Runing the training/inference job
-# (change only the script name and options after python command)
-#
-
-ddlrun --mpiarg "-x EGO_TOP" -v \
-  ./launch.sh python <python-script-name-here>
-
--------------------------
+   -------------------------
 
 
 
