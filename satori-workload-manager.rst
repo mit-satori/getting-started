@@ -122,10 +122,7 @@ In the above template you can change:
 -  line 17-18: change as need for what you will want to run and from
    where
 
-As above, if you need to request exclusive use of the gpus on the node you can do the following in your template 
-
-As an example, consider the following batch script for 4x V100 GPUs requested for exclusive use 
-(single AC922 node):
+if you need to request exclusive use of the gpus fr the example above  you can do the following in your template 
 
 .. code:: bash
 
