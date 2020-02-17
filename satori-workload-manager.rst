@@ -124,6 +124,32 @@ In the above template you can change:
 
 As above, if you need to request exclusive use of the gpus on the node you can do the following in your template 
 
+As an example, consider the following batch script for 4x V100 GPUs requested for exclusive use 
+(single AC922 node):
+
+.. code:: bash
+
+   #BSUB -L /bin/bash
+   #BSUB -J "keras-job-name"
+   #BSUB -o "keras-job-name_o.%J"
+   #BSUB -e "keras-job-name_e.%J"
+   #BSUB -n 4
+   #BSUB -R "span[ptile=4]"
+   #BSUB -gpu "num=4"
+   #BSUB -q "normalx"
+   #BSUB -x
+
+   HOME2=/nobackup/users/<your_user_name>
+   PYTHON_VIRTUAL_ENVIRONMENT=wmlce-1.6.2
+   CONDA_ROOT=$HOME2/anaconda3
+   source ${CONDA_ROOT}/etc/profile.d/conda.sh
+   conda activate $PYTHON_VIRTUAL_ENVIRONMENT
+
+   cd $HOME2/projects
+   python Keras-ResNet50-training.py --batch=64
+
+To request 4 nodes with 16 GPU's in exclusive use use
+
 .. code:: bash
 
    $ bsub < template-16GPUs.lsf
