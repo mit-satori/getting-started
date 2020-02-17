@@ -28,6 +28,11 @@ In general, the process for running a batch job is to:
 -  Submit the batch script to the Workload Manager
 -  Monitor the job’s progress before and during execution
 
+A Note on Exclusivity
+^^^^^^^^^^^^^^^^^^^^^
+
+To make best use of Satori's GPU resource  default job submissiosn are not exclusive. That means that unless you ask otherwise, the GPUs on the node(s) you are assigned may already be in use by another user. That means if you request a node  with 2GPU's  the 2 other GPUs on that node may be engaged by anohther job. This allows us to more efficently allocate all of the GPU resources. This may require some additional checkign to make sure you can uniquly use  all of the GPU's on a machine. If you're in doubt, you can request the node to be 'exclusive' . See below on how to request exclusive access  in an interactive and batch situation. 
+
 Interactive Jobs
 ^^^^^^^^^^^^^^^^
 
@@ -55,6 +60,13 @@ command:
 
 This will request an AC922 node with 4x GPUs from the Satori (normal
 queue) for 3 hours.
+
+If you need to make sure no one else can allocate the unused GPU's on the machine you can use
+.. code:: bash
+
+   bsub -W 3:00 -x -q normalx -gpu "num=4:mode=exclusive_process" -Is /bin/bash
+   
+
 
 Batch Scripts
 ^^^^^^^^^^^^^
@@ -109,6 +121,60 @@ In the above template you can change:
 -  line 17-18: change as need for what you will want to run and from
    where
 
+As above, if you need to request exclusive use of the gpus on the node you can do the following in your template 
+
+.. code:: bash
+
+$ bsub < template-16GPUs.lsf
+
+
+--- template-16GPUs.lsf ---
+#BSUB -L /bin/bash
+#BSUB -J "template-16GPUs"
+#BSUB -o "template-16GPUs_o.%J"
+#BSUB -e "template-16GPUs_e.%J"
+#BSUB -n 16
+#BSUB -R "span[ptile=4]"
+#BSUB -gpu "num=4"
+#BSUB -q "normalx"
+#BSUB -x
+
+#
+# Setup User Environement (Python, WMLCE virtual environment etc)
+#
+HOME2=/nobackup/users/<user-name>
+PYTHON_VIRTUAL_ENVIRONMENT=wmlce-1.6.2
+CONDA_ROOT=$HOME2/anaconda3
+
+source ${CONDA_ROOT}/etc/profile.d/conda.sh
+conda activate $PYTHON_VIRTUAL_ENVIRONMENT
+export EGO_TOP=/opt/ibm/spectrumcomputing
+
+#
+# Cleaning CUDA_VISIBLE_DEVICES
+#
+cat > launch.sh << EoF_s
+#! /bin/sh
+export CUDA_VISIBLE_DEVICES=0,1,2,3
+exec \$*
+EoF_s
+chmod +x launch.sh
+mpirun --tag-output ./setup.sh
+
+
+#
+# Runing the training/inference job
+# (change only the script name and options after python command)
+#
+
+ddlrun --mpiarg "-x EGO_TOP" -v \
+  ./launch.sh python <python-script-name-here>
+
+-------------------------
+
+
+
+
 For your convienenice additional LSF batch job templates have been
 created to cover distributed deep learning trainings across Satori
 cluster:
@@ -122,6 +188,7 @@ cluster:
 -  `TensorFlow with Horovod + IBM Distributed Deep Learning Library
    (DDL)
    backend <https://github.com/mit-satori/getting-started/blob/master/lsf-templates/template-tf-horovod-multinode.lsf>`__
+
 
 Job States
 ~~~~~~~~~~
