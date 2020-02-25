@@ -109,7 +109,7 @@ example, to create an environment named wmlce_env with Python 3.6:
    conda create --name wmlce-1.6.2 python=3.6
    conda activate wmlce-1.6.2
 
-As a good practice to maintain the disk space usage on Satori please run at regular intervals the following command that will remove unused packages and caches from your Anaconda profile. In addition this command shuld be use before installing a new version of WMLCE on another virtual environment.
+NOTE: As a good practice to maintain the disk space usage on Satori please run at regular intervals the following command that will remove unused packages and caches from your Anaconda profile. In addition this command shuld be use before installing a new version of WMLCE on another virtual environment.
 
 .. code:: bash
 
