@@ -98,7 +98,6 @@ As an example, consider the following batch script for 4x V100 GPUs
    #BSUB -R "span[ptile=4]"
    #BSUB -gpu "num=4"
    #BSUB -q "normal"
-   #BSUB -x
 
    HOME2=/nobackup/users/<your_user_name>
    PYTHON_VIRTUAL_ENVIRONMENT=wmlce-1.6.2
