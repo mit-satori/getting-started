@@ -58,7 +58,9 @@ https://raw.githubusercontent.com/IBM/coursera/master/coursera_ai/week4/multi_wo
 Useful references
 +++++++++++++++++
 https://lambdalabs.com/blog/tensorflow-2-0-tutorial-05-distributed-training-multi-node/
+
 https://www.tensorflow.org/api_docs/python/tf/distribute/experimental/MultiWorkerMirroredStrategy
+
 https://www.youtube.com/watch?v=ZwFPvvAREC8
 
 
