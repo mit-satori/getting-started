@@ -15,13 +15,15 @@ Use satori-login-002.mit.edu
   1. Login: 
   
      .. code:: bash
+     
        ssh -Y username@satori-login-002.mit.edu
     
   
   2. Submit a fake job to access a node: 
   
      .. code:: bash
-      bsub -x -q normalx sleep 7200 
+     
+       bsub -x -q normalx sleep 7200 
     
 
 
