@@ -23,7 +23,7 @@ Use satori-login-002.mit.edu
   
      .. code:: bash
      
-       bsub -x -q normalx sleep 7200 
+       bsub -x -q normalx -gpu "num=1" sleep 7200
     
 
 
