@@ -13,11 +13,13 @@ Use satori-login-002.mit.edu
 * To access the Relion GUI
 
   1. Login: 
+  
      ```
        ssh -Y username@satori-login-002.mit.edu
      ```
   
   2. Submit a fake job to access a node: 
+  
      ```
       bsub -x -q normalx sleep 7200 
      ```
