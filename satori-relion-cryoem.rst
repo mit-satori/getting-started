@@ -47,9 +47,23 @@ Use satori-login-002.mit.edu
        
   6. Open Relion by typing: 
   
-    .. code:: bash   
+     .. code:: bash   
     
        relion
+       
+  7. Use GUI to configure your job.
+  
+  8. Use "Print" command to print job commands to terminal. 
+  
+  9. Adjust the relion submission script to incorporate the commands specific to your job. Note: If you have a job that requires a lot of memory, you should alter the --n and --j values. Save submission script. Make sure paths for "--o" already exist. 
+  
+  10. Execute job
+  
+      .. code:: bash
+      
+      bsub< run
+      
+  11. Check job is running with bjobs. Submission script generates a log file. 
 
 
 
