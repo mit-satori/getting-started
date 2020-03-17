@@ -67,8 +67,8 @@ Use satori-login-002.mit.edu
   
 * Example job
 
- Below is an example of a job file that Relion should generate. The file you generate should look something
- like this. 
+Below is an example of a job file that Relion should generate. The file you generate should look something
+like this. 
 
    .. code:: bash
  
