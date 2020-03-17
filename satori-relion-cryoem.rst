@@ -64,6 +64,28 @@ Use satori-login-002.mit.edu
         bsub< run
       
   11. Check job is running with bjobs. Submission script generates a log file. 
+  
+* Example job
+
+ .. code:: bash
+ 
+    #BSUB -L /bin/bash
+    #BSUB -J "Relion"
+    #BSUB -o "Relion.%J"
+    #BSUB -n 40
+    #BSUB -R "span[ptile=40]"
+    #BSUB -gpu "num=4"
+    #BSUB -q "normal"
+
+    export PATH=/nobackup/users/ruzhu/RELION/bin:/nobackup/users/ruzhu/CTFfind4/bin:/opt/ibm/spectrum_mpi/bin:$PATH 
+    export LD_LIBRARY_PATH=/nobackup/users/ruzhu/CTFfind4/lib:$LD_LIBRARY_PATH
+
+    #source ~/anaconda3/bin/activate
+    #conda activate CryoEM
+
+    unset CUDA_VISIBLE_DEVICES
+    export CUDA_VISIBLE_DEVICES="0,1,2,3"
+    (time -p mpirun -bind-to none -n 9 relion_refine_mpi --j 4 --gpu --pool 50 --dont_combine_weights_via_disc --scratch_dir /dev/shm  --o Refine3D/job005 --auto_refine --split_random_halves --i squirrel2.star --ref Import/job004/postprocess_refine850_resampled_775.mrc --firstiter_cc --ini_high 40  --ctf --ctf_corrected_ref --particle_diameter 340 --flatten_solvent --zero_mask --oversampling 1 --healpix_order 2 --auto_local_healpix_order 4 --offset_range 5 --offset_step 2 --sym C1 --low_resol_join_halves 40 --norm --scale) >run_21x8.log 2>&1
 
 
 
