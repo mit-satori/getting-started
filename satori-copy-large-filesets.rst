@@ -123,5 +123,7 @@ Note: <asperauser> is your userid on Satori
       ascp –P 22 –mode=send|recv  /path/to/file.txt  <asperauser>@satori-login-002.mit.edu:/path/to/file.txt
    
       The path to ascp command is located at $HOME/.aspera/connect/bin 
+      
+      Here4's an estimator for Aspera transfer times https://www.ibm.com/aspera/file-transfer-calculator/
 
 For technical support, Support <satori-support@techsquare.com>
