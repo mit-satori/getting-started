@@ -2,8 +2,13 @@ Copying larger files and large file sets
 ----------------------------------------
 
  
-cp command is a single threaded process and it does not take advantage of the distributed file systems like GPFS.  If you have a lot of files to copy, you may want to use  msrsync (https://github.com/jbd/msrsync).  It is a python wrapper around rsync.  
+cp command is a single threaded process and it does not take advantage of the distributed file systems like GPFS.  If you have a lot of files to copy, or you have very large files, you may want to use  one of the large data set copy fasciliities supporte4d by Satori. The two methods are:
+
+* msrsync (https://github.com/jbd/msrsync) whichis a python wrapper around rsync. 
+* Aspera (https://www.ibm.com/products/aspera) which is a high speed data transfer service offered by IBM
  
+Using mrsync
+------------
 https://github.com/jbd/msrsync
  
 To install
@@ -75,3 +80,48 @@ real    8m25.144s
 user    0m2.756s
 sys     0m35.559s
  
+
+
+Using Aspera for remote file transfer to Satori cluster
+-------------------------------------------------------
+
+Note: Aspera server is enabled on either satori-login-001.mit.edu or satori-login-002.mit.edu login nodes.
+
+1. Install Aspera client or connect on your local machine
+
+   * For Mac, Windows or Linux-x86, please download and install Aspera connect from https://downloads.asperasoft.com/en/downloads/8?list  
+   To install on Mac or Windows, please following the software installation step to complete the installation. For Linux as non-root user, untar the gz file and run the install script file. After the installation is complete, it will be located at your home directory .aspera/connect
+
+   * For PowerPC (ppc64le) system, please download and install Aspera desktop client from https://downloads.asperasoft.com/en/downloadsArchive/2 
+   To install desktop client on Power system after download deb or rpm file:
+   
+      * on an Ubuntu system
+      
+      .. code:: bash
+      
+      sudo apt-get install ibm-aspera-desktopclient-3.9.6.176567-linux-ppc64le.deb
+      
+      * RHEL|CentOS
+      
+      .. code:: bash
+      
+      sudo yum install ibm-aspera-desktopclient-3.9.6.176567-linux-ppc64le.rpm
+
+2. Transfer files using Aspera connect or client
+Note: <asperauser> is your userid on Satori
+
+   * on Windows
+   
+      .. code:: bash 
+   
+      ascp.exe –P 22 –mode=send|recv  \path\to\file.txt  <asperauser>@satori-login-002.mit.edu:/path/to/file.txt
+
+   * on Mac or Linux
+
+      .. code:: bash 
+   
+      ascp –P 22 –mode=send|recv  /path/to/file.txt  <asperauser>@satori-login-002.mit.edu:/path/to/file.txt
+   
+      The path to ascp command is located at $HOME/.aspera/connect/bin 
+
+For technical support, Support <satori-support@techsquare.com>
