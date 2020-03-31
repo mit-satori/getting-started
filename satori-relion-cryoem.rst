@@ -5,7 +5,9 @@ Prerequisites
 ^^^^^^^^^^^^^
 
 A local installation of an X11 server is required to use the Relion GUI.
+
 On a Mac computer the XQuartz ( https://www.xquartz.org ) software is a good option.
+
 On a Window computer Cygwin/X ( http://x.cygwin.com ) software provides a free X server. 
 
 Quick start
