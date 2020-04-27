@@ -217,6 +217,6 @@ Additional jobs will be rejected at submit time.
 
 Priority Queue Policy
 ~~~~~~~~~~~~~~~~~~~~~
-We are setting up a small number of priority queues that will be used for jobs with urgent time constraints such as paper deadlines. To request acccess to the priority queue please email <support-satori@techsquare.com> and indicate the deadlien you are facing, and the duration you will need priority access. 
+We are setting up a small number of priority queues that will be used for jobs with urgent time constraints such as paper deadlines. To request acccess to the priority queue please email support-satori@techsquare.com and indicate the deadlien you are facing, and the duration you will need priority access. 
 
-Priority queues will initially be set up in two configureations, 1 Node with 4 GPUs and 2 Nodes with 8 GPU's. Job run  length will be capped at 24 hours so please use checkpointing. There will be a limit of 4 parallel jobs per user running during peak times. If these queue setting do not meet your project goals, please email <support-satori@techsquare.com> with your needed requirments and we will consider them. 
+Priority queues will initially be set up in two configureations, 1 Node with 4 GPUs and 2 Nodes with 8 GPU's. Job run  length will be capped at 24 hours so please use checkpointing. There will be a limit of 4 parallel jobs per user running during peak times. If these queue setting do not meet your project goals, please email support-satori@techsquare.com with your needed requirments and we will consider them. 
