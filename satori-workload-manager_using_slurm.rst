@@ -161,14 +161,7 @@ In the above template you can change:
 
 
 
-For your convienenice additional SLURM batch job templates have been
-created to cover distributed deep learning trainings across Satori
-cluster. You can find them `here <https://github.com/mit-satori/getting-started/tree/master/slurm-templates>
-
--  
--  Pytorch with Horovod + IBM Distributed Deep Learning Library (DDL)backend 
-  * `Pytorch singal node, 1 GPU 
-<https://github.com/mit-satori/getting-started/blob/master/lsf-templates/template-pytorch-horovod-multinode.lsf>`__
+For your convienenice additional SLURM batch job templates have been created to cover distributed deep learning trainings across Satori cluster. You can find them `here <https://github.com/mit-satori/getting-started/tree/master/slurm-templates>
 
 
 
@@ -224,6 +217,6 @@ Additional jobs will be rejected at submit time.
 
 Priority Queue Policy
 ~~~~~~~~~~~~~~~~~~~~~
-We are setting up a small number of priority queues that will be used for jobs with urgent time constraints such as paper deadlines. To request acccess to the priority queue please email `support-satori@techsquare.com <mailto://support-satori@techsquare.com>` and indicate the deadlien you are facing, and the duration you will need priority access. 
+We are setting up a small number of priority queues that will be used for jobs with urgent time constraints such as paper deadlines. To request acccess to the priority queue please email <support-satori@techsquare.com> and indicate the deadlien you are facing, and the duration you will need priority access. 
 
-Priority queues will initially be set up in two configureations, 1 Node with 4 GPUs and 2 Nodes with 8 GPU's. Job run  length will be capped at 24 hours so please use checkpointing. There will be a limit of 4 parallel jobs per user running during peak times. If these queue setting do not meet your project goals, please email `support-satori@techsquare.com <mailto://support-satori@techsquare.com>` with your needed requirments and we will consider them. 
+Priority queues will initially be set up in two configureations, 1 Node with 4 GPUs and 2 Nodes with 8 GPU's. Job run  length will be capped at 24 hours so please use checkpointing. There will be a limit of 4 parallel jobs per user running during peak times. If these queue setting do not meet your project goals, please email <support-satori@techsquare.com> with your needed requirments and we will consider them. 
