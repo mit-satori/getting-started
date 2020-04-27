@@ -128,8 +128,12 @@ to Satori, it can be helpful to first run it in an interactive session, so you c
 rerun your code, without waiting for new resources each time. However, once you have a script that you are fairly
 confident will run without need for intervention, it's time to move on to a batch job.
 
-Visit the `Interactive Jobs <https://mit-satori.github.io/satori-workload-manager.html#interactive-jobs>`__
-section to see how to start an interactive session.
+Visit the `Interactive Jobs <https://mit-satori.github.io/satori-workload-manager-using-lsf.html#interactive-jobs>`__
+section to see how to start an interactive session using the exisitng LSF workload manager.
+
+**Note** Satori is in the process of being migrated to the SLURM Workload manager. Visit the `Interactive Jobs <https://mit-satori.github.io/satori-workload-manager-using-slurm.html#interactive-jobs>`__
+section to see how to start an interactive session using the new  SLURM workload manager.
+
 
 Running Batch Jobs
 ------------------
@@ -138,8 +142,11 @@ you submit that to the scheduler using a submission or batch script. From there,
 and where to run your script, and when your script comes to completion or runs into an error the job will end.
 
 Visit the `Batch Jobs <https://mit-satori.github.io/satori-workload-manager.html#batch-scripts>`__
-section to see how to submit a batch job, as well as some sample submission scripts and other information on
-monitoring batch jobs.
+section to see how to submit a batch job using the existing LSF workload manager , as well as some sample submission scripts and other information on monitoring batch jobs.
+
+**Note** Satori is in the process of being migrated to the SLURM Workload manager. Visit the `Batch Jobs <https://mit-satori.github.io/satori-workload-manager-using-slurm.html#batch-scripts>`__
+section to see how to submit a batch job using the new SLURM workload manager , as well as some sample submission scripts and other information on monitoring batch jobs.
+
 
 One of the most common questions on batch jobs is how to know what is going on with them, how does the user
 know if there is an error or monitor the output of the job. In your submission script you specify where you
