@@ -257,5 +257,5 @@ sbatch --gres=gpu:4 -N 1 --exclusive --mem=1T --time 1:00:00 foo.slurm
 ```
 
 will create a series of jobs that runs one after another. Together with checkpointing this sort of
-approach can be used to run extended workloads in an largely automated manner. Slurm has many
-feartures for managing sequences of jobs. Some more involved examples can be found `_here <https://hpc.nih.gov/docs/job_dependencies.html>`__.
+approach can be used to run extended workloads in an largely automated manner. The Slurm `documentation <https://slurm.schedmd.com/documentation.html>`__ describes many
+features for managing sequences of jobs. Some more involved examples can be found at the `NIH Biowulf <https://hpc.nih.gov/docs/job_dependencies.html>`__ site.
