@@ -260,4 +260,4 @@ submitting this job, for example, as
 
 will create a series of jobs that runs one after another. Together with checkpointing this sort of
 approach can be used to run extended workloads in an largely automated manner. The Slurm `documentation <https://slurm.schedmd.com/documentation.html>`__ describes many
-features for managing sequences of jobs. Some more involved examples can be found at the `NIH Biowulf <https://hpc.nih.gov/docs/job_dependencies.html>`__ site.
+features for managing sequences of jobs. Some more involved examples can be found at the `NIH Biowulf <https://hpc.nih.gov/docs/job_dependencies.html>`__ site. 
