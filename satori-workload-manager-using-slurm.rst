@@ -142,15 +142,15 @@ As an example, consider the following batch script for 4x V100 GPUs
 
 In the above template you can change:
 
--  line 2-4: with your desire job name, but remember to keep \_out for the
+-  line 2-4: with your desired job name, but remember to keep \_out for the
    job output file and \_err for the file with the related job errors
--  line 7: “--gres=gpu:4” here you can consider the no of GPUs you need **per node** *e.g.* a value of 1 means you want only 
+-  line 7: ``--gres=gpu:4`` here you can consider the no of GPUs you need **per node** *e.g.* a value of 1 means you want only 
    1 GPU on each node, a value of 4 means you want all GPUS's on the node. 
 -  line 9: "--nodes=1" here you put how many nodes you need. *e.g.* a value of 1 means 1 node, a value of 2 means 2 nodes,                
    etc. **Note:** the total number of GPUS is the product of the "--gres" and the "--nodes" settings. *e.g.* a value of 
    "--gres=gpu:4" and "--nodes=2" = 4 x 2 = 8 GPU's in total.
--  line 12: "--time=24:00:00" indicates the maximum run time you wish to allow. **Note** If thi snumber sis lareger than the    
-   runtime limit of the queue you are in, your job will be terminated at the queue limit. **It is good practivce to make use 
+-  line 12: "--time=24:00:00" indicates the maximum run time you wish to allow. **Note** If this number is larger than the    
+   runtime limit of the queue you are in, your job will be terminated at the queue limit. **It is good practice to make use 
    of checkpointing in order not to lose your work if your job is terminated.** 
 -  line 13: "--exclusive" means that you want full use of the GPUS on the nodes you are reserving. Leaving this out allows 
    the GPU resources you're not using on the node to be shared. 
