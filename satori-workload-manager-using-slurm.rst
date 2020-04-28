@@ -119,8 +119,8 @@ As an example, consider the following batch script for 4x V100 GPUs
    echo " "
    echo " Nodelist:= " $SLURM_JOB_NODELIST
    echo " Number of nodes:= " $SLURM_JOB_NUM_NODES
-   echo " NGPUs per node:= " $SLURM_GPUS_PER_NODE 
-   echo " Ntasks per node:= "  $SLURM_NTASKS_PER_NOD
+   echo " GPUs per node:= " $SLURM_STEP_GPUS
+   echo " Ntasks per node:= "  $SLURM_NTASKS_PER_NODE
 
 
    ####    Use MPI for communication with Horovod - this can be hard-coded during installation as well.
