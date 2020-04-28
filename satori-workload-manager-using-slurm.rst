@@ -129,7 +129,7 @@ As an example, consider the following batch script for 4x V100 GPUs
    export HOROVOD_GPU_BROADCAST=MPI
    export NCCL_DEBUG=DEBUG
 
-   echo " Running on multiple nodes and GPU devices"
+   echo " Running on multiple nodes/GPU devices"
    echo ""
    echo " Run started at:- "
    date
