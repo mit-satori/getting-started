@@ -254,6 +254,7 @@ of job is shown below
 submitting this job, for example, as
 
 .. code:: bash
+
    sbatch --gres=gpu:4 -N 1 --exclusive --mem=1T --time 1:00:00 foo.slurm
 
 
