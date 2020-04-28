@@ -119,7 +119,7 @@ As an example, consider the following batch script for 4x V100 GPUs
    echo " "
    echo " Nodelist:= " $SLURM_JOB_NODELIST
    echo " Number of nodes:= " $SLURM_JOB_NUM_NODES
-   echo " GPUs per node:= " $SLURM_STEP_GPUS
+   echo " GPUs per node:= " $SLURM_JOB_GPUS
    echo " Ntasks per node:= "  $SLURM_NTASKS_PER_NODE
 
 
