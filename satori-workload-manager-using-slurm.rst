@@ -242,19 +242,20 @@ Running jobs in series
 Slurm provides numerous mechanisms for chaining jobs together to run unattended in sequence. A simple example of this sort
 of job is shown below
 
-```
-#!/bin/bash
-MYSCRIPT=/home/${USER}/foo.slurm
-MYSUBDIR=/home/${USER}
-JID=${SLURM_JOB_ID}
-ssh service0001 "cd $MYSUBDIR; pwd; sbatch --dependency=afterok:${JID} ${MYSCRIPT}"
-sleep 60
-```
+.. code:: bash
+
+   #!/bin/bash
+   MYSCRIPT=/home/${USER}/foo.slurm
+   MYSUBDIR=/home/${USER}
+   JID=${SLURM_JOB_ID}
+   ssh service0001 "cd $MYSUBDIR; pwd; sbatch --dependency=afterok:${JID} ${MYSCRIPT}"
+   sleep 60
 
 submitting this job, for example, as
-```
-sbatch --gres=gpu:4 -N 1 --exclusive --mem=1T --time 1:00:00 foo.slurm
-```
+
+.. code:: bash
+   sbatch --gres=gpu:4 -N 1 --exclusive --mem=1T --time 1:00:00 foo.slurm
+
 
 will create a series of jobs that runs one after another. Together with checkpointing this sort of
 approach can be used to run extended workloads in an largely automated manner. The Slurm `documentation <https://slurm.schedmd.com/documentation.html>`__ describes many
