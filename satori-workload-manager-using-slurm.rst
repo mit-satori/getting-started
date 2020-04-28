@@ -146,15 +146,15 @@ In the above template you can change:
    job output file and \_err for the file with the related job errors
 -  line 7: ``--gres=gpu:4`` here you can consider the no of GPUs you need **per node** *e.g.* a value of 1 means you want only 
    1 GPU on each node, a value of 4 means you want all GPUS's on the node. 
--  line 9: "--nodes=1" here you put how many nodes you need. *e.g.* a value of 1 means 1 node, a value of 2 means 2 nodes,                
-   etc. **Note:** the total number of GPUS is the product of the "--gres" and the "--nodes" settings. *e.g.* a value of 
-   "--gres=gpu:4" and "--nodes=2" = 4 x 2 = 8 GPU's in total.
--  line 12: "--time=24:00:00" indicates the maximum run time you wish to allow. **Note** If this number is larger than the    
+-  line 9: ``--nodes=1`` here you put how many nodes you need. *e.g.* a value of 1 means 1 node, a value of 2 means 2 nodes,                
+   etc. **Note:** the total number of GPUS is the product of the ``--gres`` and the ``--nodes`` settings. *e.g.* a value of 
+   ``--gres=gpu:4`` and ``--nodes=2`` = 4 x 2 = 8 GPU's in total.
+-  line 12: ``--time=24:00:00`` indicates the maximum run time you wish to allow. **Note** If this number is larger than the    
    runtime limit of the queue you are in, your job will be terminated at the queue limit. **It is good practice to make use 
    of checkpointing in order not to lose your work if your job is terminated.** 
--  line 13: "--exclusive" means that you want full use of the GPUS on the nodes you are reserving. Leaving this out allows 
+-  line 13: ``--exclusive`` means that you want full use of the GPUS on the nodes you are reserving. Leaving this out allows 
    the GPU resources you're not using on the node to be shared. 
--  line 17: change to your conda virtual environment defined at nstallation of WMLCE (or other conda environment) 
+-  line 17: change to your conda virtual environment defined at installation of WMLCE (or other conda environment) 
 -  line 49: change as need for what you will want to run and from where. **Note** while horovod isn't strictly needed for 
    single node runs, we recommend it in case you need to expand to more nodes. 
 -  The Horovod communication from MPI to NCCL2; In case of the MPI, allgather allocates an output tensor which is proportionate to the number of processes participating in the training. Useful when you find yourself running out of GPU memory and you can force allgather to happen on CPU by passing device_sparse='/cpu:0' to hvd.DistributedOptimizer.
