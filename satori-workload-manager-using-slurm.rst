@@ -221,15 +221,41 @@ indirectly encourages the submission of smaller jobs.
 Batch Queue Policy
 ~~~~~~~~~~~~~~~~~~
 
-The batch queue is the default queue for production work on Satori. It
-enforces the following policies: Limit of (4) eligible-to-run jobs per
-user. Jobs in excess of the per user limit above will be placed into a
-held state, but will change to eligible-to-run at the appropriate time.
-Users may have only (100) jobs queued at any state at any time.
-Additional jobs will be rejected at submit time.  
+New users are granted access to a default batch queue. It
+enforces the following policies: Limit of (1) executing job per
+user with a maximum wall time of 12 hours. Jobs in excess of the per 
+user limit above will be placed into a
+queued state, and will change to eligible-to-run at the appropriate time.
+ 
 
-Priority Queue Policy
-~~~~~~~~~~~~~~~~~~~~~
-We are setting up a small number of priority queues that will be used for jobs with urgent time constraints such as paper deadlines. To request acccess to the priority queue please email support-satori@techsquare.com and indicate the deadlien you are facing, and the duration you will need priority access. 
+Queue Policies
+~~~~~~~~~~~~~~
+Account holders who are comfortable with basic practices of how to use the system productively (understanding basic Linux commands, learning interactive and batch scheduling techniques, developing 
+basic strategies for managing large numbers of files etc... ) are able to access higher level queues on 
+the system. These can be useful for urgent time constraints such as paper deadlines and for more involved workflows. To request acccess to the priority queue first make sure you are comfortable with the technical and social norms of using a shared system. Then please email support-satori@techsquare.com and indicate that you would like to access higher level queue features. 
 
-Priority queues will initially be set up in two configureations, 1 Node with 4 GPUs and 2 Nodes with 8 GPU's. Job run  length will be capped at 24 hours so please use checkpointing. There will be a limit of 4 parallel jobs per user running during peak times. If these queue setting do not meet your project goals, please email support-satori@techsquare.com with your needed requirments and we will consider them. 
+A set higher level queues has initially been set up in two configureations, 1 Node with 4 GPUs and 2 Nodes with 8 GPU's. Job run  length will be capped at 24 hours so please use checkpointing. There will be a limit of 2 parallel jobs per user running during peak times. If these queue setting do not meet your project goals, please email support-satori@techsquare.com with your needed requirments and we will consider them. 
+
+Running jobs in series
+~~~~~~~~~~~~~~~~~~~~~~
+
+Slurm provides numerous mechanisms for chaining jobs together to run unattended in sequence. A simple example of this sort
+of job is shown below
+
+```
+#!/bin/bash
+MYSCRIPT=/home/${USER}/foo.slurm
+MYSUBDIR=/home/${USER}
+JID=${SLURM_JOB_ID}
+ssh service0001 "cd $MYSUBDIR; pwd; sbatch --dependency=afterok:${JID} ${MYSCRIPT}"
+sleep 60
+```
+
+submitting this job, for example, as
+```
+sbatch --gres=gpu:4 -N 1 --exclusive --mem=1T --time 1:00:00 foo.slurm
+```
+
+will create a series of jobs that runs one after another. Together with checkpointing this sort of
+approach can be used to run extended workloads in an largely automated manner. Slurm has many
+feartures for managing sequences of jobs. Some more involved examples can be found [here](https://hpc.nih.gov/docs/job_dependencies.html).
