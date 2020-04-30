@@ -2,10 +2,10 @@
 
    Satori
 
-Running your AI training jobs on Satori using SLURM
+Running your AI training jobs on Satori using Slurm
 ---------------------------------------------------
 
-Computational work on Satori is quickly being migrated to use the SLURM  workload manager. A typical job consists of several
+Computational work on Satori is quickly being migrated to use the Slurm  workload manager. A typical job consists of several
 components:
 
 -  A submission script
@@ -263,3 +263,16 @@ approach can be used to run extended workloads in an largely automated manner. T
 features for managing sequences of jobs. Some more involved examples can be found at the `NIH Biowulf <https://hpc.nih.gov/docs/job_dependencies.html>`__ site. Fully automating workflows can be a little
 fiddly and time consuming to get going, but once it is in place you no longer have to get up in the 
 middle of the night to check on every computational experiment. 
+
+
+Note on Pytorch 1.4
+~~~~~~~~~~~~~~~~~~~
+Note.. we have recently updated the CUDA drivers on the part of Satori running Slurm. You can install Pytorch 1.4 for use with Slurm using these commands
+
+.. code:: bash
+
+   conda config --prepend channels https://public.dhe.ibm.com/ibmdl/export/pub/software/server/ibm-ai/conda-early-access/
+   conda create -n wmlce-ea python=3.7
+   conda activate wmlce-ea
+   conda install pytorch=1.4.0=23447.g18a1a27
+
