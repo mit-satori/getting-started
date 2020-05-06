@@ -176,7 +176,7 @@ In the above template you can change:
 
 .. code:: bash
    
-   conda active wlmce-1.6.3.  * <or whatever your conda environment is called>*
+   conda active wlmce-1.6.3.  <or whatever your conda environment is called>
    conda install horovod
 
 For your convenience additional SLURM batch job templates have been created to cover distributed deep learning trainings across Satori cluster. You can find them `here <https://github.com/mit-satori/getting-started/tree/master/slurm-templates>`__
