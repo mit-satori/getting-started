@@ -172,6 +172,12 @@ In the above template you can change:
    export HOROVOD_GPU_ALLREDUCE=NCCL
    export HOROVOD_GPU_BROADCAST=NCLL
 
+**Note** you may need to install Horovod by activating your conda environment and installing it. *e.g.*
+
+.. code:: bash
+   
+   conda active wlmce-1.6.3.  * <or whatever your conda environment is called>*
+   conda install horovod
 
 For your convenience additional SLURM batch job templates have been created to cover distributed deep learning trainings across Satori cluster. You can find them `here <https://github.com/mit-satori/getting-started/tree/master/slurm-templates>`__
 
