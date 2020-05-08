@@ -26,6 +26,10 @@ Slack or satori-support@techsquare.com
 
 For basic things, like *I can't log in* an email to satori-support@techsquare.com is probably best. For more involved things like *Does anyone know how to make Horovod do parallel I/O properly* the Slack channel may be more useful. 
 
+Satori Office Hours
+^^^^^^^^^^^^^^^^^^^
+We hold bi-weekly open office hours for Satori help at 3PM Monday and Thursday . Meeting info is https://mit.zoom.us/j/93373393960 password 466932 . Come join us !
+
 Tips and Tricks
 ^^^^^^^^^^^^^^^
 
