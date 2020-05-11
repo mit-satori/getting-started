@@ -132,7 +132,8 @@ Visit the `Interactive Jobs <https://mit-satori.github.io/satori-workload-manage
 section to see how to start an interactive session using the exisitng LSF workload manager.
 
 **Note** Satori is in the process of being migrated to the SLURM Workload manager. Visit the `Interactive Jobs <https://mit-satori.github.io/satori-workload-manager-using-slurm.html#interactive-jobs>`__
-section to see how to start an interactive session using the new  SLURM workload manager.
+section to see how to start an interactive session using the new  SLURM workload manager. 
+**Note:** More recent CUDA Drivers are only available on Slurm.
 
 
 Running Batch Jobs
