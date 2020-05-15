@@ -61,8 +61,8 @@ The LMS functionality is disabled by default in PyTorch and needs to be enabled 
 
 .. code:: bash
 
-import torch
-torch.cuda.set_enabled_lms(True)
+   import torch
+   torch.cuda.set_enabled_lms(True)
 
 Additional Documentation and Tutorial:
 
