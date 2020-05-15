@@ -56,7 +56,8 @@ hyper-parameters introduced are:
 Installing PyTorch Large Model Support
 LMS is built into the pytorch conda package so it is installed by default when you install the GPU enabled PyTorch from WML CE. The support is currently available in the WML CE conda channel. For getting best LMS performance you need to use Pytorch 1.4 from Watson ML Community Edition Early Access Channel (pytorch 1.4.0==23447.g18a1a27)
 
-How to enable LMS in Pytorch 1.14
+How to enable LMS in Pytorch 1.14?
+
 The LMS functionality is disabled by default in PyTorch and needs to be enabled before your model creates tensors. Enabling LMS is as simple as calling the enablement API at the start of your program:
 
 .. code:: bash
