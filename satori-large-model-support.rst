@@ -53,7 +53,17 @@ hyper-parameters introduced are:
 -  sync_mode: Whether to do synchronisation between data transfer and
    kernel computation or not.
 
-Documentation and Tutorial:
+Installing PyTorch Large Model Support
+LMS is built into the pytorch conda package so it is installed by default when you install the GPU enabled PyTorch from WML CE. The support is currently available in the WML CE conda channel. For getting best LMS performance you need to use Pytorch 1.4 from Watson ML Community Edition Early Access Channel (pytorch 1.4.0==23447.g18a1a27)
+
+How to enable LMS in Pytorch 1.14
+The LMS functionality is disabled by default in PyTorch and needs to be enabled before your model creates tensors. Enabling LMS is as simple as calling the enablement API at the start of your program:
+
+.. code:: bash
+import torch
+torch.cuda.set_enabled_lms(True)
+
+Additional Documentation and Tutorial:
 
 -  `LMS in
    TensorFlow <https://www.ibm.com/support/knowledgecenter/SS5SF7_1.6.2/navigation/wmlce_getstarted_tflmsv2.html>`__
@@ -69,3 +79,5 @@ Examples:
    Images <https://github.com/smatzek/3DUnetCNN>`__
 -  `ResNet with LMS in
    Pytorch <https://github.com/mtbrandy/pytorch/wiki/Large-Model-Support#example>`__
+-  `Various Models with LMS in Pytorch using synthetic data <https://github.com/IBM/pytorch-large-model-support/tree/master/examples>`__
+
