@@ -1,0 +1,234 @@
+Untitled Note 2020-06-10 13.15.18
+
+0) What is a cluster?
+
+Satori is an HPC-style shared cluster. You are sharing its resources with a number of other researchers, staff, and students so it is important that you read this page and use the system as intended.
+A cluster is a group of inter-connected computers that work together to perform computationally intensive tasks.  In a cluster, each computer is referred to as a "node". 
+There are two types of nodes/computers: “login nodes, usually only one or two, and a large number of "compute nodes". For example, the Satori cluster has 2 login nodes (satori-login-001.mit.edu and satori-login-001.mit.edu ) and 64 compute nodes (named node0001 - node0064). 
+The login nodes are the computers to which you log in. They are usually mainly specified to handle traffic, but not for any longer computing.  Note that you can not login to the compute nodes directly. 
+From the login nodes, you can either submit a job (will be explained later) or request a node to work on. 
+In both cases, each job is started using a piece of software called the scheduler. In out case, it's SLURM.  You let it know what resources you need and what you want to run, and the scheduler will find those resources and start your job on them. When your job completes those resources are relinquished. 
+
+1) Login
+
+You can access Satori via ssh.
+
+- Mac/Linux:
+You can login via
+ssh your_username@satori-login-001.mit.edu
+
+- Win:  Using WinSCP
+
+Windows users can install WinSCP : https://winscp.net/eng/index.php
+
+To transfer files, you can follow those instructions:
+https://www.siteground.com/tutorials/ssh/winscp/
+
+For Satori, you have to use the following setting:
+
+File Protocol - SFPT
+Host Name - satori-login-001.mit.edu
+Port number - 22
+User name - your_username
+Password - password
+
+This will bring you to an overview of you home folder: /home/your_username
+
+You can open the command line via clicking on the "Open session in Putty" button in WinSCP.
+
+
+1) How to copy data?
+
+Before you get started, you need to transfer data to the cluster. 
+
+There are multiple ways to transfer files:
+
+- At the command line using scp or rsync 
+- Using other tools like WinSCP, Cyberduck, etc
+- On the Satori Portal using the File explorer  (works with every computer, but might be slow)
+
+- Linux and Mac : Using scp or rysnc 
+Both scp and rsync are command line tools that you can use to transfer files to and from remote systems like Satori. They both work like cp, but you have to specify the hostname of the remote system. You’ll need to know the path to the file or directory that you want to transfer and the path to the location where you want to transfer the file or directory. To transfer a file from your computer to Satori, for example:
+
+scp <local-file.py> your_username@satori-login-001.mit.edu:/path/to/location/
+To transfer a file from Satori you’d do a similar thing, but swap the arguments. For example, to transfer to the current directory:
+
+scp your_username@satori-login-001.mit.edu:/path/to/file/<remote-file.py> .
+To transfer a directory use the -r (recursive) flag as you would with cp and other Linux commands.
+
+
+- Win: WinSCP
+You can create folders under /home/your_username and copy any data there by drag and drop.
+
+
+- All: Satori Portal File Explorer
+Using the File Explorer on the Satori Portal you can navigate, view, and transfer files. To get to the File Explorer, log into the Satori Portal and click Files -> Home Directory. From here you can click use the Upload and Download buttons to move your files. You can also drag and drop files from your computer into the File Explorer window to transfer them to the system.
+
+
+3) Open a desktop via VNC
+
+To allow you to access the Relion GUI, you need to have access to a remote desktop on Satori. 
+VNC is a program that allows you to work on remote desktops. To work with that, you need to  3.0) do some setup,  3.1) request a node, 3.2) start a VNC server on the node, 3.3)connect your local machine to the node, and finally, 3.4) start the VNC server on you local machine. 
+
+
+
+To run VNC on Satori:
+
+
+3.0) Prepare the cluster (this needs to be done only once)
+
+- You must first one time create the file /home/your_username/.vnc/xstartup  with the following:
+
+#!/bin/sh
+unset SESSION_MANAGER
+unset DBUS_SESSION_BUS_ADDRESS
+# /etc/X11/xinit/xinitrc
+startxfce4
+vncserver -kill $DISPLAY
+
+- Change the permission:
+chmod +x .vnc/xstartup
+
+This needs to be done only once!
+
+Note that WinSCP does not show hidden folders (starting with a dot) by default. You need to open the perference panel under Options -> Preferences and activate the "Show hidden files" option as shown here: https://winscp.net/eng/docs/ui_pref_panels
+
+3.1) Request a node 
+
+Open the command line via clicking on the "Open session in Putty" button in WinSCP. (see sec 1))
+
+Request a node for e.g. 4 hours with this command:
+
+srun -N 1 -t 4:00:00 --pty /bin/bash
+
+You will get logged into a a new node with  an interactive session
+
+
+You can see the name of your new node on the prompt. In this case it's node0021
+
+3.2) Start the vncserver
+
+On the new node you're given, run 
+
+vncserver 
+
+You will get an output like:
+
+
+New 'node00YY:X (your_username)' desktop is node00YY:X
+Starting applications specified in /home/hkuehne/.vnc/xstartup
+Log file is /home/hkuehne/.vnc/node00YY:X.log
+
+Make note the display number node00YY:X -> the X is important.
+
+3.3)  Connect your local machine
+
+Go to your laptop/desktop and start a terminal and type:
+
+On a  Mac 
+
+ssh -L 590X:node00YY:590X  satori-login-001.mit.edu -l <your_username>
+
+   e.g. in our example, if your node was node0021   and vnc told you it was running on display :2  you would use
+   
+ssh -L 5902:node0021:5902  satori-login-001.mit.edu -l <your_username>
+
+4) then  bring up vnc  on your laptop . give the address as
+ localhost:590X 
+
+eg..if your  Y value was '1' use
+ localhost:590X 
+
+On Windows:
+
+3.3.1) Make a connection:
+
+- open a command prompt and run:
+
+"C:\Program Files\PuTTY\putty.exe" -ssh -L 590X:node00YY:590X  satori-login-001.mit.edu -l <your_username>
+
+   e.g. .. if your node was node0021   and vnc told you it was running on display :1  you would use
+
+"C:\Program Files\PuTTY\putty.exe" -ssh -L 5901:node0021:5901  satori-login-001.mit.edu -l <your_username>
+
+a new window will open, where you have to enter your password again
+
+
+
+3.4) Install and run VNC
+
+You have to now install the VNC viewer program on your laptop/desktop:
+Some options are:
+https://www.realvnc.com/de/connect/download/viewer/windows/
+https://www.tightvnc.com/download.php
+https://tigervnc.org
+
+To connect with RealVNC:
+
+Go to File -> New connection
+
+Enter: 
+VNC Server: localhost:590X
+Name: Some_nice_name
+
+Double click on the new connection. (if you used a password in your vnc configuration, you need to enter it now.)
+Your remote desktop should now appear in a new window.
+
+
+Part 3 - Run Relion
+
+4) Run Relion
+
+To run Relion, open a terminal on the remote desktop (e.g. right click on the desktop and choose "Open terminal").
+
+4.0) If you login for the first time, you have to install anaconda:
+
+wget https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-ppc64le.sh
+sh Anaconda3-2019.10-Linux-ppc64le.sh -f -p /nobackup/users/$(whoami)/anaconda3
+
+just always answer yes resp. use the default
+
+Then start conda
+source ~/.bashrc
+
+When you login next time, conda is already running.
+
+2) Activate the Relion environment
+
+conda activate /nobackup/users/ruzhu/Apps/CryoEM
+
+
+It worked when the begin of your prompt changed from (base) to (/nobackup/users/ruzhu/Apps/CryoEM)
+
+3) To set the path, run the two following commands:
+
+export PATH=/nobackup/users/ruzhu/RELION/bin:/nobackup/users/ruzhu/CTFfind4/bin:/opt/ibm/spectrum_mpi/bin:$PATH
+export LD_LIBRARY_PATH=/opt/ibm/spectrum_mpi/profilesupport/lib:/nobackup/users/ruzhu/CTFfind4/lib:$LD_LIBRARY_PATH
+
+4) Then run:
+relion
+
+5) The Relion GUI should now appear.
+
+---------------------------------------------
+
+
+a) Open Relion via X forwarding
+
+see: https://mit-satori.github.io/satori-relion-cryoem.html
+
+-------------------------------------------------
+
+4) Use Relion
+
+TODO
+
+
+5) How many GPUs? How long to run?
+
+TODO
+
+
+6) Run ...
+
+TODO
