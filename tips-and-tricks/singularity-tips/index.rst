@@ -5,7 +5,7 @@ To build an image for Singularity from scratch you generally need to have privil
 is a little awkward since nobody has Power 9 CPU laptops or desktops. Docker ( https://docs.docker.com/get-docker/ ) has recently added 
 features that provide a way to do this, using
 the ppc64le Power 9 emulation that is part of the QEMU (https://www.qemu.org) project. Steps to get this set up on a laptop, desktop or virtual 
-machine are described below.
+machine are described below. 
 
 #. Launch or log in to an Ubuntu 18.04 Linux machine.
 
@@ -20,6 +20,10 @@ machine are described below.
          
    Vagrant and Virtual Box should work on most Mac, Windows or Linux hosts.
 
-#. 
+#. Install Docker if it is not already installed (this requires privileged access). Steps for installing Docker on 
+
+   #.
 
 #.
+
+Note - the steps above involve installing Docker on an Ubuntu virtual of physical machine. In principle a native install of Docker could work. This does not seem to work reliably in practice on OSX. 
