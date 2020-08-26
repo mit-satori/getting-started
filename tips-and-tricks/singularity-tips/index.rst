@@ -43,10 +43,10 @@ machine are described below.
       
    #. Set Docker server to allow experimental features by editing line::
       
-      ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+          ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
       
-   in file /lib/systemd/system/docker.service to read::
+      in file /lib/systemd/system/docker.service to read::
    
-      ExecStart=/usr/bin/dockerd --experimental -H fd:// --containerd=/run/containerd/containerd.sock
+          ExecStart=/usr/bin/dockerd --experimental -H fd:// --containerd=/run/containerd/containerd.sock
 
 Note - the steps above involve installing Docker on an Ubuntu virtual of physical machine. In principle a native install of Docker could work. This does not seem to work reliably in practice on OSX. 
