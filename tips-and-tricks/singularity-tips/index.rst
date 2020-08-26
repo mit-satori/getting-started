@@ -39,7 +39,7 @@ machine are described below.
    
    #. Set Docker client to allow experimental features::
    
-      export DOCKER_CLI_EXPERIMENTAL=enabled
+          export DOCKER_CLI_EXPERIMENTAL=enabled
       
    #. Set Docker server to allow experimental features by editing line::
       
