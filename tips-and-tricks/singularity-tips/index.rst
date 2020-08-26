@@ -6,10 +6,10 @@ is a little awkward since nobody has Power 9 CPU laptops or desktops. Docker ( h
 features that provide a way to do this, using
 the ppc64le Power 9 emulation that is part of the QEMU (https://www.qemu.org) project. Using this feature is described below.
 
-#. Set up to run Docker in ppc64le mode
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+(A) Set up to run Docker in ppc64le mode
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-One time steps to get this set up on a laptop, desktop or virtual 
+The one time steps to get this set up on a laptop, desktop or virtual 
 machine are described below. 
 
 #. Launch or log in to an Ubuntu 18.04 Linux machine.
