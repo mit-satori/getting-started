@@ -85,12 +85,12 @@ Run Docker in ppc64le mode on an x86 machine to generate an image for Satori
 Once you have a machine with Docker fully configured for ppc64le it can be used to generate and push an image to Docker hub. Steps for this are
 shown below.
 
-#. Generate an image from a Dockerfile::
+#. Generate an image from a Dockerfile, using for example::
 
     curl https://raw.githubusercontent.com/christophernhill/ibmcloudhacks/master/ppc64le-docker-testing/jp-Dockerfile > Dockerfile
     docker build --platform ppc64le --tag jp-p9-sing-test:1.0 .
     
-#. Tag image for pushing to your docker account::
+#. Tag image for pushing to your docker account, for example::
 
      docker tag jp-p9-sing-test:1.0 christophernhill/jp-p9-sing-test:1.0
      
