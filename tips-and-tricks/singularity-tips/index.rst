@@ -2,8 +2,8 @@ How do I build a Singularity image from scratch?
 ================================================
 
 To build an image for Singularity from scratch you generally need to have privileged access to a Power 9 CPU system. This
-is a little awkward since nobody has Power 9 CPU laptops or desktops. Fortunately Docker have recently created a way to do this using
-a Power 9 emulator. The steps to get this set up on a laptop are shown below.
+is a little awkward since nobody has Power 9 CPU laptops or desktops. Docker have recently added features that provide a way to do this using
+the ppc64le Power 9 emulation that is part of the QEMU (https://www.qemu.org) project. The steps to get this set up on a laptop are shown below.
 
 #. Launch or log in to an Ubuntu 18.04 Linux machine.
 
