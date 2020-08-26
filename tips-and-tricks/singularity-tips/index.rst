@@ -94,7 +94,7 @@ shown below.
 
      docker tag jp-p9-sing-test:1.0 christophernhill/jp-p9-sing-test:1.0
      
-#. Push image to you docker account
+#. Push image to you docker account::
 
      docker push christophernhill/jp-p9-sing-test:1.0
  
