@@ -59,7 +59,7 @@ machine are described below.
           systemctl daemon-reload
           systemctl restart docker
           
-#. Install needed QEMU emulator binfmt information for ppc64le architecture ( see https://github.com/dbhi/qus for explanations ). The default QEMU install does not seem to work, but the install from https://github.com/dbhi/qus does work::
+#. Install needed QEMU emulator binfmt information for ppc64le architecture ( see https://github.com/dbhi/qus for explanations ). Note - the default QEMU install does not seem to work reliably, but the install from https://github.com/dbhi/qus does work::
     
      docker run --rm --privileged aptman/qus -s -- -p 
 
