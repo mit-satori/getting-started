@@ -18,4 +18,4 @@ Tips, tricks and questions
    tips-and-tricks/carlos-quick-start-commands/index.rst
    tips-and-tricks/sys_queries/index.rst
    tips-and-tricks/ondemand_portal_queries/index.rst
-   tips-and-tricks/singulairy-tips/index.rst
+   tips-and-tricks/singularity-tips/index.rst
