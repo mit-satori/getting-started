@@ -5,7 +5,9 @@ To build an image for Singularity from scratch you generally need to have privil
 is a little awkward since nobody has Power 9 CPU laptops or desktops. Fortunately Docker have recently created a way to do this using
 a Power 9 emulator. The steps to get this set up on a laptop are shown below.
 
-#. Launch an Ubuntu 18.04 Linux machine
+#. Launch or log in to an Ubuntu 18.04 Linux machine
+
+  #. If you don't have an Ubuntu machine you can create a virtual machine
 
 2.
 
