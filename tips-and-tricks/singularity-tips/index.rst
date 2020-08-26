@@ -97,4 +97,9 @@ shown below.
 #. Push image to you docker account::
 
      docker push christophernhill/jp-p9-sing-test:1.0
+    
+Import new Docker hub image into Singularity on Satori
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Once your Docker image is ready 
  
