@@ -109,8 +109,7 @@ Once your Docker image is ready it can now be imported into Singulariy on Satori
     singularity build foo.sif docker://christophernhill/jp-p9-sing-test:1.0
 
 
- and used (finally!)::
-
+and used (finally!)::
 
     singularity shell foo.sif
     
