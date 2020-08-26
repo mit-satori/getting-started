@@ -20,6 +20,6 @@ machine are described below.
          
    Vagrant and Virtual Box should work on most Mac, Windows or Linux hosts.
 
-#.
+#. 
 
 #.
