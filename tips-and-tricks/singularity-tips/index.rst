@@ -70,7 +70,7 @@ machine are described below.
      apt-get install -y file
      file /bin/ls
      
-     should produce output indicating a PowerPC executable::
+   should produce output indicating a PowerPC executable::
      
      
      /bin/ls: ELF 64-bit LSB shared object, 64-bit PowerPC or cisco 7500, version 1 (SYSV), dynamically linked, interpreter /lib64/ld64.so.2, BuildID[sha1]=da9b7dc089cbaee41f4d1af3da65a40d29b25773, for GNU/Linux 3.10.0, stripped
