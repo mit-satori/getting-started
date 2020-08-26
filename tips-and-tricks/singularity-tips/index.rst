@@ -6,8 +6,8 @@ is a little awkward since nobody has Power 9 CPU laptops or desktops. Docker ( h
 features that provide a way to do this, using
 the ppc64le Power 9 emulation that is part of the QEMU (https://www.qemu.org) project. Using this feature is described below.
 
-Setting up to run Docker in ppc64le mode on an x86 machine
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Set up to run Docker in ppc64le mode on an x86 machine
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The one time steps to get this set up on a laptop, desktop or virtual 
 machine are described below. 
@@ -79,6 +79,22 @@ machine are described below.
   Note - the steps above involve installing Docker on an Ubuntu virtual of physical machine. In principle a native install of Docker could work. In practice, this does not seem to work reliably on OSX. 
   
   
-Running Docker in ppc64le mode on an x86 machine
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Run Docker in ppc64le mode on an x86 machine to generate an image for Satori
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Once you have a machine with Docker fully configured for ppc64le it can be used to generate and push an image to Docker hub. Steps for this are
+shown below.
+
+#. Generate an image from a Dockerfile::
+
+    curl https://raw.githubusercontent.com/christophernhill/ibmcloudhacks/master/ppc64le-docker-testing/jp-Dockerfile > Dockerfile
+    docker build --platform ppc64le --tag jp-p9-sing-test:1.0 .
+    
+#. Tag image for pushing to your docker account::
+
+     docker tag jp-p9-sing-test:1.0 christophernhill/jp-p9-sing-test:1.0
+     
+#. Push image to you docker account
+
+     docker push christophernhill/jp-p9-sing-test:1.0
  
