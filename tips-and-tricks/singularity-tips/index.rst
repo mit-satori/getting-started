@@ -79,6 +79,6 @@ machine are described below.
   Note - the steps above involve installing Docker on an Ubuntu virtual of physical machine. In principle a native install of Docker could work. In practice, this does not seem to work reliably on OSX. 
   
   
- Running Docker in ppc64le mode on an x86 machine
- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Running Docker in ppc64le mode on an x86 machine
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  
