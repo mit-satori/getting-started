@@ -48,5 +48,10 @@ machine are described below.
       in file /lib/systemd/system/docker.service to read::
    
           ExecStart=/usr/bin/dockerd --experimental -H fd:// --containerd=/run/containerd/containerd.sock
+      
+      and restarting system daemons::
+      
+          systemctl daemon-reload
+          systemctl restart docker
 
 Note - the steps above involve installing Docker on an Ubuntu virtual of physical machine. In principle a native install of Docker could work. This does not seem to work reliably in practice on OSX. 
