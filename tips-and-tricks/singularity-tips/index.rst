@@ -7,9 +7,13 @@ a Power 9 emulator. The steps to get this set up on a laptop are shown below.
 
 #. Launch or log in to an Ubuntu 18.04 Linux machine
 
-   If you don't have an Ubuntu machine you can create a virtual machine as follows
+   if you don't have an Ubuntu machine you can create a virtual machine as follows
      
    #. install Vagrant ( https://www.vagrantup.com/downloads ) and Virtual Box ( https://www.virtualbox.org/wiki/Downloads ) 
+   #. 
+   
+         vagrant up generic/ubuntu1804
+         vagrant ssh
 
 #.
 
