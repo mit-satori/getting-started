@@ -20,9 +20,16 @@ machine are described below.
          
    Vagrant and Virtual Box should work on most Mac, Windows or Linux hosts.
 
-#. Install Docker if it is not already installed (this requires privileged access). Steps for installing Docker on 
+#. Install Docker on the Ubuntu system, if it is not already installed. This requires privileged access. Steps for installing Docker are:: 
 
-   #.
+      apt-get remove docker docker-engine docker.io containerd runc
+      apt-get update
+      apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
+      curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+      apt-key fingerprint 0EBFCD88
+      add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+      apt-get update
+      apt-get install docker-ce docker-ce-cli containerd.io
 
 #.
 
