@@ -101,12 +101,16 @@ shown below.
 Import new Docker hub image into Singularity on Satori
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Once your Docker image is ready it can now be imported into Singulariy and executed on Satori, for example::
+Once your Docker image is ready it can now be imported into Singulariy on Satori, for example::
 
     srun -N 1 -n 40 --mem 1T -t 12:00:00 --pty /bin/bash
     module load singularity
     cd /nobackup/users/cnh/
     singularity build foo.sif docker://christophernhill/jp-p9-sing-test:1.0
+    
+ and used (finally!)::
+ 
+
     singularity shell foo.sif
     
  
