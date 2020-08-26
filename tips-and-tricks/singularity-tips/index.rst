@@ -20,7 +20,7 @@ machine are described below.
          
    Vagrant and Virtual Box should work on most Mac, Windows or Linux hosts.
 
-#. Install Docker on the Ubuntu system, if it is not already installed. This requires privileged access. Steps for installing Docker are:: 
+#. Install Docker on whatever Ubuntu system you selected, if it is not already installed. This requires privileged access. Steps for installing Docker are:: 
 
       apt-get remove docker docker-engine docker.io containerd runc
       apt-get update
@@ -31,6 +31,22 @@ machine are described below.
       apt-get update
       apt-get install docker-ce docker-ce-cli containerd.io
 
-#.
+#. Check docker works::
+
+      docker run hello-world
+      
+#. Set docker to allow experimental features
+   
+   #. Set Docker client to allow experimental features::
+   
+      export DOCKER_CLI_EXPERIMENTAL=enabled
+      
+   #. Set Docker server to allow experimental features by editing line::
+      
+      ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+      
+   in file /lib/systemd/system/docker.service to read::
+   
+      ExecStart=/usr/bin/dockerd --experimental -H fd:// --containerd=/run/containerd/containerd.sock
 
 Note - the steps above involve installing Docker on an Ubuntu virtual of physical machine. In principle a native install of Docker could work. This does not seem to work reliably in practice on OSX. 
