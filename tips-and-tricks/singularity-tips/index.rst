@@ -7,8 +7,8 @@ a Power 9 emulator. The steps to get this set up on a laptop are shown below.
 
 #. Launch or log in to an Ubuntu 18.04 Linux machine
 
-  ##. If you don't have an Ubuntu machine you can create a virtual machine
+     1. If you don't have an Ubuntu machine you can create a virtual machine
 
-2.
+#.
 
-3.
+#.
