@@ -63,6 +63,15 @@ machine are described below.
     
      docker run --rm --privileged aptman/qus -s -- -p 
 
-#.
+#. Check that we can work with ppc64le executables in an image::
+
+
+     docker run --rm -i -t --platform ppc64le ppc64le/ubuntu /bin/bash
+     apt-get update
+     apt-get install -y file
+     file /bin/ls
+     
+     /bin/ls: ELF 64-bit LSB shared object, 64-bit PowerPC or cisco 7500, version 1 (SYSV), dynamically linked, interpreter /lib64/ld64.so.2, BuildID[sha1]=da9b7dc089cbaee41f4d1af3da65a40d29b25773, for GNU/Linux 3.10.0, stripped
+
 
 Note - the steps above involve installing Docker on an Ubuntu virtual of physical machine. In principle a native install of Docker could work. This does not seem to work reliably in practice on OSX. 
