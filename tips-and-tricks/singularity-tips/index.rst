@@ -132,3 +132,6 @@ which launches a container running a shell within an instnace of the image ``foo
 - The ``-B /nobackup/users/cnh:/work/nb`` option maps the Satori scratch file space of the account to a container directory.
 - The ``-c`` and ``-e`` options create a container that does not mount the host home directory for the account and does not copy
   host account environment variables. 
+  
+Together this set of options starts a container that can access the Satori GPUs and shared file system, but that is otherwise isolated
+from the standard Satori software and can have a fully custom set of tools. 
