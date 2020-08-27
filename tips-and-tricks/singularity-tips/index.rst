@@ -128,6 +128,6 @@ and used (finally!)::
 
  which launches a container running a shell within an instnace of the image ``foo2.sif``.
  
- * The ``--nv`` option ensures the container can access the host GPU cards. 
+ - The ``--nv`` option ensures the container can access the host GPU cards. 
  
- * The ``-B /nobackup/users/cnh:/work/nb`` option maps the Satori scratch file space of the account to a container directory.
+ - The ``-B /nobackup/users/cnh:/work/nb`` option maps the Satori scratch file space of the account to a container directory.
