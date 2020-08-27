@@ -131,4 +131,4 @@ which launches a container running a shell within an instnace of the image ``foo
 - The ``--nv`` option ensures the container can access the host GPU cards. 
 - The ``-B /nobackup/users/cnh:/work/nb`` option maps the Satori scratch file space of the account to a container directory.
 - The ``-c`` and ``-e`` options create a container that does not mount the host home directory for the account and does not copy
-  host account environent variables. 
+  host account environment variables. 
