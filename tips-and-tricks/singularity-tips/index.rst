@@ -113,4 +113,21 @@ and used (finally!)::
 
     singularity shell foo.sif
     
+ Using Singularity instead of Docker
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  
+ Singularity is a little different from Docker in that it restricts access more and shares more environment with the
+ host system. In particular there is no root access in a running Singularity image and privileged access directories
+ are not writable. This means any operations that requires root privileges must be taken as part of the image build.
+ Singularity also mounts the home directory for an account on the host system into the container by default. This
+ can be useful, but also is not an isolated environment so care must be taken when running ensembles of containers. 
+
+ A typical Singularity command for executing an image with some isolation on Satori is::
+   
+       singularity exec --nv -c -e -B /nobackup/users/cnh:/work/nb foo2.sif  /bin/bash
+
+ which launches a container running a shell within an instnace of the image ``foo2.sif``.
+ 
+ * The ``--nv`` option ensures the container can access the host GPU cards. 
+ 
+ * The ``-B /nobackup/users/cnh:/work/nb`` option maps the Satori scratch file space of the account to a container directory.
