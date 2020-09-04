@@ -107,7 +107,7 @@ session::
 
     srun -N 1 -n 40 --mem 1T -t 12:00:00 --pty /bin/bash
     
-Once the interactive session starts use the following commands::
+once the interactive session starts use the following commands::
     
     
     module load singularity
@@ -115,7 +115,7 @@ Once the interactive session starts use the following commands::
     singularity build foo.sif docker://christophernhill/jp-p9-sing-test:1.0
 
 
-and used (finally!)::
+and once the image is built try it out! ::
 
     singularity shell foo.sif
     
