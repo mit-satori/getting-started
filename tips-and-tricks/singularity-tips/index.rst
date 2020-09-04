@@ -101,9 +101,13 @@ shown below.
 Import new Docker hub image into Singularity on Satori
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Once your Docker image is ready it can now be imported into Singulariy on Satori, for example::
+Once your Docker image is ready it can now be imported into Singulariy on Satori. To do this
+in a dedicated interactive session (useful for large images), first start lauch an interactive 
+session::
 
     srun -N 1 -n 40 --mem 1T -t 12:00:00 --pty /bin/bash
+    
+Once the interactive session starts use the following commands::
     
     
     module load singularity
