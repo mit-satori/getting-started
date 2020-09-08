@@ -79,3 +79,8 @@ running julia::
    
    
 
+Running a multi-process julia program somewhat interactively
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+When debugging and testing it is sometimes to run outside of sbatch but still use multiple GPUs.
+The best way to do this is through the ```salloc``` command.
