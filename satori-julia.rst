@@ -104,6 +104,8 @@ now use srun to launch individual steps e.g.::
    export JULIA_DEPOT_PATH=`pwd`
    julia -e 'using Pkg; Pkg.add("MPI"); Pkg.build("MPI"); Pkg.precompile()'
    srun -n 3 julia foo.jl
+   
+::
 
      2: Sending   2 -> 0 = [2.0, 2.0, 2.0, 2.0]
      0: Sending   0 -> 1 = [0.0, 0.0, 0.0, 0.0]
