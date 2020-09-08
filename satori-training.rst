@@ -19,11 +19,10 @@ how to use the tensor cores on V100 GPUs.
 https://vimeo.com/308290719 Programming Methods for Summit’s Multi-GPU
 Nodes
 
-`https://vimeo.com/306890804 <https://vimeo.com/308290719>`__ Brian
-Thompto (IBM) - IBM P9 SMT Deep Dive
+https://vimeo.com/306890804 Brian Thompto (IBM) - IBM P9 SMT Deep Dive
 
-`https://vimeo.com/306437439 <https://vimeo.com/308290719>`__ Jeff
-Larkin (NVIDIA) describes NVIDIA profiling tools.
+https://vimeo.com/306437439 Jeff Larkin (NVIDIA) describes NVIDIA
+profiling tools.
 
-`https://vimeo.com/306434362 <https://vimeo.com/308290719>`__ Chris
-Fuson (OLCF) gives an overview of the batch scheduler and job launcher
+https://vimeo.com/306434362 Chris Fuson (OLCF) gives an overview of
+the batch scheduler and job launcher
