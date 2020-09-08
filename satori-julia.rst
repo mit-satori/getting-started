@@ -20,6 +20,30 @@ are the best place to quickly get answers.
 
 If you have Satori/PowerPC specific questions feel free to reach out to vchuravy either on the Satori Slack or mail.
 
+A simple batch script example
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A simple batch script for a julia program on Satori is shown below::
+
+   #!/bin/bash
+   #SBATCH -J CLIMA_TEST_35
+   #SBATCH -o CLIMA_TEST_35_%j.out
+   #SBATCH -e CLIMA_TEST_35_%j.err
+   #SBATCH --mail-user=XXXXX@mit.edu
+   #SBATCH --mail-type=ALL
+   #SBATCH --gres=gpu:1
+   #SBATCH --nodes=1
+   #SBATCH --mem=0
+   #SBATCH --time=2:00:00
+   #SBATCH --exclusive
+   cd /nobackup/users/jars/projects/runscripts/
+   module add spack
+   module add spack-flat
+   module load openmpi/3.1.4-gcc-8.3.0-cuda-pmi-ucx
+   date
+   /home/software/julia/1.4.1/bin/julia --project ../CLIMA file_35.jl
+   date
+
 Recipe for running single GPU, single threaded interactive session with CUDA aware MPI
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
