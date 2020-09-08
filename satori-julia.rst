@@ -103,6 +103,9 @@ now use srun to launch individual steps e.g.::
    cd /nobackup/users/cnh/projects/jmpi/
    export JULIA_DEPOT_PATH=`pwd`
    julia -e 'using Pkg; Pkg.add("MPI"); Pkg.build("MPI"); Pkg.precompile()'
+   
+::
+
    srun -n 3 julia foo.jl
    
 ::
@@ -113,8 +116,12 @@ now use srun to launch individual steps e.g.::
      2: Received 1 -> 2 = [1.0, 1.0, 1.0, 1.0]
      0: Received 2 -> 0 = [2.0, 2.0, 2.0, 2.0]
      1: Received 0 -> 1 = [0.0, 0.0, 0.0, 0.0]
-     
+
+::
+
   cat foo.jl
+  
+::
      
      using MPI
      MPI.Init()
