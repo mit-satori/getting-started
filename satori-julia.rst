@@ -83,4 +83,32 @@ Running a multi-process julia program somewhat interactively
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 When debugging and testing it is sometimes to run outside of sbatch but still use multiple GPUs.
-The best way to do this is through the ```salloc``` command.
+The best way to do this is through the Slurm ``salloc`` command. This command reserves resources
+and then allows multiple job stages to be executed through the ``srun`` command from a shell as shown::
+
+   salloc --gres=gpu:3 -N 1 -n 3 --mem 1T -t 12:00:00
+   
+now use srun to launch individual steps e.g.::
+
+   module purge > /dev/null 2>&1
+   module add spack
+   module load gcc/8.3.0
+   module load julia/1.4.1
+   module load spack-admin/1.0
+   module load spack-flat/0.1
+   module load openmpi/3.1.4-gcc-8.3.0-cuda-pmi-ucx
+   export UCX_ERROR_SIGNALS="SIGILL,SIGBUS,SIGFPE"
+   export JULIA_MPI_BINARY=system
+   export JULIA_CUDA_USE_BINARYBUILDER=false
+   cd /nobackup/users/cnh/projects/jmpi/
+   export JULIA_DEPOT_PATH=`pwd`
+   julia -e 'using Pkg; Pkg.add("MPI"); Pkg.build("MPI"); Pkg.precompile()'
+   srun -n 3 julia foo.jl
+
+     2: Sending   2 -> 0 = [2.0, 2.0, 2.0, 2.0]
+     0: Sending   0 -> 1 = [0.0, 0.0, 0.0, 0.0]
+     1: Sending   1 -> 2 = [1.0, 1.0, 1.0, 1.0]
+     2: Received 1 -> 2 = [1.0, 1.0, 1.0, 1.0]
+     0: Received 2 -> 0 = [2.0, 2.0, 2.0, 2.0]
+     1: Received 0 -> 1 = [0.0, 0.0, 0.0, 0.0]
+
