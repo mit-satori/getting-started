@@ -120,6 +120,7 @@ now use srun to launch individual steps e.g.::
 ::
 
   cat foo.jl
+  
      
      using MPI
      MPI.Init()
