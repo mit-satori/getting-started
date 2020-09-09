@@ -122,7 +122,7 @@ now use srun to launch individual steps e.g.::
   cat foo.jl
   
 ::
-  :emphasize-lines:
+  : :
      
      using MPI
      MPI.Init()
