@@ -166,11 +166,18 @@ installing and running https://github.com/clima/climatemachine.jl in a clean eni
 illustrates some steps
 
 
+1. Launch a an interactive node session:: 
+
+     srun --gres=gpu:1 -N 1 -n 1 --mem 1T -t 12:00:00 --pty /bin/bash
+     
+     
 1. Create a fresh directory::
 
     mkdir /nobackup/user/cnh/projects/myclima
     git clone https://github.com/clima/climatemachine.jl
     cd /nobackup/user/cnh/projects/myclima
+    
+1. 
 
 
 
