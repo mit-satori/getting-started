@@ -157,3 +157,20 @@ now use srun to launch individual steps e.g.::
      MPI.Barrier(comm)
 
 
+An example of installing https://github.com/clima/climatemachine.jl on Satori
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Because Satori is a Power 9 CPU based system some Julia packages require a few extra steps to
+ensure the right binaries are deployed. An example of
+installing and running https://github.com/clima/climatemachine.jl in a clean enironment 
+illustrates some steps
+
+
+1. Create a fresh directory::
+
+    mkdir /nobackup/user/cnh/projects/myclima
+    git clone https://github.com/clima/climatemachine.jl
+    cd /nobackup/user/cnh/projects/myclima
+
+
+
