@@ -163,7 +163,7 @@ An example of installing https://github.com/clima/climatemachine.jl on Satori
 Because Satori is a Power 9 CPU based system some Julia packages require a few extra steps to
 ensure the right binaries are deployed. An example of
 installing and running https://github.com/clima/climatemachine.jl in a clean enironment 
-illustrates some steps
+illustrates some steps that may occaisionally be needed. 
 
 
 - Launch a an interactive node session:: 
@@ -195,5 +195,10 @@ illustrates some steps
    julia -e 'using Pkg; Pkg.add("NCDatasets"); Pkg.build("NCDatasets")'
    julia -e 'using Pkg; Pkg.add(PackageSpec(name="Dierckx",rev="master")); Pkg.build("Dierckx")'
    julia --project=@. -e 'using Pkg; Pkg.instantiate(); using ClimateMachine'
+   
+ In this example the master revision of the Conda and Dierckx packages are used because versions
+ with full support for Power 9 were not available and so some small patches had to be introduced. 
+ Releases of these packages with the patches will be available soon, but the steps shown illustrate
+ some of the ways to work around these sorts of occurences generally. 
 
 
