@@ -196,9 +196,9 @@ illustrates some steps that may occaisionally be needed.
    julia -e 'using Pkg; Pkg.add(PackageSpec(name="Dierckx",rev="master")); Pkg.build("Dierckx")'
    julia --project=@. -e 'using Pkg; Pkg.instantiate(); using ClimateMachine'
    
- In this example the master revision of the Conda and Dierckx packages are used because versions
- with full support for Power 9 were not available and so some small patches had to be introduced. 
- Releases of these packages with the patches will be available soon, but the steps shown illustrate
- some of the ways to work around these sorts of occurences generally. 
+In this example the master revision of the Conda and Dierckx packages are used because versions
+with full support for Power 9 were not available and so some small patches had to be introduced. 
+Releases of these packages with the patches will be available soon, but the steps shown illustrate
+some of the ways to work around these sorts of occurences generally. 
 
 
