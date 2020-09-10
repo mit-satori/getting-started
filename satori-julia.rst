@@ -201,4 +201,7 @@ with full support for Power 9 were not available and so some small patches had t
 Releases of these packages with the patches will be available soon, but the steps shown illustrate
 some of the ways to work around these sorts of occurences generally. 
 
+The UCX and CUDA settings are used to set the conifguration so that optimized versions of
+GPU Direct and CUDA aware MPI will be used. 
+
 
