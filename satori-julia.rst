@@ -177,7 +177,22 @@ illustrates some steps
     git clone https://github.com/clima/climatemachine.jl
     cd /nobackup/user/cnh/projects/myclima
     
-- 
+- Set up the Julia environment::
+
+   module purge > /dev/null 2>&1
+   module add spack
+   module load gcc/8.3.0
+   module load julia/1.4.1
+   module load spack-admin/1.0
+   module load spack-flat/0.1
+   module load openmpi/3.1.4-gcc-8.3.0-cuda-pmi-ucx
+   export UCX_ERROR_SIGNALS="SIGILL,SIGBUS,SIGFPE"
+   export JULIA_MPI_BINARY=system
+   export JULIA_CUDA_USE_BINARYBUILDER=false
+   export JULIA_DEPOT_PATH=`pwd`/../.julia
+   \rm -fr $JULIA_DEPOT_PATH
+   julia -e 'using Pkg; Pkg.add(PackageSpec("Conda",rev="maser")); Pkg.build("Conda")'
+   
 
 
 
