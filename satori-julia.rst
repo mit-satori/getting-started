@@ -191,8 +191,9 @@ illustrates some steps
    export JULIA_CUDA_USE_BINARYBUILDER=false
    export JULIA_DEPOT_PATH=`pwd`/../.julia
    \rm -fr $JULIA_DEPOT_PATH
-   julia -e 'using Pkg; Pkg.add(PackageSpec("Conda",rev="maser")); Pkg.build("Conda")'
-   
-
+   julia -e 'using Pkg; Pkg.add(PackageSpec(name="Conda",rev="master")); Pkg.build("Conda")'
+   julia -e 'using Pkg; Pkg.add("NCDatasets"); Pkg.build("NCDatasets")'
+   julia -e 'using Pkg; Pkg.add(PackageSpec(name="Dierckx",rev="master")); Pkg.build("Dierckx")'
+   julia --project=@. -e 'using Pkg; Pkg.instantiate(); using ClimateMachine'
 
 
