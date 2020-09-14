@@ -191,7 +191,7 @@ illustrates some steps that may occaisionally be needed.
    export JULIA_CUDA_USE_BINARYBUILDER=false
    export JULIA_DEPOT_PATH=`pwd`/../.julia
    
-   One time only setup for clean environment (or to reset from clean)::
+ One time only setup for clean environment (or to reset from clean)::
    
     
    \rm -fr $JULIA_DEPOT_PATH
