@@ -190,6 +190,10 @@ illustrates some steps that may occaisionally be needed.
    export JULIA_MPI_BINARY=system
    export JULIA_CUDA_USE_BINARYBUILDER=false
    export JULIA_DEPOT_PATH=`pwd`/../.julia
+   
+   One time only setup for clean environment (or to reset from clean)::
+   
+    
    \rm -fr $JULIA_DEPOT_PATH
    julia -e 'using Pkg; Pkg.add(PackageSpec(name="Conda",rev="master")); Pkg.build("Conda")'
    julia -e 'using Pkg; Pkg.add("NCDatasets"); Pkg.build("NCDatasets")'
