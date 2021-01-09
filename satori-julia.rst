@@ -128,33 +128,33 @@ now use srun to launch individual steps e.g.::
   
 ..
   
-     using MPI
-     MPI.Init()
+   using MPI
+   MPI.Init()
 
-     comm = MPI.COMM_WORLD
-     rank = MPI.Comm_rank(comm)
-     size = MPI.Comm_size(comm)
+   comm = MPI.COMM_WORLD
+   rank = MPI.Comm_rank(comm)
+   size = MPI.Comm_size(comm)
 
-     dst = mod(rank+1, size)
-     src = mod(rank-1, size)
+   dst = mod(rank+1, size)
+   src = mod(rank-1, size)
 
-     N = 4
+   N = 4
 
-     send_mesg = Array{Float64}(undef, N)
-     recv_mesg = Array{Float64}(undef, N)
+   send_mesg = Array{Float64}(undef, N)
+   recv_mesg = Array{Float64}(undef, N)
 
-     fill!(send_mesg, Float64(rank))
+   fill!(send_mesg, Float64(rank))
 
-     rreq = MPI.Irecv!(recv_mesg, src,  src+32, comm)
+   rreq = MPI.Irecv!(recv_mesg, src,  src+32, comm)
 
-     print("$rank: Sending   $rank -> $dst = $send_mesg\n")
-     sreq = MPI.Isend(send_mesg, dst, rank+32, comm)
+   print("$rank: Sending   $rank -> $dst = $send_mesg\n")
+   sreq = MPI.Isend(send_mesg, dst, rank+32, comm)
 
-     stats = MPI.Waitall!([rreq, sreq])
+   stats = MPI.Waitall!([rreq, sreq])
+   
+   print("$rank: Received $src -> $rank = $recv_mesg\n")
 
-     print("$rank: Received $src -> $rank = $recv_mesg\n")
-
-     MPI.Barrier(comm)
+   MPI.Barrier(comm)
 
 
 An example of installing https://github.com/clima/climatemachine.jl on Satori
@@ -190,7 +190,7 @@ illustrates some steps that may occaisionally be needed.
    export JULIA_MPI_BINARY=system
    export JULIA_CUDA_USE_BINARYBUILDER=false
    export JULIA_DEPOT_PATH=`pwd`/../.julia
-   
+   https://github.com/mit-satori/getting-started/blob/master/satori-julia.rst
  One time only setup for clean environment (or to reset from clean)::
    
     
