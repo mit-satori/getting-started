@@ -1,5 +1,7 @@
 IBM Watson Machine Learning Community Edition (WML-CE)
+
 and
+
 Open Cognitive Environment (Open-CE)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -75,7 +77,7 @@ The WML-CE MLDL packages are distributed as conda packages in an online
 conda repository. conda must be configured to give priority to
 installing packages from this channel.
 
-Add the WML-CE channel to the conda configuration by running the
+Add the IBM WML-CE channel to the conda configuration by running the
 following command:
 
 .. code:: bash
@@ -83,7 +85,7 @@ following command:
    conda config --prepend channels \
    https://public.dhe.ibm.com/ibmdl/export/pub/software/server/ibm-ai/conda/
 
-Add the Open-CE channel to the conda configuration by running the
+Add the MIT Open-CE channel to the conda configuration by running the
 following command:
 
 .. code:: bash
