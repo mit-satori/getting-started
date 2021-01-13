@@ -1,19 +1,22 @@
-IBM Watson Machine Learning Community Edition (WMLCE)
+IBM Watson Machine Learning Community Edition (WML-CE)
+and
+Open Cognitive Environment (Open-CE)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Watson ML CE is an IBM Cognitive Systems offering that is designed for
-the rapidly growing and quickly evolving AI category of deep learning.
-Watson ML CE brings a suite of capabilities from the open source
+Watson Machine Learning Community Edition is an IBM Cognitive Systems 
+offering that is designed for the rapidly growing and quickly evolving 
+AI category of deep learning.
+WML-CE and Open-CE brings a suite of capabilities from the open source
 community and combines them into a single enterprise distribution of
 software that incorporates complete lifecycle management from
 installation and configuration; data ingest and preparation; building,
 optimizing, and training the model; to inference; testing; and moving
-the model into production. Watson ML CE takes advantage of a distributed
+the model into production. WML-CE and Open-CE takes advantage of a distributed
 architecture to help enable your teams to quickly iterate through the
 training cycle on more data to help continuously improve the model over
 time.
 
-Watson ML CE is designed for scale, with software optimised for both
+WML-CE and Open-CE are designed for scale, with software optimised for both
 single server and cluster deep learning training. It offers many
 optimizations that can ease installation and management, and can help
 accelerate performance:
@@ -33,10 +36,7 @@ accelerate performance:
 -  Supported on GPU accelerated IBM AC922 servers; and also supported on
    accelerated x86 architecture servers.
 
-.. figure:: images/Satori-WMLCE_Infographic.png
-   :alt: WMLCE
 
-   WMLCE
 
 [1] Install Anaconda
 ''''''''''''''''''''
@@ -66,22 +66,35 @@ download of the Anaconda can be done using ``wget``:
 By default Anaconda will be insalled in your home folder under
 ``anaconda3`` and all the WMLCE pachages will be install in a
 sub-directory on chosen virtual name/folder (ie.
-anaconda3/envs/wmlce-1.6.2)
+anaconda3/envs/wmlce-1.7.0)
 
-[2] WMLCE: Setting up the software repository
+[2] WML-CE: Setting up the software repository
 '''''''''''''''''''''''''''''''''''''''''''''
 
-The WML CE MLDL packages are distributed as conda packages in an online
+The WML-CE MLDL packages are distributed as conda packages in an online
 conda repository. conda must be configured to give priority to
 installing packages from this channel.
 
-Add the WML CE channel to the conda configuration by running the
+Add the WML-CE channel to the conda configuration by running the
 following command:
 
 .. code:: bash
 
    conda config --prepend channels \
    https://public.dhe.ibm.com/ibmdl/export/pub/software/server/ibm-ai/conda/
+
+Add the Open-CE channel to the conda configuration by running the
+following command:
+
+.. code:: bash
+
+   conda config --prepend channels \
+   https://opence.mit.edu
+   
+
+NOTE: Moving forward with new AI frameworks and new related packages OPENCE.MIT.EDU
+      conda channel will the default choice. 
+      (i.e. TensorFlow 2.3.1, 2.4.0, Pytorch 1.6.0, 1.7.1 etc)
 
 
 [3] WMLCE: Creating and activate conda environments (recommended)
@@ -106,8 +119,8 @@ example, to create an environment named wmlce_env with Python 3.6:
 
 .. code:: bash
 
-   conda create --name wmlce-1.6.2 python=3.6
-   conda activate wmlce-1.6.2
+   conda create --name wmlce-1.7.0 python=3.6
+   conda activate wmlce-1.7.0
 
 NOTE: As a good practice to maintain the disk space usage on Satori please run at regular intervals the following command that will remove unused packages and caches from your Anaconda profile. In addition this command shuld be use before installing a new version of WMLCE on another virtual environment.
 
@@ -164,7 +177,7 @@ The license accept has to be done only once on a per user basis.
 
 .. code:: bash
 
-   conda activate wmlce-1.6.2
+   conda activate wmlce-1.7.0
    python
 
 a. PYTORCH
@@ -231,7 +244,7 @@ The template-caffe-test-singlenode.lsf consist in the following LSF file:
    #BSUB -x
 
    HOME2=/nobackup/users/$(whoami)
-   PYTHON_VIRTUAL_ENVIRONMENT=wmlce-1.6.2
+   PYTHON_VIRTUAL_ENVIRONMENT=wmlce-1.7.0
    CONDA_ROOT=$HOME2/anaconda3
    source ${CONDA_ROOT}/etc/profile.d/conda.sh
    conda activate $PYTHON_VIRTUAL_ENVIRONMENT
@@ -309,15 +322,15 @@ to install packages from an older release. Examples:
 
 .. code:: bash
 
+   (my-wmlce-env) $ conda install pytorch powerai-release=1.7.0
    (my-wmlce-env) $ conda install pytorch powerai-release=1.6.2
-   (my-wmlce-env) $ conda install pytorch powerai-release=1.6.1
 
 The –strict-channel-priority option can be used with powerai-release for
 greater control:
 
 .. code:: bash
 
-   conda install --strict-channel-priority pytorch powerai-release=1.6.2
+   conda install --strict-channel-priority pytorch powerai-release=1.7.0
 
 Additional conda channels
 ^^^^^^^^^^^^^^^^^^^^^^^^^
