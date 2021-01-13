@@ -205,6 +205,9 @@ b. TensorFlow
 
    import tensorflow as tf
    from __future__ import print_function
+   # bellow two rows are for TF1.x compatibility mode in TF2.x - don't use them with TF1.x
+   import tensorflow.compat.v1 as tf
+   tf.disable_v2_behavior()
    # Create a Constant op
    # The op is added as a node to the default graph.
    #
