@@ -90,7 +90,7 @@ following command:
    https://opence.mit.edu
    
 
-NOTE: Moving forward with new AI frameworks and new related packages OPENCE.MIT.EDU conda channel will the default choice (i.e. TensorFlow 2.3.1, 2.4.0, Pytorch 1.6.0, 1.7.1 etc).
+NOTE: Moving forward with new AI frameworks and new related packages OPENCE.MIT.EDU conda channel will the prefered choice (i.e. TensorFlow 2.3.1, 2.4.0, Pytorch 1.6.0, 1.7.1 etc).
 
 
 [3] WML-CE and Open-CE: Creating and activate conda environments (recommended)
@@ -117,8 +117,17 @@ example, to create an environment named wmlce_env with Python 3.6:
 
    conda create --name wmlce-1.7.0 python=3.6
    conda activate wmlce-1.7.0
+   
+   
+or
 
-NOTE: As a good practice to maintain the disk space usage on Satori please run at regular intervals the following command that will remove unused packages and caches from your Anaconda profile. In addition this command shuld be use before installing a new version of WMLCE on another virtual environment.
+.. code:: bash
+
+   conda create --name opence python=3.7
+   conda activate opence
+   
+   
+NOTE: As a good practice to maintain the disk space usage on Satori please run at regular intervals the following command that will remove unused packages and caches from your Anaconda profile. In addition this command shuld be use before installing a new version of WML-CE/Open-CE on another virtual environment.
 
 .. code:: bash
 
