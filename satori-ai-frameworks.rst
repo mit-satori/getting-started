@@ -1,10 +1,5 @@
-IBM Watson Machine Learning Community Edition (WML-CE)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-and
-
-Open Cognitive Environment (Open-CE)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+IBM Watson Machine Learning Community Edition (WML-CE) and Open Cognitive Environment (Open-CE)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Watson Machine Learning Community Edition is an IBM Cognitive Systems 
 offering that is designed for the rapidly growing and quickly evolving 
