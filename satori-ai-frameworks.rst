@@ -90,9 +90,7 @@ following command:
    https://opence.mit.edu
    
 
-NOTE: Moving forward with new AI frameworks and new related packages OPENCE.MIT.EDU
-      conda channel will the default choice. 
-      (i.e. TensorFlow 2.3.1, 2.4.0, Pytorch 1.6.0, 1.7.1 etc)
+NOTE: Moving forward with new AI frameworks and new related packages OPENCE.MIT.EDU conda channel will the default choice (i.e. TensorFlow 2.3.1, 2.4.0, Pytorch 1.6.0, 1.7.1 etc).
 
 
 [3] WML-CE and Open-CE: Creating and activate conda environments (recommended)
