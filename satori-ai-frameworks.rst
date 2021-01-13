@@ -66,10 +66,10 @@ By default Anaconda will be insalled in your home folder under
 sub-directory on chosen virtual name/folder (ie.
 anaconda3/envs/wmlce-1.7.0)
 
-[2] WML-CE: Setting up the software repository
+[2] WML-CE and Open-CE: Setting up the software repository
 '''''''''''''''''''''''''''''''''''''''''''''
 
-The WML-CE MLDL packages are distributed as conda packages in an online
+The WML-CE and Open-CE MLDL packages are distributed as conda packages in an online
 conda repository. conda must be configured to give priority to
 installing packages from this channel.
 
@@ -81,7 +81,7 @@ following command:
    conda config --prepend channels \
    https://public.dhe.ibm.com/ibmdl/export/pub/software/server/ibm-ai/conda/
 
-Add the MIT Open-CE channel to the conda configuration by running the
+Add, the MIT Open-CE channel to the conda configuration by running the
 following command:
 
 .. code:: bash
@@ -95,8 +95,8 @@ NOTE: Moving forward with new AI frameworks and new related packages OPENCE.MIT.
       (i.e. TensorFlow 2.3.1, 2.4.0, Pytorch 1.6.0, 1.7.1 etc)
 
 
-[3] WMLCE: Creating and activate conda environments (recommended)
-'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+[3] WML-CE and Open-CE: Creating and activate conda environments (recommended)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 With conda, you can create environments that have different versions of
 Python or packages installed in them. Conda environments are optional
@@ -112,7 +112,7 @@ The syntax to create and activate a conda environment is:
    conda create --name <environment name> python=<python version>
    conda activate <environment name>
 
-The only valid Python versions with WML CE are Python 3.6 and 3.7. For
+The only valid Python versions with WML-CE are Python 3.6, 3.7 and for Open-CE are Python 3.6, 3.7, 3.8 . For
 example, to create an environment named wmlce_env with Python 3.6:
 
 .. code:: bash
@@ -129,7 +129,7 @@ NOTE: As a good practice to maintain the disk space usage on Satori please run a
    
 
 
-[4] WMLCE: Installing all frameworks at the same time
+[4] WML-CE: Installing all frameworks at the same time
 '''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 All the MLDL frameworks except RAPIDS packages can be installed at the
@@ -170,7 +170,7 @@ command:
 
 The license accept has to be done only once on a per user basis.
 
-[5] WMLCE: Testing ML/DL frameworks (Pytorch, TensorFlow etc) installation
+[5] WML-CE: Testing ML/DL frameworks (Pytorch, TensorFlow etc) installation
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 .. code:: bash
@@ -261,7 +261,7 @@ libraries don’t forget to install them with:
 If you don’t have any more errors you are ready to submit jobs on the
 compute nodes :)
 
-Controlling WMLCE release packages
+Controlling WML-CE release packages
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The conda installer uses a set of rules to determine which packages to
@@ -310,7 +310,7 @@ You could permanently change the channel priority setting to strict:
 
    conda config --set channel_priority strict
 
-b. WMLCE release meta-package
+b. WML-CE release meta-package
                              
 
 The powerai-release meta-package can be used to specify the WML CE
@@ -354,20 +354,20 @@ Problem reports and recipe contributions from the community are welcome.
 More information about the Supplementary channel can be found in the
 PowerAI Supplementary Channel README.
 
-The WML CE Early Access channel is available at: https://public.dhe.ibm.com/ibmdl/export/pub/software/server/ibm-ai/conda-early-access/.
+The WML-CE Early Access channel is available at: https://public.dhe.ibm.com/ibmdl/export/pub/software/server/ibm-ai/conda-early-access/.
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 This channel is updated occasionally with latest versions of various
 packages included in WML CE. The purpose of the channel is to make new
 versions of frameworks available in advance of formal WML CE releases.
 Packages published in the Early Access channel may not exactly match a
-later WML CE release. For example, package and prerequisite versions may
+later WML-CE release. For example, package and prerequisite versions may
 differ.
 
 Packages in the Early Access channel might depend on packages in the
 main channel, so both channels might be needed in the conda config.
 
-Example of getting EA WMLCE software: 
+Example of getting EA WML-CE software: 
 
 
 .. code:: bash
