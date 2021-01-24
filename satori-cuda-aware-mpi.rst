@@ -138,6 +138,7 @@ shows both the bash script launcher and the CUDA runtime calls. Only one of thes
 are shown to illustrate the approaches. 
 
 .. code:: bash
+
     #!/bin/bash
     #
     # Example SLURM batch script to run example CUDA aware MPI program with one rank on 
