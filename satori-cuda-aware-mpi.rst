@@ -70,8 +70,8 @@ are set to ``1``.  The start of the batch scripts selects the modules needed for
 Assigning GPUs to MPI ranks
 ...........................
 
-The batch script will allocated 4 GPUs on each node to the batch session. Individual MPI ranks then need to
-be attached to specific GPUs to run in parallel. There are 2 ways to do this.
+The batch script will be allocated 4 GPUs on each node in the batch session. Individual MPI ranks then need to
+attach to specific GPUs to run in parallel. There are two ways to do this.
 
 1. Attach GPU to a rank using a bash script.
  
