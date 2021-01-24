@@ -70,13 +70,13 @@ Assigning GPUs to MPI ranks
 The batch script will allocated 4 GPUs on each node to the batch session. Individual MPI ranks then need to
 be attached to specific GPUs to run in parallel. There are 2 ways to do this.
 
- #. Attach GPU to a rank using a bash script.
+#. Attach GPU to a rank using a bash script.
  
     In this approach a bash script is written that is used as a launcher for the MPI program to be run. This
     bash script modifies the environment variable ``CUDA_VISIBLE_DEVICES`` so that the MPI program will only see
     the GPU it has been allocated. An example script is shown below.
  
-    .. code:: bash
+.. code:: bash
 
     #!/bin/bash
     #
@@ -88,6 +88,6 @@ be attached to specific GPUs to run in parallel. There are 2 ways to do this.
     exec $*
   
 
- #. Attach a GPU to a rack using CUDA library runtime code.
+#. Attach a GPU to a rack using CUDA library runtime code.
 
 
