@@ -1,8 +1,8 @@
 Using MPI and CUDA on Satori
 ============================
 
- CUDA aware MPI is supported through MPI modules using OpenMPI. To use CUDA aware MPI codes, and libraries that 
- involve MPI, may need to be recompiled with the correct OpenMPI modules. 
+CUDA aware MPI from Slurm bacth scripts is supported through MPI modules using OpenMPI. To use CUDA aware MPI codes, and libraries that 
+involve MPI, may need to be recompiled with the correct OpenMPI modules. 
 
 Getting started
 ^^^^^^^^^^^^^^^
