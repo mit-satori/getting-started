@@ -7,7 +7,7 @@ involve MPI, may need to be recompiled with the correct OpenMPI modules.
 Getting started
 ^^^^^^^^^^^^^^^
 
-The following modules are needed to CUDA aware MPI codes
+The following modules are needed to work with CUDA aware MPI codes
 
 .. code:: bash
 
