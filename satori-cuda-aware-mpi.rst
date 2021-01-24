@@ -133,9 +133,9 @@ below.
 A complete example SLURM batch script
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The script below shows a full example of the steps for CUDA and MPI using GPUs under SLURM. The example
-shows both the bash script launcher and the CUDA runtime calls. Only one of these is needed in practice, both
-are shown to illustrate the approaches. 
+The script below shows a working full example of the steps for CUDA and MPI using multiple GPUs on multiple nodes under SLURM. The example
+shows both the bash script launcher and the CUDA runtime call approaches for assigning GPUs to ranks. Only one of these approaches is 
+needed in practice, both are shown to illustrate the two approaches. 
 
 .. code:: bash
 
