@@ -132,6 +132,11 @@ below.
 
    srun ./launch.sh ./a.out
    
+the equivalent without a launch script is
+
+.. code:: bash
+
+   srun ./a.out
   
 A complete example SLURM batch script
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
