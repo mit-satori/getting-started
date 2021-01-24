@@ -44,7 +44,7 @@ Batch script header
 
 The following example SLURM batch script heading illustrates requesting 8 GPUs on 2 nodes with exclusive access. In this
 example we are want to have one MPI rank for each GPU, so we set ``cpus-per-task``, ``ntasks-per-core`` and ``threads-per-core``
-to ``1``. 
+to ``1``.  The start of the bacth scripts selects the modules needed for OpenMPI CUDA aware MPI with SLURM integration. 
 
 .. code:: bash
 
@@ -59,5 +59,10 @@ to ``1``.
   #SBATCH --exclusive
   #SBATCH --time 00:05:00
   
+  module purge all
+  module add spack
+  module add cuda/10.1
+  module load openmpi/3.1.4-pmi-cuda-ucx
+
 
 
