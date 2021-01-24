@@ -64,5 +64,14 @@ to ``1``.  The start of the bacth scripts selects the modules needed for OpenMPI
   module add cuda/10.1
   module load openmpi/3.1.4-pmi-cuda-ucx
 
+Assigning GPUs to MPI ranks
+...........................
+
+The batch script will allocated 4 GPUs on each node to the batch session. Individual MPI ranks then need to
+be attached to specific GPUs to run in parallel. There are 2 ways to do this.
+
+1. Attach GPU to a rank using a bash script.
+
+1. Attach a GPU to a rack using CUDA library runtime code.
 
 
