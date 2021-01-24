@@ -74,7 +74,7 @@ be attached to specific GPUs to run in parallel. There are 2 ways to do this.
  
    In this approach a bash script is written that is used as a launcher for the MPI program to be run. This
    bash script modifies the environment variable ``CUDA_VISIBLE_DEVICES`` so that the MPI program will only see
-   the GPU it has been allocated. An example script is shown below.
+   the GPU it has been allocated. An example script is shown below:
  
 .. code:: bash
 
@@ -89,5 +89,33 @@ be attached to specific GPUs to run in parallel. There are 2 ways to do this.
   
 
 2. Attach a GPU to a rank using CUDA library runtime code.
+
+   In this approach the MPI program source must be modified to include GPU device selection code
+   before ``MPI_Init()`` is invoked. An example code fragment for GPU device selection (based on the 
+   environment variable SLURM_LOCALID) is shown below:
+   
+.. code:: C
+
+    #include <mpi.h>
+    #include <stdio.h>
+    #include <cuda_runtime.h>
+
+    int main(int argc, char** argv, char *envp[]) {
+
+    char * localRankStr = NULL;
+    int localrank = 0, devCount = 0, mydev;
+    // We extract the local rank initialization using an environment variable
+    if ((localRankStr = getenv("SLURM_LOCALID")) != NULL) {
+      localrank = atoi(localRankStr);
+    }
+    cudaGetDeviceCount(&devCount);
+    mydev=localrank % devCount;
+    cudaSetDevice(mydev);
+          :
+          :
+    MPI_Init(NULL, NULL);
+          :
+          :
+
 
 
