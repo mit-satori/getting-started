@@ -1,8 +1,10 @@
 Using MPI and CUDA on Satori
 ============================
 
-CUDA aware MPI from Slurm batch scripts is supported through MPI modules using OpenMPI. To use CUDA aware MPI codes, and libraries that 
-involve MPI, may need to be recompiled with the correct OpenMPI modules. 
+Leveraging multiple GPUs in a CUDA program with MPI is supported by CUDA aware MPI installations on Satori.  
+CUDA aware MPI from Slurm batch scripts is supported through system MPI modules build on OpenMPI. To use CUDA aware MPI codes, and libraries that 
+involve MPI, may need to be recompiled with the correct OpenMPI modules.  
+
 
 Getting started
 ^^^^^^^^^^^^^^^
@@ -211,4 +213,11 @@ needed in practice, both are shown to illustrate the two approaches.
     mpic++ x.cc -lcudart
 
     srun ./launch.sh ./a.out
+    
+    Using alternate MPI builds
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    
+    It is also possible to build custom MPI modules in individual user accounts using the spack ( https://spack.readthedocs.io/en/latest/ )
+package management tool. These builds should use the UCX communcation features and PMI job management features to integrate with SLURM and the Satori high-speed network. 
+
 
