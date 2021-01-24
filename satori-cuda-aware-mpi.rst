@@ -76,7 +76,7 @@ be attached to specific GPUs to run in parallel. There are 2 ways to do this.
     bash script modifies the environment variable ``CUDA_VISIBLE_DEVICES`` so that the MPI program will only see
     the GPU it has been allocated. An example script is shown below.
  
-.. code:: bash
+    .. code:: bash
 
     #!/bin/bash
     #
