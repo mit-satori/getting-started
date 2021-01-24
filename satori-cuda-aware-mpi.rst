@@ -117,5 +117,19 @@ be attached to specific GPUs to run in parallel. There are 2 ways to do this.
           :
           :
 
+Running the MPI program within the batch script
+...............................................
 
+To run the MPI program the SLURM command ``srun`` is used (and not ``mpirun`` or ``mpiexec``). The ``srun`` command
+works like the MPI run or exec commands but it creates the environment variables needed to select which rank 
+works with which GPU prior to any calls to MIT_Init(). An example of using srun with a launch script is shown
+below.
+
+.. code:: bash
+
+   srun ./launch.sh ./a.out
+   
+  
+A complete example SLURM batch script
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
