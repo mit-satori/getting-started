@@ -23,8 +23,9 @@ Compiling
 ^^^^^^^^^
 
 Codes and libraries that make MPI calls against CUDA device memory pointers need
-to compiled using the MPI compilation wrappers e.g. ``mpicc``, ``mpiCC``, ``mpicxx``, ``mpic++``,
-``mpif77``, ``mpif90``, ``mpifort``. The CUDA runtime library needs to be added as a link
+to be compiled using the MPI compilation wrappers e.g. ``mpicc``, ``mpiCC``, ``mpicxx``, ``mpic++``,
+``mpif77``, ``mpif90``, ``mpifort`` from the ``openmpi/3.1.4-pmi-cuda-ucx`` OpenMPI
+module. The CUDA runtime library needs to be added as a link
 library, e.g. ``-lcudart``.
 
 A typical compilation setup is
