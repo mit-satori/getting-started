@@ -220,10 +220,13 @@ needed in practice, both are shown to illustrate the two approaches.
 
     srun ./launch.sh ./a.out
     
-    Using alternate MPI builds
-    ^^^^^^^^^^^^^^^^^^^^^^^^^^
     
-    It is also possible to build custom MPI modules in individual user accounts using the spack ( https://spack.readthedocs.io/en/latest/ )
-package management tool. These builds should use the UCX communcation features and PMI job management features to integrate with SLURM and the Satori high-speed network. 
+  
+ Using alternate MPI builds
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    
+    It is also possible to build custom MPI modules in individual user accounts using the 
+    spack ( https://spack.readthedocs.io/en/latest/ ) package management tool. These builds should use the UCX communcation 
+    features and PMI job management features to integrate with SLURM and the Satori high-speed network. 
 
 
