@@ -38,3 +38,21 @@ A typical compilation setup is
 
 Submiting a batch script
 ^^^^^^^^^^^^^^^^^^^^^^^^
+
+The following example SLURM batch script heading illustrates requesting 8 GPUs on 2 nodes with exclusive access. In this
+example we are want to have one MPI rank for each GPU, so we set ``cpus-per-task``, ``ntasks-per-core`` and ``threads-per-core``
+to ``1``. 
+
+.. code:: bash
+
+  #!/bin/bash
+  #SBATCH --nodes=2
+  #SBATCH --ntasks-per-node=4
+  #SBATCH --gres=gpu:4
+  #SBATCH --cpus-per-task=1
+  #SBATCH --ntasks-per-core=1
+  #SBATCH --threads-per-core=1
+  #SBATCH --mem=1T
+  #SBATCH --exclusive
+  #SBATCH --time 00:05:00
+
