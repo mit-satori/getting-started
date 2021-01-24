@@ -138,86 +138,76 @@ shows both the bash script launcher and the CUDA runtime calls. Only one of thes
 are shown to illustrate the approaches. 
 
 .. code:: bash
-#!/bin/bash
-#
-# Example SLURM batch script to run example CUDA aware MPI program with one rank on 
-# each GPU, using two nodes with 4 GPUs on each node.
-#
-#SBATCH --nodes=2
-#SBATCH --ntasks-per-node=4
-#SBATCH --gres=gpu:4
-#SBATCH --cpus-per-task=1
-#SBATCH --ntasks-per-core=1
-#SBATCH --threads-per-core=1
-#SBATCH --mem=1T
-#SBATCH --exclusive
-#SBATCH --time 00:05:00
+    #!/bin/bash
+    #
+    # Example SLURM batch script to run example CUDA aware MPI program with one rank on 
+    # each GPU, using two nodes with 4 GPUs on each node.
+    #
+    #SBATCH --nodes=2
+    #SBATCH --ntasks-per-node=4
+    #SBATCH --gres=gpu:4
+    #SBATCH --cpus-per-task=1
+    #SBATCH --ntasks-per-core=1
+    #SBATCH --threads-per-core=1
+    #SBATCH --mem=1T
+    #SBATCH --exclusive
+    #SBATCH --time 00:05:00
 
-cd /home/cnh/projects/c++gpumpi
+    module purge all
+    module add spack
+    module add cuda/10.1
+    module load openmpi/3.1.4-pmi-cuda-ucx
 
-module purge all
-module add spack
-module add cuda/10.1
-module load openmpi/3.1.4-pmi-cuda-ucx
+    cat > launch.sh <<'EOFA'
+    #!/bin/bash
 
-cat > launch.sh <<'EOFA'
-#!/bin/bash
+    # Choose a CUDA device number ($mygpu) based on ${SLURM_LOCALID}, cycling through
+    # the available GPU devices ($ngpu) on the node.
+    ngpu=`nvidia-smi -L | grep UUID | wc -l`
+    mygpu=$((${SLURM_LOCALID} % ${ngpu} ))
+    export CUDA_VISIBLE_DEVICES=${mygpu}
 
-# Choose a CUDA device number ($mygpu) based on ${SLURM_LOCALID}, cycling through
-# the available GPU devices ($ngpu) on the node.
-ngpu=`nvidia-smi -L | grep UUID | wc -l`
-mygpu=$((${SLURM_LOCALID} % ${ngpu} ))
-export CUDA_VISIBLE_DEVICES=${mygpu}
+    # Run MPI program with any arguments
+    exec $*
+    EOFA
 
-# Run MPI program with any arguments
-exec $*
-EOFA
+    cat > x.cc <<'EOFA'
+    #include <mpi.h>
+    #include <stdio.h>
+    #include <cuda_runtime.h>
 
-cat > x.cc <<'EOFA'
-#include <mpi.h>
-#include <stdio.h>
-#include <cuda_runtime.h>
+    int main(int argc, char** argv, char *envp[]) {
 
-int main(int argc, char** argv, char *envp[]) {
+      char * localRankStr = NULL;
+      int localrank = 0, devCount = 0, mydev;
 
-    char * localRankStr = NULL;
-    int localrank = 0, devCount = 0, mydev;
+      // We extract the local rank initialization using an environment variable
+      if ((localRankStr = getenv("SLURM_LOCALID")) != NULL) {
+        localrank = atoi(localRankStr);
+      }
+      cudaGetDeviceCount(&devCount);
+      mydev=localrank % devCount;
+      cudaSetDevice(mydev);
 
-    // We extract the local rank initialization using an environment variable
-    if ((localRankStr = getenv("SLURM_LOCALID")) != NULL) {
-      localrank = atoi(localRankStr);
+      MPI_Init(NULL, NULL);
+      int world_size;
+      MPI_Comm_size(MPI_COMM_WORLD, &world_size);
+      int world_rank;
+      MPI_Comm_rank(MPI_COMM_WORLD, &world_rank);
+      char processor_name[MPI_MAX_PROCESSOR_NAME];
+      int name_len;
+      MPI_Get_processor_name(processor_name, &name_len);
+
+      // Let check which CUDA device we have
+      char pciBusId[13];
+      cudaDeviceGetPCIBusId ( pciBusId, 13, mydev );
+      printf("MPI rank %d of %d on host %s is using GPU with PCI id %s.\n",world_rank,world_size,processor_name,pciBusId);
+
+      MPI_Finalize();
     }
-    cudaGetDeviceCount(&devCount);
-    mydev=localrank % devCount;
-    cudaSetDevice(mydev);
+    EOFA
 
-    // Initialize the MPI environment
-    MPI_Init(NULL, NULL);
+    mpic++ x.cc -lcudart
 
-    // Get the number of processes
-    int world_size;
-    MPI_Comm_size(MPI_COMM_WORLD, &world_size);
-
-    // Get the rank of the process
-    int world_rank;
-    MPI_Comm_rank(MPI_COMM_WORLD, &world_rank);
-
-    // Get the name of the processor
-    char processor_name[MPI_MAX_PROCESSOR_NAME];
-    int name_len;
-    MPI_Get_processor_name(processor_name, &name_len);
-
-    // Let check which CUDA device we have
-    char pciBusId[13];
-    cudaDeviceGetPCIBusId ( pciBusId, 13, mydev );
-    printf("MPI rank %d of %d on host %s is using GPU with PCI id %s.\n",world_rank,world_size,processor_name,pciBusId);
-
-    // Finalize the MPI environment.
-    MPI_Finalize();
-}
-EOFA
-
-mpic++ x.cc -lcudart
-
-srun ./launch.sh ./a.out
+    srun ./launch.sh ./a.out
 
