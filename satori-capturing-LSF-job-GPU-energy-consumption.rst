@@ -19,36 +19,35 @@ script.
 
 `pre-exec.sh` script:
 
-```bash
-#!/bin/bash
+.. code:: bash
+    #!/bin/bash
 
-su $LSFUSER -c "nvidia-smi dmon -i 0 -s p -o DT -f /nobackup/users/$LSFUSER/power.$LSB_JOBID.$LSB_JOBINDEX.txt 2>&1 >/dev/null < /dev/zero &"
-su $LSFUSER -c "/nobackup/users/$LSFUSER/watch.sh $LSB_JOBID &"
+    su $LSFUSER -c "nvidia-smi dmon -i 0 -s p -o DT -f /nobackup/users/$LSFUSER/power.$LSB_JOBID.$LSB_JOBINDEX.txt 2>&1 >/dev/null < /dev/zero &"
+    su $LSFUSER -c "/nobackup/users/$LSFUSER/watch.sh $LSB_JOBID &"
 
-```
 
 
 ``watch.sh`` script:
 
-```bash
-#!/bin/bash
-echo "Watch is running" >> /nobackup/users/$LSFUSER/watch.txt
+.. code:: bash
+    #!/bin/bash
+    echo "Watch is running" >> /nobackup/users/$LSFUSER/watch.txt
 
-sleep 20
-jobid=$1
+    sleep 20
+    jobid=$1
 
-echo $(bjobs -l $jobid | awk '/PIDs/ {print $NF}') >> /nobackup/users/$LSFUSER/watch.txt
-echo $(bjobs -l $jobid | awk '/PIDs/ {print $NF}' | tail -n 1) >> /nobackup/users/$LSFUSER/watch.txt
+    echo $(bjobs -l $jobid | awk '/PIDs/ {print $NF}') >> /nobackup/users/$LSFUSER/watch.txt
+    echo $(bjobs -l $jobid | awk '/PIDs/ {print $NF}' | tail -n 1) >> /nobackup/users/$LSFUSER/watch.txt
 
-watchpid=$(bjobs -l $jobid | awk '/PIDs/ {print $NF}' | tail -n 1)
-killpid=$(ps uxwww | grep nvidia | grep -v grep | awk '{print $2}')
+    watchpid=$(bjobs -l $jobid | awk '/PIDs/ {print $NF}' | tail -n 1)
+    killpid=$(ps uxwww | grep nvidia | grep -v grep | awk '{print $2}')
 
-echo "jobid: $jobid, watchpid: $watchpid, killpid: $killpid" >> /nobackup/users/$LSFUSER/watch.txt
+    echo "jobid: $jobid, watchpid: $watchpid, killpid: $killpid" >> /nobackup/users/$LSFUSER/watch.txt
 
-while sleep 1; do kill -0 $watchpid || break; done
+    while sleep 1; do kill -0 $watchpid || break; done
 
-echo "Done waiting" >> /nobackup/users/$LSFUSER/watch.txt
-kill -2 $killpid
-exit 0
+    echo "Done waiting" >> /nobackup/users/$LSFUSER/watch.txt
+    kill -2 $killpid
+    exit 0
 
-```
+
