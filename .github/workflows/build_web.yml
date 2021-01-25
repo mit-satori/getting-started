@@ -20,6 +20,7 @@ jobs:
           
       - name: build
         run: |
+          echo "/home/runner/.local/bin" >> $GITHUB_PATH
           make html
           touch _build/html/.nojekyll
           ls -altr _build/html
