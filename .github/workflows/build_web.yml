@@ -37,7 +37,7 @@ jobs:
           FOLDER: _build/html # The folder the action should deploy.
           CLEAN: false # Automatically remove deleted files from the deploy branch
           REPOSITORY_NAME: mit-satori/mit-satori-test-getting-started-web
-          ## ACCESS_TOKEN: ${{ secrets.WEB_PAGE_DEPLOY }}
+          ACCESS_TOKEN: ${{ secrets.WEB_PAGE_DEPLOY }}
           TARGET_FOLDER: docs  
      
         
