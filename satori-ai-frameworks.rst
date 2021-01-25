@@ -1,5 +1,5 @@
 IBM Watson Machine Learning Community Edition (WML-CE) and Open Cognitive Environment (Open-CE)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+===============================================================================================
 
 Watson Machine Learning Community Edition is an IBM Cognitive Systems 
 offering that is designed for the rapidly growing and quickly evolving 
@@ -67,7 +67,7 @@ sub-directory on chosen virtual name/folder (ie.
 anaconda3/envs/wmlce-1.7.0)
 
 [2] WML-CE and Open-CE: Setting up the software repository
-'''''''''''''''''''''''''''''''''''''''''''''
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 The WML-CE and Open-CE MLDL packages are distributed as conda packages in an online
 conda repository. conda must be configured to give priority to
@@ -137,7 +137,7 @@ NOTE: As a good practice to maintain the disk space usage on Satori please run a
 
 
 [4] WML-CE: Installing all frameworks at the same time
-'''''''''''''''''''''''''''''''''''''''''''''''''''''
+''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 All the MLDL frameworks except RAPIDS packages can be installed at the
 same time by using the powerai meta-package. All the RAPIDS packages can
@@ -178,7 +178,7 @@ command:
 The license accept has to be done only once on a per user basis.
 
 [5] WML-CE: Testing ML/DL frameworks (Pytorch, TensorFlow etc) installation
-''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 .. code:: bash
 
@@ -272,7 +272,7 @@ If you don’t have any more errors you are ready to submit jobs on the
 compute nodes :)
 
 Controlling WML-CE release packages
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The conda installer uses a set of rules to determine which packages to
 install. Channel priorities and package versions are weighted heavily,
