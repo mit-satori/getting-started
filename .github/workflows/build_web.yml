@@ -31,12 +31,12 @@ jobs:
       - name: deploy
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_DEPLOY_TOKEN }}
           BRANCH: main # The branch the action should deploy to.
           FOLDER: _build/html # The folder the action should deploy.
           CLEAN: false # Automatically remove deleted files from the deploy branch
           REPOSITORY_NAME: mit-satori/mit-satori-test-getting-started-web
-          ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ACCESS_TOKEN: ${{ secrets.GH_DEPLOY_TOKEN }}
           TARGET_FOLDER: docs  
      
         
