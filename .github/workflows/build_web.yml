@@ -27,5 +27,15 @@ jobs:
           make html
           touch _build/html/.nojekyll
           ls -altr _build/html
+          
+      - name: deploy
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: main # The branch the action should deploy to.
+          FOLDER: docs # The folder the action should deploy.
+          CLEAN: false # Automatically remove deleted files from the deploy branch
+          REPOSITORY_NAME: ${GH_DEPLOY_ORG}/${GH_DEPLOY_REPO}
+          ACCESS_TOKEN: ${GH_DEPLOY_TOKEN}
      
         
