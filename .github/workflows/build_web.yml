@@ -35,7 +35,7 @@ jobs:
           BRANCH: main # The branch the action should deploy to.
           FOLDER: docs # The folder the action should deploy.
           CLEAN: false # Automatically remove deleted files from the deploy branch
-          REPOSITORY_NAME: https://mit-satori/mit-satori-test-getting-started-web
+          REPOSITORY_NAME: mit-satori/mit-satori-test-getting-started-web
           ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
      
         
