@@ -54,7 +54,8 @@ The following commands can be used
 #. If things work as expected this should create a file that logs power use 
    you should be able to see the power  readings using the command ``cat`` like this::
     
-   cat energy-consumption.out.<###> 
+     cat energy-consumption.out.<###> 
+     
    where <###> is your job number. You should see:: 
 
 
