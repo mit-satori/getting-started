@@ -12,6 +12,7 @@ Using mrsync
 https://github.com/jbd/msrsync
  
 To install
+
 .. code:: bash
 
   wget https://raw.githubusercontent.com/jbd/msrsync/master/msrsync && chmod +x msrsync
@@ -34,10 +35,10 @@ To use
     --stats               show additional stats
     -d, --dry-run         do not run rsync processes
     -v, --version         print version
-rsync options:
+   rsync options:
     -r, --rsync ...       MUST be last option. rsync options as a quoted string ["-aS --numeric-ids"]. The "--from0 --files-from=... --quiet --verbose --stats --log-file=..." options will ALWAYS be added, no
                             matter what. Be aware that this will affect all rsync *from/filter files if you want to use them. See rsync(1) manpage for details.
-self-test options:
+   self-test options:
     -t, --selftest        run the integrated unit and functional tests
     -e, --bench           run benchmarks
     -g, --benchshm        run benchmarks in /dev/shm or the directory in $SHM environment variable                        
@@ -75,10 +76,10 @@ We created an empty directory and used it with rsync --delete as the example bel
 
 .. code:: bash
 
--bash-4.2$ time rsync -a --delete empty-dir/ train2-24/
-real    8m25.144s
-user    0m2.756s
-sys     0m35.559s
+   -bash-4.2$ time rsync -a --delete empty-dir/ train2-24/
+   real    8m25.144s
+   user    0m2.756s
+   sys     0m35.559s
  
 
 
@@ -90,20 +91,20 @@ Note: Aspera server is enabled on either satori-login-001.mit.edu or satori-logi
 1. Install Aspera client or connect on your local machine
 
    * For Mac, Windows or Linux-x86, please download and install Aspera connect from https://downloads.asperasoft.com/en/downloads/8?list  
-   To install on Mac or Windows, please following the software installation step to complete the installation. For Linux as non-root user, untar the gz file and run the install script file. After the installation is complete, it will be located at your home directory .aspera/connect
+      To install on Mac or Windows, please following the software installation step to complete the installation. For Linux as non-root user, untar the gz file and run the install script file. After the installation is complete, it will be located at your home directory .aspera/connect
 
    * For PowerPC (ppc64le) system, please download and install Aspera desktop client from https://downloads.asperasoft.com/en/downloadsArchive/2 
-   To install desktop client on Power system after download deb or rpm file:
+      To install desktop client on Power system after download deb or rpm file:
    
-      * on an Ubuntu system
+   * on an Ubuntu system
       
-      .. code:: bash
+.. code:: bash
       
       sudo apt-get install ibm-aspera-desktopclient-3.9.6.176567-linux-ppc64le.deb
       
       * RHEL|CentOS
       
-      .. code:: bash
+.. code:: bash
       
       sudo yum install ibm-aspera-desktopclient-3.9.6.176567-linux-ppc64le.rpm
 
@@ -112,18 +113,18 @@ Note: <asperauser> is your userid on Satori
 
    * on Windows
    
-      .. code:: bash 
+.. code:: bash 
    
       ascp.exe –P 22 –mode=send|recv  \path\to\file.txt  <asperauser>@satori-login-002.mit.edu:/path/to/file.txt
 
    * on Mac or Linux
 
-      .. code:: bash 
+.. code:: bash 
    
       ascp –P 22 –mode=send|recv  /path/to/file.txt  <asperauser>@satori-login-002.mit.edu:/path/to/file.txt
    
       The path to ascp command is located at $HOME/.aspera/connect/bin 
       
-      Here4's an estimator for Aspera transfer times https://www.ibm.com/aspera/file-transfer-calculator/
+      Here's an estimator for Aspera transfer times https://www.ibm.com/aspera/file-transfer-calculator/
 
 For technical support, Support <satori-support@techsquare.com>
