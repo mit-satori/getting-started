@@ -4,3 +4,9 @@ on:
   push:
     branches:
     - master
+        
+jobs:
+  buildpages:
+    runs-on:  ubuntu-latest
+     
+        
