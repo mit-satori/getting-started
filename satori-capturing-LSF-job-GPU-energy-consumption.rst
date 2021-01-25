@@ -17,9 +17,10 @@ The pre-execution processing script below first calls the `nvidia-smi dmon` comm
 that watches for the pid of the batch or interactive shell to exit.  The `watch.sh` is listed below the `pre-exec.sh` 
 script.
 
-`pre-exec.sh` script:
+``pre-exec.sh`` script:
 
 .. code:: bash
+
     #!/bin/bash
 
     su $LSFUSER -c "nvidia-smi dmon -i 0 -s p -o DT -f /nobackup/users/$LSFUSER/power.$LSB_JOBID.$LSB_JOBINDEX.txt 2>&1 >/dev/null < /dev/zero &"
@@ -30,6 +31,7 @@ script.
 ``watch.sh`` script:
 
 .. code:: bash
+
     #!/bin/bash
     echo "Watch is running" >> /nobackup/users/$LSFUSER/watch.txt
 
