@@ -9,5 +9,5 @@ Tips and Tricks
    conda-500-error/index		
    storage/index
    sys_queries/index
-   singulairy-tips/index
+   singularity-tips/index
    
