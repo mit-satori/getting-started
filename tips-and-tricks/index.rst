@@ -1,5 +1,5 @@
 Tips and Tricks
-~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~
 
 .. toctree::
    :maxdepth: 2
