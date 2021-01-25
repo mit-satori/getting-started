@@ -32,6 +32,7 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
           ## GITHUB_TOKEN: ${{ secrets.WEB_PAGE_DEPLOY }}
+          SSH: true 
           BRANCH: main # The branch the action should deploy to.
           FOLDER: _build/html # The folder the action should deploy.
           CLEAN: false # Automatically remove deleted files from the deploy branch
