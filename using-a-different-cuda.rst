@@ -1,5 +1,5 @@
 Using a Different Level of CUDA
-=========================
+===============================
 Rationale
 ^^^^^^^^^
 * Sometimes you are bringing something to the grid that requires an older (or newer) level of CUDA
@@ -19,6 +19,7 @@ Fast start
 .. code:: bash
 
   module add cuda/9.2
+  
 * CUDA 10.0
 
 .. code:: bash
@@ -26,7 +27,7 @@ Fast start
   module add cuda/10.0
 
 Other notes
-^^^^^^^^^^
+^^^^^^^^^^^
 * To do this in the context of an LSF job - include the load module snippet in your .lsf script
 
 Have fun!
