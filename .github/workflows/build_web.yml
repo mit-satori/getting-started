@@ -18,9 +18,12 @@ jobs:
           python3 -m pip install -U pip
           python3 -m pip install -r requirements.txt
           
-      - name: build
+      - name: add_path
         run: |
           echo "/home/runner/.local/bin" >> $GITHUB_PATH
+          
+      - name: build
+        run: |
           make html
           touch _build/html/.nojekyll
           ls -altr _build/html
