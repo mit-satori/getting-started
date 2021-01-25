@@ -90,19 +90,19 @@ Note: Aspera server is enabled on either satori-login-001.mit.edu or satori-logi
 
 1. Install Aspera client or connect on your local machine
 
-   * For Mac, Windows or Linux-x86, please download and install Aspera connect from https://downloads.asperasoft.com/en/downloads/8?list  
+* For Mac, Windows or Linux-x86, please download and install Aspera connect from https://downloads.asperasoft.com/en/downloads/8?list  
       To install on Mac or Windows, please following the software installation step to complete the installation. For Linux as non-root user, untar the gz file and run the install script file. After the installation is complete, it will be located at your home directory .aspera/connect
 
-   * For PowerPC (ppc64le) system, please download and install Aspera desktop client from https://downloads.asperasoft.com/en/downloadsArchive/2 
+* For PowerPC (ppc64le) system, please download and install Aspera desktop client from https://downloads.asperasoft.com/en/downloadsArchive/2 
       To install desktop client on Power system after download deb or rpm file:
    
-   * on an Ubuntu system
+* on an Ubuntu system
       
 .. code:: bash
       
       sudo apt-get install ibm-aspera-desktopclient-3.9.6.176567-linux-ppc64le.deb
       
-      * RHEL|CentOS
+* RHEL|CentOS
       
 .. code:: bash
       
@@ -111,13 +111,13 @@ Note: Aspera server is enabled on either satori-login-001.mit.edu or satori-logi
 2. Transfer files using Aspera connect or client
 Note: <asperauser> is your userid on Satori
 
-   * on Windows
+* on Windows
    
 .. code:: bash 
    
       ascp.exe –P 22 –mode=send|recv  \path\to\file.txt  <asperauser>@satori-login-002.mit.edu:/path/to/file.txt
 
-   * on Mac or Linux
+* on Mac or Linux
 
 .. code:: bash 
    
