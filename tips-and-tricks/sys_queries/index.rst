@@ -314,7 +314,7 @@ to
 
 .. code:: bash
 
-mpirun helper.sh > my_out
+   mpirun helper.sh > my_out
 
 where the content of helper.sh (which must be executable: i.e., chmod +x helper.sh) is
 
