@@ -12,5 +12,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2.2.0
+      
+      - name: install
+        run: |
+          pip install -U pip
+          pip install -r requirements.txt
      
         
