@@ -14,8 +14,8 @@ Fast start
 
 .. code:: bash
 
-  bsub -W 3:00 -q normal -gpu "num=4" -R "select[type==any]" -Ip bash
-
+   srun --gres=gpu:4 -N 1 --mem=1T --time 1:00:00 -l --pty /bin/bash 
+   
 * Submit your payload
 
 .. code:: bash
@@ -36,7 +36,7 @@ Interactive Allocation:
  
 .. code:: bash
   
-   bsub -W 3:00 -q normal -gpu "num=4" -R "select[type==any]" -Ip bash
+    srun --gres=gpu:4 -N 1 --mem=1T --time 1:00:00 -l --pty /bin/bash 
   
 * Submit your payload
 * Using interactive allocation, we are allocated a node - your interactions with singularity will be generally standard , just like you would in any environments
@@ -66,7 +66,7 @@ Non interactive / batch mode
  
 .. code::
   
-   bsub -app singapp ./myjob.sh
+   sbatch singapp ./myjob.sh
 
 .. [#] (https://www.ibm.com/support/knowledgecenter/SSWRJV_10.1.0/lsf_command_ref/bsub.man_top.1.html)
 .. [#] (https://www.ibm.com/support/knowledgecenter/en/SSWRJV_10.1.0/lsf_container/lsf_singularity_config.html).
