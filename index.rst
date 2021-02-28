@@ -21,6 +21,7 @@ combined simulation and machine learning intensive research work.
    satori-distributed-deeplearning
    satori-large-model-support.rst
    satori-julia.rst
+   satori-R.rst
    satori-cuda-aware-mpi.rst
    lsf-templates/satori-lsf-ml-examples.rst
    satori-howto-videos.rst
