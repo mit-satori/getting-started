@@ -8,10 +8,11 @@ Getting Started with R
 
 A fast way to get R running on Satori is to load the Spack build
 
-..code:: console
-module load spack-flat
-module load r
-R
+.. code:: console 
+
+    module load spack-flat
+    module load r
+    R
 
 
 Installing Packages
