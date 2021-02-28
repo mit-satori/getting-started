@@ -17,3 +17,19 @@ A fast way to get R running on Satori is to load the Spack build
 
 Installing Packages
 ~~~~~~~~~~~~~~~~~~~
+
+To avoid R packages taking up space on home, you can consider setting the R library path inside `/nobackup`, e.g.
+
+.. code:: R
+
+    .libPaths("/nobackup/users/{username}/packages/R")
+
+R packages can be installed as usual:
+
+.. code:: R
+    
+    install.packages("ggplot2")
+    
+A Simple Batch Script Example
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
