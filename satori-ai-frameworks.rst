@@ -158,9 +158,20 @@ For example:
 
 .. code:: bash
 
+   conda install tensorflow
+   conda install pytorch
    conda install powerai-rapids
    conda install dali
    conda install apex
+
+For specific python package versions you can search with conda as in example bellow (by indicaticating the channel if not included as described above) :
+
+.. code:: bash
+
+   conda search pytorch
+   conda search pytorch==1.7.1 -c https://opence.mit.edu
+   conda search 'pytorch>=1.6' -c https://opence.mit.edu
+   
 
 NOTE: During the conda install, the packages are downloaded from the
 internet and after downloading, the license agreement is presented. Read
