@@ -22,7 +22,7 @@ Satori users such as:
    environment (Anaconda) on your login profile
 
 -  `Installing
-   WMLCE <https://github.com/mit-satori/getting-started/blob/master/satori-ai-frameworks.rst>`__
+   Open-CE or/and WMLCE <https://github.com/mit-satori/getting-started/blob/master/satori-ai-frameworks.rst>`__
    optimized Machine Learning and Deep Learning libraries and frameworks
    on your login profile
 
