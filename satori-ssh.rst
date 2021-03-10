@@ -80,10 +80,10 @@ of this document that can help show how to get started.
 
 As general rules:
 
--  satori-login-001.mit.edu - shuld be used for submiting training jobs
+-  satori-login-001.mit.edu - should be used for submiting training jobs
    and related activities
--  satori-login-002.mit.edu - shuld be used for transfering large
-   files/datasets and compiling software requireing nvcc, gcc, XL
+-  satori-login-002.mit.edu - should be used for transfering large
+   files/datasets and compiling software requiring nvcc, gcc, XL
    compiler etc
 -  if one login-node will not be available try the second one
 -  don’t run large computations on the login nodes

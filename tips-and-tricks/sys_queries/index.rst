@@ -60,7 +60,7 @@ architecture, model name, sockets, cores per socket, threads per core, min/max C
 
    lscpu
       
-WHow much RAM is there on my nodes?
+How much RAM is there on my nodes?
 ===================================
 
 The amount of RAM that is expected to be available on a system is summarized elsewhere. The command to interrogate a node for the total available memory is

@@ -31,7 +31,15 @@ In general, the process for running a batch job is to:
 A Note on Exclusivity
 ^^^^^^^^^^^^^^^^^^^^^
 
-To make best use of Satori's GPU resource  default job submissiosn are not exclusive. That means that unless you ask otherwise, the GPUs on the node(s) you are assigned may already be in use by another user. That means if you request a node  with 2GPU's  the 2 other GPUs on that node may be engaged by anohther job. This allows us to more efficently allocate all of the GPU resources. This may require some additional checkign to make sure you can uniquly use  all of the GPU's on a machine. If you're in doubt, you can request the node to be 'exclusive' . See below on how to request exclusive access  in an interactive and batch situation. 
+To make best use of Satori's GPU resource  default job submissions are not
+exclusive. That means that unless you ask otherwise, the GPUs on the node(s)
+you are assigned may already be in use by another user. That means if you
+request a node  with 2GPU's  the 2 other GPUs on that node may be engaged by
+another job. This allows us to more efficently allocate all of the GPU
+resources. This may require some additional checking to make sure you can
+uniquely use  all of the GPU's on a machine. If you're in doubt, you can
+request the node to be 'exclusive' . See below on how to request exclusive
+access  in an interactive and batch situation. 
 
 Interactive Jobs
 ^^^^^^^^^^^^^^^^

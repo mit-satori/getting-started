@@ -81,7 +81,7 @@ following command:
    conda config --prepend channels \
    https://public.dhe.ibm.com/ibmdl/export/pub/software/server/ibm-ai/conda/
 
-Add, the MIT Open-CE channel to the conda configuration by running the
+Add the MIT Open-CE channel to the conda configuration by running the
 following command:
 
 .. code:: bash

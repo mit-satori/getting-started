@@ -29,7 +29,15 @@ In general, the process for running a batch job is to:
 A Note on Exclusivity
 ^^^^^^^^^^^^^^^^^^^^^
 
-To make best use of Satori's GPU resource  default job submissiosn are not exclusive. That means that unless you ask otherwise, the GPUs on the node(s) you are assigned may already be in use by another user. That means if you request a node  with 2GPU's  the 2 other GPUs on that node may be engaged by anohther job. This allows us to more efficently allocate all of the GPU resources. This may require some additional checkign to make sure you can uniquly use  all of the GPU's on a machine. If you're in doubt, you can request the node to be 'exclusive' . See below on how to request exclusive access  in an interactive and batch situation. 
+To make best use of Satori's GPU resource  default job submissiosn are not
+exclusive. That means that unless you ask otherwise, the GPUs on the node(s)
+you are assigned may already be in use by another user. That means if you
+request a node  with 2GPU's  the 2 other GPUs on that node may be engaged by
+another job. This allows us to more efficently allocate all of the GPU
+resources. This may require some additional checking to make sure you can
+uniquely use  all of the GPU's on a machine. If you're in doubt, you can request
+the node to be 'exclusive' . See below on how to request exclusive access  in
+an interactive and batch situation. 
 
 Interactive Jobs
 ^^^^^^^^^^^^^^^^
@@ -238,11 +246,22 @@ queued state, and will change to eligible-to-run at the appropriate time.
 
 Queue Policies
 ~~~~~~~~~~~~~~
-Account holders who are comfortable with basic practices of how to use the system productively (understanding basic Linux commands, learning interactive and batch scheduling techniques, developing 
-basic strategies for managing large numbers of files etc... ) are able to access higher level queues on 
-the system. These can be useful for urgent time constraints such as paper deadlines and for more involved workflows. To request acccess to the priority queue first make sure you are comfortable with the technical and social norms of using a shared system. Then please email support-satori@techsquare.com and indicate that you would like to access higher level queue features. 
+Account holders who are comfortable with basic practices of how to use the
+system productively (understanding basic Linux commands, learning interactive
+and batch scheduling techniques, developing basic strategies for managing large
+numbers of files etc... ) are able to access higher level queues on the system.
+These can be useful for urgent time constraints such as paper deadlines and for
+more involved workflows. To request acccess to the priority queue first make
+sure you are comfortable with the technical and social norms of using a shared
+system. Then please email support-satori@techsquare.com and indicate that you
+would like to access higher level queue features. 
 
-A set higher level queues has initially been set up in two configureations, 1 Node with 4 GPUs and 2 Nodes with 8 GPU's. Job run  length will be capped at 24 hours so please use checkpointing. There will be a limit of 2 parallel jobs per user running during peak times. If these queue setting do not meet your project goals, please email support-satori@techsquare.com with your needed requirments and we will consider them. 
+A set higher level queues has initially been set up in two configurations, 1
+Node with 4 GPUs and 2 Nodes with 8 GPU's. Job run  length will be capped at 24
+hours so please use checkpointing. There will be a limit of 2 parallel jobs per
+user running during peak times. If these queue settings do not meet your project
+goals, please email support-satori@techsquare.com with your needed requirments
+and we will consider them. 
 
 Running jobs in series
 ~~~~~~~~~~~~~~~~~~~~~~
