@@ -7,7 +7,7 @@ and certain appropriate common sense rules apply to working on it.
 Acceptable Use Guidelines
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The Satori resource is intended for reasearch associated with MIT projects or collaborations around
+The Satori resource is intended for research associated with MIT projects or collaborations around
 MIT research projects. That can cover a lot of things, but all account holders are expected
 to use judgement and apply common sense to their use of the system. The system is not
 to be used to support commercial activities or for non-MIT related activities. It is not

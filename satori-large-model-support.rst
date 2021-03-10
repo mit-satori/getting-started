@@ -1,8 +1,8 @@
 IBM Large Model Support (LMS)
 -----------------------------
 
-Allow seamlessly moves layers of a model between the GPU and CPU to
-overcome GPU memory limits allows training of:
+LMS seamlessly moves layers of a model between the GPU and CPU to
+overcome GPU memory limits. This allows training of:
 
 -  Deeper models
 -  Higher resolution data
