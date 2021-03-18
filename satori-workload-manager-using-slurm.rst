@@ -62,7 +62,7 @@ command:
 
 .. code:: bash
 
-   srun --gres=gpu:4 -N 1 --mem=1T --time 1:00:00 -l --pty /bin/bash
+   srun --gres=gpu:4 -N 1 --mem=1T --time 1:00:00 -I --pty /bin/bash
 
 
 This will request an AC922 node with 4x GPUs from the Satori (normal
