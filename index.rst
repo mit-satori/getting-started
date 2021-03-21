@@ -14,7 +14,6 @@ combined simulation and machine learning intensive research work.
    Satori Login <satori-ssh.rst>
    satori-getting-started.rst
    satori-training.rst
-   satori-workload-manager-using-lsf.rst
    satori-workload-manager-using-slurm.rst
    satori-troubleshooting.rst
    satori-ai-frameworks.rst
