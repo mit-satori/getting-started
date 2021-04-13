@@ -163,3 +163,8 @@ they are written to the file. For example:
 Will print the output of the log file my_job.log-12345, where 12345 is the Job ID for this particular job. To
 exit the "following" mode, press Ctrl+C.
 
+Project Groups
+--------------
+
+Project groups can be created for sets of accounts that wish to share storage or make use of a priority partition. Groups can be created in MIT WebMoira. Once a group is created please email
+the system administration team to request the group be activated on Satori. The WebMoira interface can then be used to manage group membership.
