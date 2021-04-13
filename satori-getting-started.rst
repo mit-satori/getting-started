@@ -173,7 +173,7 @@ Creating project groups
 -----------------------
 To create a project group access the MIT WebMoira interface here
 
-`https://groups.mit.edu/webmoira/<https://groups.mit.edu/webmoira/>`__
+`https://groups.mit.edu/webmoira/ <https://groups.mit.edu/webmoira/>`__
 
 and select "Create a new list". Follow the steps on the web pages, selecting the "Moira" 
 group, "Active", "NFS Group" and "Public Options". 
