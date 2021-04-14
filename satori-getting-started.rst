@@ -180,7 +180,7 @@ group, "Active", "Moira Group", "NFS Group" and "Public Options". In the group p
 appear as
 
 .. image:: MoiraSettings.png
-   :width: 200
+   :width: 350
 
 Once the group is created notify the systems administration team that you wish the group to be activated on Satori. The WebMoira interface can
 then be used to manage group membership. 
