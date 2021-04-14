@@ -179,7 +179,8 @@ and select "Create a new list". Follow the steps on the web pages, selecting the
 group, "Active", "Moira Group", "NFS Group" and "Public Options". In the group page make sure the group settings
 appear as
 
-
+.. image:: MoiraSetting.png
+   :width: 200
 
 Once the group is created notify the systems administration team that you wish the group to be activated on Satori. The WebMoira interface can
 then be used to manage group membership. 
