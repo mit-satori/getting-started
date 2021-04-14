@@ -31,18 +31,18 @@ jobs:
       - name: Install SSH Client
         uses: webfactory/ssh-agent@v0.4.1
         with:
-          ssh-private-key: ${{ secrets.WEB_PAGE_DEPLOY }}
+          ssh-private-key: ${{ secrets.PRODUCTION_WEB_PAGE_DEPLOY }}
           
       - name: deploy
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
-          GITHUB_TOKEN: ${{ secrets.WEB_PAGE_DEPLOY }}
+          GITHUB_TOKEN: ${{ secrets.PRODUCTION_WEB_PAGE_DEPLOY }}
           SSH: true 
           BRANCH: main # The branch the action should deploy to.
           FOLDER: _build/html # The folder the action should deploy.
           CLEAN: false # Automatically remove deleted files from the deploy branch
           REPOSITORY_NAME: mit-satori/mit-satori.github.io
-          ACCESS_TOKEN: ${{ secrets.WEB_PAGE_DEPLOY }}
+          ACCESS_TOKEN: ${{ secrets.PRODUCTION_WEB_PAGE_DEPLOY }}
           TARGET_FOLDER: docs  
      
         
