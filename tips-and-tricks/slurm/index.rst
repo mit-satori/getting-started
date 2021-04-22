@@ -7,4 +7,4 @@ accounts, requested resources.
 
 You can query the priority ranking of pending jobs using the command
 
-sprio -l
+     sprio -l
