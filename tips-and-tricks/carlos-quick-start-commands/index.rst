@@ -14,8 +14,4 @@ Log in and then::
    conda install -c conda-forge jupyterlab
 
 
-Once the environment is setup.  You can run LSF interactive with::
 
- 
-    bsub -W 3:00 -q normal -gpu “num=4” -R “select[type=any]” -Ip bash
-    conda activate wmlce-1.6.2
