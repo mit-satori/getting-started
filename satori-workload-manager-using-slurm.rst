@@ -76,6 +76,19 @@ If you need to make sure no one else can allocate the unused GPU's on the machin
    
 this will request exclusive use of an interactive node with 4GPU's 
 
+**Note:** if your Interactive job will not launch it may mean that there are no interactive notes available… Try removing the *-I* flag which and your job will run when a node becomes available rather than failing immediately.    
+
+.. code:: bash
+
+   srun --gres=gpu:4 -N 1 --mem=1T --time 1:00:00  --pty /bin/bash
+
+You may also want to lower the memory requested in the *--mem=** flag as that may alow you to get interactive time on a shared node.   Eg
+
+.. code:: bash
+
+   srun --gres=gpu:4 -N 1 --mem=250G  --time 1:00:00  --pty /bin/bash
+
+
 Batch Scripts
 ^^^^^^^^^^^^^
 
