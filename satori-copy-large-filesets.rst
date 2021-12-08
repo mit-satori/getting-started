@@ -2,9 +2,9 @@ Copying larger files and large file sets
 ----------------------------------------
 
  
-cp command is a single threaded process and it does not take advantage of the distributed file systems like GPFS.  If you have a lot of files to copy, or you have very large files, you may want to use  one of the large data set copy fasciliities supporte4d by Satori. The two methods are:
+cp command is a single threaded process and it does not take advantage of the distributed file systems like GPFS.  If you have a lot of files to copy, or you have very large files, you may want to use  one of the large data set copy facilities supported by Satori. The two methods are:
 
-* msrsync (https://github.com/jbd/msrsync) whichis a python wrapper around rsync. 
+* msrsync (https://github.com/jbd/msrsync) which is a python wrapper around rsync. 
 * Aspera (https://www.ibm.com/products/aspera) which is a high speed data transfer service offered by IBM
  
 Using mrsync
