@@ -31,22 +31,6 @@ The syntax for creating and activating an environment is:
    conda create --name <environment name> python=<python version>
    source activate <environment name>
 
-Note: The only valid Python versions with WML-CE are Python 3.6, 3.7 and for Open-CE are Python 3.6, 3.7, 3.8 . For
-example, to create an environment named wmlce_env with Python 3.6:
-
-.. code:: bash
-
-   conda create --name wmlce-1.7.0 python=3.6
-   source activate wmlce-1.7.0
-   
-   
-or
-
-.. code:: bash
-
-   conda create --name opence python=3.7
-   source activate opence
-
 
 To create an anaconda environment in a specfic location, use the `--prefix` flag during creation with the absolute path and name of the environment:
 
@@ -92,5 +76,25 @@ There are a number of other conda channels that exist which can be added to the 
 
 [4] Searching for and installing conda packages
 '''''''''''''''''''''''''''''''''''''''''''''''
+
+The basic syntax for searching for a package through conda is as follow:
+
+.. code:: bash
+
+  conda search <package-name>
+  
+This command will search the base anaconda channel along with any channels currently added to your conda configuration. You can search a specific channel by explicitly including it in the search:
+
+.. code:: bash
+
+  conda search -c <channel> <package-name>
+  
+Example:
+
+.. code:: bash
+
+  conda search -c conda-forge pytorch
+ 
+Results from conda searches typically include several available versions for the package queried. If no particular version of a package is specified, conda will install [the most appropriate version based on the version of python installed locally]. Conda search results may look similar to this:
 
 
