@@ -87,7 +87,7 @@ This command will search the base anaconda channel along with any channels curre
 
 .. code:: bash
 
-  conda search -c <channel> <package-name>
+  conda search -c <channel> <package>
   
 Example:
 
@@ -97,4 +97,66 @@ Example:
  
 Results from conda searches typically include several available versions for the package queried. If no particular version of a package is specified, conda will install [the most appropriate version based on the version of python installed locally]. Conda search results may look similar to this:
 
+.. code:: bash
+
+  (test2022-14) [ageod@satori-login-001 envs]$ conda search pytorch
+  Loading channels: done
+  # Name                       Version           Build  Channel             
+  pytorch                        1.7.1      hca541ab_1  None                
+  pytorch                        1.9.0 cuda10.2_py37_1  None                
+  pytorch                        1.9.0 cuda10.2_py38_1  None                
+  pytorch                        1.9.0 cuda10.2_py39_1  None                
+  pytorch                       1.10.2 cpu_py310hef0c51e_0  pkgs/main           
+  pytorch                       1.10.2 cpu_py37h6f0ae12_0  pkgs/main           
+  pytorch                       1.10.2 cpu_py38h6f0ae12_0  pkgs/main           
+  pytorch                       1.10.2 cpu_py39h6f0ae12_0  pkgs/main
+  
+The output lists the name of the package relevant to the query, the version available, its build, and what channel it exists on. There are several versions of pytorch in the example that show they were built with cuda support, the specific version of cuda used, and the version of python used. There are also versions of pytorch built to utilize CPU's rather than GPU's. 
+
+The "pkgs/main" channel refers to the default anaconda repository, whereas the results with the channels listed as "None" are coming from the MIT OpenCE channel.
+
+To install a package, you must first need to have an environment activated. Again, packages are installed within conda environments. You can specify versions of packages through levels of specificity:
+
+.. code:: bash
+
+  conda install <package>
+  
+or
+
+.. code:: bash
+
+  conda install <package>=<version>
+  conda install <package>=<version>=<build>
+  
+Example:
+
+.. code:: bash
+
+  conda install pytorch
+  conda install pytorch=1.9.0
+  conda install pytorch=1.9.0=cuda10.2_py39_1
+  
+
+[5] Listing the contents of your conda environment
+''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Viewing the packages installed in your environment is easy. Use the following command:
+
+.. code:: bash
+
+  conda list
+  
+You can be more granular and search for a specific package in your environment by adding the packages name after the above command.
+
+
+[6] Leaving your conda environment
+''''''''''''''''''''''''''''''''''
+
+When you are done working in your environment, or want to switch to a different environment, you can deactivate the current environment with:
+
+.. code:: bash
+
+  conda deactivate
+  
+Environments retain their state when inactive - as in, the packages installed within them. Simply activate the envionment again to use the installed software.
 
