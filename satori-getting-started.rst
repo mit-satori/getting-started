@@ -185,4 +185,5 @@ appear as
 Once the group is created notify the systems administration team that you wish the group to be activated on Satori. The WebMoira interface can
 then be used to manage group membership. 
 
+Please be advised that group storage space must be purchased on NESE. The systems administration team can provide contact for such inquiries.
 
