@@ -55,7 +55,7 @@ NOTE: As a good practice to maintain the disk space usage on Satori please run a
 [3] Setting up conda channels
 '''''''''''''''''''''''''''''
 
-When using conda to search for packages, one or more "channels", or repositories, may be queried. By default, conda will search it's default packages channel for any results that match the package name searched for matching the systems architecture (ppc64le). If no packages are available either under the queried name, or for host system's architecture, no results will be displayed. Note that not all packages existing for x86 can also be found for ppc64le.
+When using conda to search for packages, one or more "channels", or repositories, may be queried. By default, conda will search its main packages channel for any results that match the queried name and display any results matching packages available for the systems architecture (ppc64le). If no packages are available either under the queried name, or for host system's architecture, no results will be displayed. Note that not all packages existing for x86 can also be found for ppc64le.
 
 To add the IBM WML-CE channel to the conda configuration:
 
@@ -95,7 +95,7 @@ Example:
 
   conda search -c conda-forge pytorch
  
-Results from conda searches typically include several available versions for the package queried. If no particular version of a package is specified, conda will install [the most appropriate version based on the version of python installed locally]. Conda search results may look similar to this:
+Results from conda searches typically include several available versions for the package queried. If no particular version of a package is specified, conda will install the most appropriate version based on the version of python installed locally. Conda search results may look similar to this:
 
 .. code:: bash
 
