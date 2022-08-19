@@ -11,7 +11,7 @@ The portal is the first step in accessing the cluster. Satori is available to al
 
 Once authenticated, you will land here:
 
-(insert pic)
+.. image:: images/satori_portal_landing.png
 
 [2] Using the Portal
 ''''''''''''''''''''''''''''
@@ -41,19 +41,19 @@ There are a number of actions you can take using the header bar at the top of th
 [3] Using Jupyter Notebooks
 '''''''''''''''''''''''''''
 
-(insert pic)
+.. image:: images/satori-notebook-dropdown.png
 
 To start using a Jupyter Notebook, select one of the options from the "Interactive Apps" drop down menu.
 
 1. Jupyter Notebook
 
-(insert pic)
+.. image:: images/satori-notebook01.png
 
 This is the basic Jupyter Notebook launch page. You can choose an Anaconda module, and the amount of time you would like the notebook (job) to run for. This notebook will provide you with 2 compute cores, 1 GPU, 64 GB of memory and can be ran for up to 8 hours. The job will run on the default public partition, sched_system_all_8.
 
 2. Jupyter Notebook [Experimental]
 
-(insert pic)
+.. image:: images/satori-notebook02.png
 
 This notebook provides a few more customizable options than the standard one. You are provided the same resources as the standard notebook, and can also select the runtime and Anaconda module. The new features with this notebook include an option to specify a custom Anaconda install, if you are using one, and an option to use a custom conda environment. Both options have checkboxes and brief instructions.
 
@@ -64,12 +64,12 @@ Clicking "Launch" at the bottom of either application will launch the configured
 
 Once a notebook is launched, you will be taken to the "My Interactive Sessions" page, where you can view the recently launched job which will likely show as pending, with the job ID in parenthesis.
 
-(insert pic)
+.. image:: images/satori-pending-notebook.png
 
 When your notebook is ready, the highlighting around the session will turn green, and a blue "Connect to Jupyter" button will be available.
 
-(insert pic)
+.. image:: /images/satori-ready-notebook.png
 
 When you connect to your Jupyter Notebook you will see a page like the one pictured below. There is a file explorer/browser on the left hand side, and and a Launcher menu with a number of different applications to choose from. The standard python notebook can be launched using the "Python 3" option under the "Notebook" header.
 
-(insert pic)
+.. image:: images/satori-running-notebook.png
