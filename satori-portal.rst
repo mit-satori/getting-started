@@ -72,4 +72,4 @@ When your notebook is ready, the highlighting around the session will turn green
 
 When you connect to your Jupyter Notebook you will see a page like the one pictured below. There is a file explorer/browser on the left hand side, and and a Launcher menu with a number of different applications to choose from. The standard python notebook can be launched using the "Python 3" option under the "Notebook" header.
 
-
+(insert pic)
