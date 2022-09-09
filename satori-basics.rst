@@ -13,17 +13,12 @@ nodes togehter.
 How can I get an account?
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. 
-     Anyone with active MIT Kerberos credentials (i.e. all students, employees and sponsored 
-     guest account https://ist.mit.edu/guest-accounts ) can connect to the Satori portal and create a starter account. A
-     starter account is provided somewhat limited access by default. Once a starter account has been created research 
-     group leads may request an account be added to one or more projects that can provide larger scale access.  
-   
-**Satori is currently in a beta test phase**. Access requires active MIT Kerberos credentials (available to all students, employees and sponsored guest accounts https://ist.mit.edu/guest-accounts ). To have your kereberos account activated on Satori during the beta test phase contact Chris Hill ( cnh@mit.edu ) or John Cohn ( johncohn@us.ibm.com ). 
+Access requires active MIT Kerberos credentials (available to all students, employees and sponsored guest accounts https://ist.mit.edu/guest-accounts ). To have an account created on Satori please visit the Satori portal (https://satori-portal.mit.edu/) and log in using MIT Kerberos credentials.
 
-Once beta testing is complete, anyone with active MIT Kerberos credentials (i.e. all students, employees and sponsored 
-guest account https://ist.mit.edu/guest-accounts ) will be able to connect to Satori via a portal and a 
-starter account will be created. A starter account will be provided somewhat limited access by default. Once a starter account has been created, an account holder can be added as a member to one or more research groups. Different research groups can provide larger scale access to their members. 
+New user accounts are granted storage in two locations with the following storage (block) and file (inode) quotas:
+
+* /home/<user> | 20GB & 500,000 files
+* /nobackup/users/<user> | 500GB & 1,000,000 files 
 
 Getting help?
 ^^^^^^^^^^^^^

@@ -46,25 +46,21 @@ All users on Satori will have two folders:
    /home/<username>
    /nobackup/users/<username>
    
-please download and install Anaconda3 in the: /nobackup/users/<your-username>/anaconda3 
-This is because /nobackup disk partition has way much more space compared with /home. In addition all files in /home will be automaticlay backuped compared with /nobackup partition. Anaconda3 can be install at any time in less then 10 minutes, therefore no backup is need.
-
-To install WMLCE you need to install on your login account `Anaconda for
-POWER9/ ppc64le 
-architecture <https://www.anaconda.com/distribution/#download-section>`__.
-download of the Anaconda can be done using ``wget``:
+If you choose to use your own Anaconda install, rather than the system-wide modules, please download and install Anaconda3 in: /nobackup/users/<your-username>/anaconda3. This is because the /nobackup disk partition has much more space compared with /home. In addition all files in /home will be automaticlay backuped compared with /nobackup partition. Anaconda3 can be install at any time in less then 10 minutes, therefore no backup is need.
 
 .. code:: bash
 
    cd /nobackup/users/$(whoami)
-   wget https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-ppc64le.sh
-   sh Anaconda3-2019.10-Linux-ppc64le.sh -f -p /nobackup/users/$(whoami)/anaconda3
+   wget https://repo.anaconda.com/archive/Anaconda3-2022.05-Linux-ppc64le.sh
+   sh Anaconda3-2022.05-Linux-ppc64le.sh -f -p /nobackup/users/$(whoami)/anaconda3
    source ~/.bashrc
 
 By default Anaconda will be insalled in your home folder under
-``anaconda3`` and all the WMLCE pachages will be install in a
+``anaconda3`` and all the WMLCE packages will be installed in a
 sub-directory on chosen virtual name/folder (ie.
 anaconda3/envs/wmlce-1.7.0)
+
+You may also refer to the Using Anaconda page for steps on how to use the system-wide environment modules (suggested method).
 
 [2] WML-CE and Open-CE: Setting up the software repository
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -90,7 +86,7 @@ following command:
    https://opence.mit.edu
    
 
-NOTE: Moving forward with new AI frameworks and new related packages OPENCE.MIT.EDU conda channel will the prefered choice (i.e. TensorFlow 2.3.1, 2.4.0, Pytorch 1.6.0, 1.7.1 etc).
+NOTE: Moving forward with new AI frameworks and new related packages, the OPENCE.MIT.EDU conda channel will the prefered choice.
 
 
 [3] WML-CE and Open-CE: Creating and activate conda environments (recommended)
@@ -103,6 +99,9 @@ environment called base, which often has a higher risk of containing
 conflicting packages or dependencies. Switching between environments is
 called activating the environment.
 
+| **The below information of this sub-section may be deprecated or outdated.**
+| *Please refer to the "Using Anaconda" page for details about creating conda environments.*
+|
 The syntax to create and activate a conda environment is:
 
 .. code:: bash
