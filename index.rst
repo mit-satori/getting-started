@@ -12,7 +12,9 @@ combined simulation and machine learning intensive research work.
 
    satori-basics.rst
    Satori Login <satori-ssh.rst>
+   satori-portal.rst
    satori-getting-started.rst
+   satori-using-anaconda.rst
    satori-training.rst
    satori-workload-manager-using-slurm.rst
    satori-troubleshooting.rst
@@ -22,6 +24,7 @@ combined simulation and machine learning intensive research work.
    satori-julia.rst
    satori-R.rst
    satori-cuda-aware-mpi.rst
+   satori-public-datasets.rst
    lsf-templates/satori-lsf-ml-examples.rst
    satori-howto-videos.rst
    satori-public-datasets.rst
