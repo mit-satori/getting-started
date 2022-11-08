@@ -66,17 +66,6 @@ SSH Login
 
    scp <local-file.py> your_username@satori-login-001.mit.edu:
 
--  Once connected through ssh if you are familiar with tools like LSF you can start
-   interactive or batch scripts e.g.
-
-.. code:: bash
-
-   bsub -ISp -tty -q short /bin/bash
-   bsub -q short < myjobscript.lsf
-   
-   
-If you are not familiar with LSF and cluster there are tutorial examples in other pages
-of this document that can help show how to get started. 
 
 As general rules:
 
