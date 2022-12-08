@@ -43,6 +43,6 @@ You don’t find what you where looking for?
    sheet <https://github.com/mit-satori/getting-started/blob/master/satori-conda-cheatsheet.pdf>`__
    and WMLCE extended documentation
    `here <https://www.ibm.com/support/knowledgecenter/SS5SF7_1.6.2/navigation/wmlce_getstarted.html>`__
-   or ask for help at satori-support@techsquare.com.
+   or ask for help at orcd-help-satori@mit.edu.
   
 
