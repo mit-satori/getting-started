@@ -58,4 +58,4 @@ Satori users such as:
    `here <https://www.ibm.com/support/knowledgecenter/SS5SF7_1.6.2/navigation/wmlce_getstarted.html>`__
    before asking for help.
 
--  Still need help ? Email satori-admin@techsquare.com 
+-  Still need help ? Email orcd-help-satori@mit.edu 
