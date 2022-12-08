@@ -4,7 +4,7 @@ Getting help on Satori
 Email help
 ^^^^^^^^^^
 
-If you need help with anything , please email satori-support@techsquare.com . Tech support
+If you need help with anything , please email orcd-help-satori@mit.edu. Tech support
 is mostly normal business hours, so responses are usually quicker during regular work hours. 
 Response times during the night and over weekend and holidays (or when there is a lot going on!)
 can be slower.  
@@ -21,10 +21,10 @@ A Slack channel for advice, discussion, advanced problem solving and more is ava
 You can connect to the channel `here <https://mit-satori.slack.com/>`_ . To request an invite to
 te Slack channel follow this `link <https://join.slack.com/t/mit-satori/shared_invite/enQtOTE2Mjk2NTc3MTI0LWNmZTAwMGFlM2NlZWMyZjUwOGExMTg1Mjg2ZmUzODIxMzM5YzkzNTE0NmJhZTc2NzhlZTExZmU3MWY5ZWNjZWQ>`_ . 
 
-Slack or satori-support@techsquare.com
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Slack or orcd-help-satori@mit.edu
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-For basic things, like *I can't log in* an email to satori-support@techsquare.com is probably best. For more involved things like *Does anyone know how to make Horovod do parallel I/O properly* the Slack channel may be more useful. 
+For basic things, like *I can't log in* an email to orcd-help-satori@mit.edu is probably best. For more involved things like *Does anyone know how to make Horovod do parallel I/O properly* the Slack channel may be more useful. 
 
 Satori Office Hours
 ^^^^^^^^^^^^^^^^^^^
