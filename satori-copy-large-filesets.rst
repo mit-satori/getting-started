@@ -127,4 +127,4 @@ Note: <asperauser> is your userid on Satori
       
       Here's an estimator for Aspera transfer times https://www.ibm.com/aspera/file-transfer-calculator/
 
-For technical support, Support <satori-support@techsquare.com>
+For technical support, Support <orcd-help-satori@mit.edu>

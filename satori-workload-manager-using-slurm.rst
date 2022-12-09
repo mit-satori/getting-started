@@ -266,14 +266,14 @@ numbers of files etc... ) are able to access higher level queues on the system.
 These can be useful for urgent time constraints such as paper deadlines and for
 more involved workflows. To request acccess to the priority queue first make
 sure you are comfortable with the technical and social norms of using a shared
-system. Then please email support-satori@techsquare.com and indicate that you
+system. Then please email orcd-help-satori@mit.edu and indicate that you
 would like to access higher level queue features. 
 
 A set higher level queues has initially been set up in two configurations, 1
 Node with 4 GPUs and 2 Nodes with 8 GPU's. Job run  length will be capped at 24
 hours so please use checkpointing. There will be a limit of 2 parallel jobs per
 user running during peak times. If these queue settings do not meet your project
-goals, please email support-satori@techsquare.com with your needed requirments
+goals, please email orcd-help-satori@mit.edu with your needed requirments
 and we will consider them. 
 
 Running jobs in series

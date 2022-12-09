@@ -24,4 +24,4 @@ Getting help?
 ^^^^^^^^^^^^^
 
 If you are stuck and can't find an answer in the web pages please feel free to
-email our support address satori-support@techsquare.com with questions and requests. 
+email our support address orcd-help-satori@mit.edu with questions and requests. 

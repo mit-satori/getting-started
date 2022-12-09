@@ -15,7 +15,7 @@ to be used for anything that might be construed as illegal or criminal. Datasets
 the system must have been obtained legitimately and the system is not to be used
 for working with unanonymized data or data subject to ITAR or other national security 
 restrictions. If you are unsure about a planned use, please feel
-free to contact satori-support@techsquare.com. 
+free to contact orcd-help-satori@mit.edu. 
 
 Account holders should not share accounts and should take reasonable precautions to ensure 
 that credentials for accessing the system (passwords, ssh keys etc...) are kept secure. 
