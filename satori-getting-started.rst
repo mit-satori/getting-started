@@ -53,7 +53,7 @@ should be set up to run many of the popular machine learning frameworks in the J
 
 Setting up Your Environment
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-There are two ways we manage software and environemnts in Satori. The first is conda, which is the general package
+There are two ways we manage software and environments in Satori. The first is conda, which is the general package
 manager for the second. The second are environment modules.
 
 1. **Environment Modules**: Environment modules are pre-packaged environments for software, tools, and libraries. It allows you to load and unload these as you go. It's always good to check to see if a module exists for a tool before installing it yourself. To see the full set of modules available, first load the spack module (`module load spack`), then run the `module avail` command. A few common module commands are:
