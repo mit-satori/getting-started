@@ -84,9 +84,13 @@ following command:
 
    conda config --prepend channels \
    https://opence.mit.edu
-   
 
 NOTE: Moving forward with new AI frameworks and new related packages, the OPENCE.MIT.EDU conda channel will the prefered choice.
+
+If you are not finding the packages you need through these channels, add the following open-ce channel that has some of the newer versions of things like Pytorch:
+
+.. code:: bash
+   conda config --prepend channels https://ftp.osuosl.org/pub/open-ce/current
 
 
 [3] WML-CE and Open-CE: Creating and activate conda environments (recommended)
