@@ -90,6 +90,7 @@ NOTE: Moving forward with new AI frameworks and new related packages, the OPENCE
 If you are not finding the packages you need through these channels, add the following open-ce channel that has some of the newer versions of things like Pytorch:
 
 .. code:: bash
+   
    conda config --prepend channels https://ftp.osuosl.org/pub/open-ce/current
 
 
